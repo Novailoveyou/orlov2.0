@@ -1,14 +1,12 @@
-import styles from './page.module.css'
 import { Button } from '@repo/ui/components/button'
+import { Page } from '@repo/ui/components/page'
+import { APP_NAME } from '../shared/constants'
 
-export default function Home() {
+export default function HomePage({ params }: PageProps<'/'>) {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <h1 className='text-7xl'>web</h1>
-        <Button appName='web'>Button</Button>
-      </main>
-      <footer className={styles.footer}>&copy; novailoveyou</footer>
-    </div>
+    <Page>
+      <h1 className='text-7xl'>{APP_NAME}</h1>
+      <Button appName={APP_NAME}>Button</Button>
+    </Page>
   )
 }

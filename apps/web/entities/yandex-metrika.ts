@@ -1,3 +1,6 @@
+'use client'
+import 'client-only'
+
 import { createYandexMetrika } from '@repo/next-yandex-metrika'
 
 export const { ym, YandexMetrika } = createYandexMetrika({
