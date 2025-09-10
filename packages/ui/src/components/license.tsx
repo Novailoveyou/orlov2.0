@@ -1,4 +1,5 @@
 import { ComponentProps } from 'react'
+import { ExternalLink } from './external-link'
 
 type License = {
   label: string
@@ -20,7 +21,10 @@ export const LICENSES = {
   },
 } as const satisfies Record<License['short'], License>
 
-type LicenseProps = Omit<ComponentProps<'a'>, 'rel' | 'target' | 'href'> & {
+type LicenseProps = Omit<
+  ComponentProps<typeof ExternalLink>,
+  'rel' | 'href'
+> & {
   license?:
     | (License['href'] & {})
     | (typeof LICENSES)[keyof typeof LICENSES]['href']
@@ -30,7 +34,6 @@ type LicenseProps = Omit<ComponentProps<'a'>, 'rel' | 'target' | 'href'> & {
  * @description A component to display a link to a license.
  * @see https://creativecommons.org/
  * @todo add support for different licenses
- * @todo add support for Next.js Link component
  */
 export function License({
   children,
@@ -38,12 +41,8 @@ export function License({
   ...props
 }: LicenseProps) {
   return (
-    <a
-      rel='license noopener noreferrer'
-      target='_blank'
-      href={license}
-      {...props}>
+    <ExternalLink rel='license' href={license} {...props}>
       {children}
-    </a>
+    </ExternalLink>
   )
 }
