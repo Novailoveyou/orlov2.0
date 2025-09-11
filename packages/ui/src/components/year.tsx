@@ -1,7 +1,7 @@
 'use client'
 import 'client-only'
 import { useEffect, useState } from 'react'
-import { Time } from './time'
+import { Time } from '../tags/time'
 
 type YearProps = {
   year: number

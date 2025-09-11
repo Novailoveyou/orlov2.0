@@ -1,5 +1,6 @@
 import { ComponentProps } from 'react'
 import { ExternalLink } from './external-link'
+import { cn } from '../utils'
 
 type License = {
   label: string
@@ -21,9 +22,9 @@ export const LICENSES = {
   },
 } as const satisfies Record<License['short'], License>
 
-type LicenseProps = Omit<
+type LicenseProps = Pick<
   ComponentProps<typeof ExternalLink>,
-  'rel' | 'href'
+  'children' | 'className'
 > & {
   license?:
     | (License['href'] & {})
@@ -36,12 +37,12 @@ type LicenseProps = Omit<
  * @todo add support for different licenses
  */
 export function License({
+  className,
   children,
   license = 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
-  ...props
 }: LicenseProps) {
   return (
-    <ExternalLink rel='license' href={license} {...props}>
+    <ExternalLink rel='license' href={license} className={cn(className)}>
       {children}
     </ExternalLink>
   )

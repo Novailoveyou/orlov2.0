@@ -1,6 +1,7 @@
 import { ComponentProps } from 'react'
+import { A } from '../tags/a'
 
-type ExternalLinkPropsBase = ComponentProps<'a'>
+type ExternalLinkPropsBase = ComponentProps<typeof A>
 
 type ExternalLinkProps = Omit<ExternalLinkPropsBase, 'target'> &
   Required<Pick<ExternalLinkPropsBase, 'href'>>
@@ -31,6 +32,7 @@ const getExternalRel = (
 /**
  * @description ExternalLink component to display external link
  * @todo add support for Next.js Link component
+ * @todo add confirmation modal before redirecting
  */
 export function ExternalLink({
   href,
@@ -41,9 +43,8 @@ export function ExternalLink({
   const rel = getExternalRel(defaultRel)
 
   return (
-    // eslint-disable-next-line react/jsx-no-target-blank -- it's added by getExternalRel function
-    <a rel={rel} target='_blank' href={href} {...props}>
+    <A rel={rel} target='_blank' href={href} {...props}>
       {children}
-    </a>
+    </A>
   )
 }
