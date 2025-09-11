@@ -6,10 +6,10 @@ export const paragraphVariants = cva('', {
   variants: {
     variant: {
       default:
-        'bg-primary text-primary-foreground shadow-xs hover:bg-primary/90',
-      lead: 'text-muted-foreground text-xl',
-      large: 'text-lg font-semibold',
-      muted: 'text-muted-foreground text-sm',
+        'ui:bg-primary ui:text-primary-foreground ui:shadow-xs hover:ui:bg-primary/90',
+      lead: 'ui:text-muted-foreground ui:text-xl',
+      large: 'ui:text-lg ui:font-semibold',
+      muted: 'ui:text-muted-foreground ui:text-sm',
     },
   },
   defaultVariants: {

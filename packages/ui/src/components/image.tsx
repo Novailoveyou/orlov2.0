@@ -31,7 +31,10 @@ export const Image = ({
       quality={quality}
       placeholder={placeholder}
       blurDataURL={blurDataURL}
-      className={cn('w-full max-w-full h-auto max-h-full', className)}
+      className={cn(
+        'ui:w-full ui:max-w-full ui:h-auto ui:max-h-full',
+        className,
+      )}
       {...props}
     />
   )

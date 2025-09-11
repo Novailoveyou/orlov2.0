@@ -6,7 +6,8 @@ import { Div } from '../tags/div'
 export const containerVariants = cva('', {
   variants: {
     variant: {
-      default: 'relative z-20 w-full px-5 max-w-[90rem] mx-auto',
+      default:
+        'ui:relative ui:z-20 ui:w-full ui:px-5 ui:max-w-[90rem] ui:mx-auto',
     },
   },
   defaultVariants: {

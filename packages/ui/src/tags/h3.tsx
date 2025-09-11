@@ -11,7 +11,7 @@ export function H3({ children, className, ...props }: H3Props) {
   return (
     <h3
       className={cn(
-        'font-semibold text-2xl tracking-tight scroll-m-20',
+        'ui:font-semibold ui:text-2xl ui:tracking-tight ui:scroll-m-20',
         className,
       )}
       {...props}>

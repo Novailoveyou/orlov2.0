@@ -14,7 +14,9 @@ type UlProps = Omit<ComponentProps<'ul'>, 'children'> & {
  */
 export function Ul({ className, items, ...props }: UlProps) {
   return (
-    <ul className={cn('mt-6 pl-6 border-l-2 italic', className)} {...props}>
+    <ul
+      className={cn('ui:mt-6 ui:pl-6 ui:border-l-2 ui:italic', className)}
+      {...props}>
       {items.map(({ id, children, className }) => (
         <li key={id} className={cn(className)}>
           {children}

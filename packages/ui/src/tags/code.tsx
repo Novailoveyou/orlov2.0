@@ -11,7 +11,7 @@ export function Code({ children, className, ...props }: CodeProps) {
   return (
     <code
       className={cn(
-        'relative bg-muted px-[0.3rem] py-[0.2rem] rounded font-mono font-semibold text-sm',
+        'ui:relative ui:bg-muted ui:px-[0.3rem] ui:py-[0.2rem] ui:rounded ui:font-mono ui:font-semibold ui:text-sm',
         className,
       )}
       {...props}>

@@ -9,7 +9,12 @@ type AProps = ComponentProps<'a'>
  */
 export function A({ className, children, ...props }: AProps) {
   return (
-    <a className={cn(className)} {...props}>
+    <a
+      className={cn(
+        'ui:text-inherit ui:no-underline ui:cursor-pointer',
+        className,
+      )}
+      {...props}>
       {children}
     </a>
   )

@@ -11,7 +11,7 @@ export function H1({ children, className, ...props }: H1Props) {
   return (
     <h1
       className={cn(
-        'font-extrabold text-4xl text-center text-balance tracking-tight scroll-m-20',
+        'ui:font-extrabold ui:text-4xl ui:text-center ui:text-balance ui:tracking-tight ui:scroll-m-20',
         className,
       )}
       {...props}>

@@ -11,7 +11,7 @@ export function H2({ children, className, ...props }: H2Props) {
   return (
     <h2
       className={cn(
-        'first:mt-0 pb-2 border-b font-semibold text-3xl tracking-tight scroll-m-20',
+        'first:ui:mt-0 ui:pb-2 ui:border-b ui:font-semibold ui:text-3xl ui:tracking-tight ui:scroll-m-20',
         className,
       )}
       {...props}>

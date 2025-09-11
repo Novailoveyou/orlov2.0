@@ -10,7 +10,7 @@ type BlockquoteProps = ComponentProps<'blockquote'>
 export function Blockquote({ children, className, ...props }: BlockquoteProps) {
   return (
     <blockquote
-      className={cn('mt-6 pl-6 border-l-2 italic', className)}
+      className={cn('ui:mt-6 ui:pl-6 ui:border-l-2 ui:italic', className)}
       {...props}>
       {children}
     </blockquote>
