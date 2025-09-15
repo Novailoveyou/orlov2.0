@@ -1,5 +1,6 @@
 @import '@repo/ui/styles.css';
 @import 'tailwindcss';
+@import 'tw-animate-css';
 @import '@repo/tailwind-config';
 
 :root {
