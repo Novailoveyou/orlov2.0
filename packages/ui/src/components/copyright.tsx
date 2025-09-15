@@ -3,6 +3,7 @@ import { Year } from './year'
 import { License } from './license'
 import { Small } from './tags/small'
 import { cn } from '../utils'
+import { Span } from './tags/span'
 
 type CopyrightProps = Pick<ComponentProps<typeof Small>, 'className'> & {
   name: string
@@ -16,7 +17,8 @@ export function Copyright({ name, license, className }: CopyrightProps) {
   return (
     <Small className={cn(className)}>
       <License {...license}>
-        &copy; <Year year={new Date().getFullYear()} /> {name}
+        <Span>&copy;</Span> <Year year={new Date().getFullYear()} />{' '}
+        <Span>{name}</Span>
       </License>
     </Small>
   )
