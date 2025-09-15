@@ -1,7 +1,7 @@
 import { cn } from '../utils'
 import { ComponentProps } from 'react'
 import { cva, VariantProps } from 'class-variance-authority'
-import { Div } from '../tags/div'
+import { Div } from './tags/div'
 
 export const containerVariants = cva('', {
   variants: {

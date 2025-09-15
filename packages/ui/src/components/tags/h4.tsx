@@ -1,4 +1,4 @@
-import { cn } from '../utils'
+import { cn } from '../../utils'
 import { ComponentProps } from 'react'
 
 type H4Props = ComponentProps<'h4'>

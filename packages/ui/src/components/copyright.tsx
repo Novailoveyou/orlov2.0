@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react'
 import { Year } from './year'
 import { License } from './license'
-import { Small } from '../tags/small'
+import { Small } from './tags/small'
 import { cn } from '../utils'
 
 type CopyrightProps = Pick<ComponentProps<typeof Small>, 'className'> & {

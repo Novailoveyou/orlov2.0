@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react'
-import { A } from '../tags/a'
+import { A } from './tags/a'
 
 type ExternalLinkPropsBase = ComponentProps<typeof A>
 

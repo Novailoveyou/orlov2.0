@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react'
-import { Div } from '../tags/div'
+import { Div } from './tags/div'
 import { cn } from '../utils'
 
 type PagePropsBase = ComponentProps<typeof Div>

@@ -1,16 +1,16 @@
 import 'server-only'
 
+import './globals.css'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import './globals.css'
 import { Suspense } from 'react'
-import { YandexMetrika } from '../entities/yandex-metrika'
 import { Copyright } from '@repo/ui/components/copyright'
-import { APP_NAME } from '../shared/constants'
 import { ThemeProvider } from '@repo/ui/providers/theme-provider'
-import { Header } from '@repo/ui/tags/header'
-import { Main } from '@repo/ui/tags/main'
-import { Footer } from '@repo/ui/tags/footer'
+import { Header } from '@repo/ui/components/tags/header'
+import { Main } from '@repo/ui/components/tags/main'
+import { Footer } from '@repo/ui/components/tags/footer'
+import { YandexMetrika } from '@/entities/yandex-metrika'
+import { APP_NAME } from '@/shared/constants'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
