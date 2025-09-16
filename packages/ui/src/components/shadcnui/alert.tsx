@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 
-import { cn } from '@/utils/index'
+import { cn } from '../../utils/index'
 
 const alertVariants = cva(
   'ui:relative ui:items-start ui:gap-y-0.5 ui:has-[>svg]:gap-x-3 ui:grid ui:grid-cols-[0_1fr] ui:has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] ui:px-4 ui:py-3 ui:border ui:rounded-lg ui:w-full ui:[&>svg]:size-4 ui:[&>svg]:text-current ui:text-sm ui:[&>svg]:translate-y-0.5',
