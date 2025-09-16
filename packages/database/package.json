@@ -3,12 +3,14 @@
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./*": "./generated/prisma/*.js"
   },
   "private": true,
   "scripts": {
     "prisma:generate": "pnpm dlx prisma generate",
     "prisma:migrate": "pnpm dlx prisma migrate dev",
+    "prisma:reset": "pnpm dlx prisma migrate reset",
     "prisma:studio": "pnpm dlx prisma studio",
     "prisma:deploy": "pnpm dlx prisma migrate deploy"
   },
