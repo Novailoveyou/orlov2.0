@@ -1,0 +1,8 @@
+# Todo
+
+- Replace ESLint with Biome
+- Add Docker support
+- Add Jest
+- Add Playwright
+- Add Storybook
+- Add Vitest

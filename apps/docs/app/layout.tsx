@@ -9,8 +9,9 @@ import { ThemeProvider } from '@repo/ui/providers/theme-provider'
 import { Header } from '@repo/ui/components/tags/header'
 import { Main } from '@repo/ui/components/tags/main'
 import { Footer } from '@repo/ui/components/tags/footer'
-import { YandexMetrika } from '@/entities/yandex-metrika'
+import { YandexMetrika } from '@/shared/yandex-metrika'
 import { APP_NAME } from '@/shared/constants'
+import { StoreProvider } from '@/shared/store'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -31,20 +32,22 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     <html lang='en' suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange>
-          <Header>header</Header>
-          <Main>{children}</Main>
-          <Footer>
-            <Copyright name={APP_NAME} />
-          </Footer>
-        </ThemeProvider>
-        <Suspense>
-          <YandexMetrika />
-        </Suspense>
+        <StoreProvider>
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='system'
+            enableSystem
+            disableTransitionOnChange>
+            <Header>header</Header>
+            <Main>{children}</Main>
+            <Footer>
+              <Copyright name={APP_NAME} />
+            </Footer>
+          </ThemeProvider>
+          <Suspense>
+            <YandexMetrika />
+          </Suspense>
+        </StoreProvider>
       </body>
     </html>
   )
