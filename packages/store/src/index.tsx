@@ -18,21 +18,14 @@ type StoreApi = ReturnType<typeof createStore>
 type StoreProviderProps = Pick<
   Required<ComponentProps<keyof JSX.IntrinsicElements>>,
   'children'
-> & {
-  slices: Parameters<typeof createStore>[0]
-  options: Parameters<typeof createStore>[1]
-}
+>
 
 const StoreContext = createContext<StoreApi | undefined>(undefined)
 
-export const StoreProvider = ({
-  children,
-  slices,
-  options,
-}: StoreProviderProps) => {
+export const StoreProvider = ({ children }: StoreProviderProps) => {
   const storeRef = useRef<StoreApi | null>(null)
   if (storeRef.current === null) {
-    storeRef.current = createStore(slices, options)
+    storeRef.current = createStore()
   }
 
   return (

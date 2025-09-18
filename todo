@@ -6,3 +6,4 @@
 - Add Playwright
 - Add Storybook
 - Add Vitest
+- Add zustand store to packages

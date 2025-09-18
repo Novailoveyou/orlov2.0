@@ -4,47 +4,28 @@ import {
 } from 'zustand/vanilla'
 import { devtools, persist } from 'zustand/middleware'
 import { immer } from 'zustand/middleware/immer'
+import packageJson from '../package.json'
 import { Store } from './model'
 import { exampleSlice } from './example'
+import { createVersion } from './utils'
 
-export const createStore = <
-  TSlices extends (typeof exampleSlice)[],
-  TOptions extends Parameters<typeof persist<Store>>['1'],
->(
-  slices: TSlices,
-  options: TOptions,
-) => {
+export const createStore = () => {
   return createZustandVanillaStore<Store>()(
     devtools(
       persist(
-        // @ts-expect-error I know what I'm doing
         immer((...props) => ({
-          ...slices.map(slice => slice(...props)),
+          ...exampleSlice(...props),
         })),
-        options,
+        {
+          name: 'web-store',
+          storage: undefined,
+          // storage:
+          //   (typeof window !== 'undefined' &&
+          //     createJSONStorage(() => localStorage)) ||
+          //   undefined,
+          version: createVersion(packageJson.version),
+        },
       ),
     ),
   )
 }
-
-// {
-//     name = 'orlov2.0-storage',
-//     storage = (process.env.NODE_ENV !== 'development' &&
-//       typeof window !== 'undefined' &&
-//       createJSONStorage(() => localStorage)) ||
-//       undefined,
-//     version = Number(packageJson.version),
-//     ...restOptions
-//   }
-
-// (...props) => ({
-//           ...exampleSlice(...props),
-//         })
-
-// partialize: (state) =>
-//   Object.fromEntries(
-//     Object.entries(state).filter(
-//       ([key]) =>
-//         !(['QNAs'] as (keyof Store)[]).includes(key as keyof Store),
-//     ),
-//   ),

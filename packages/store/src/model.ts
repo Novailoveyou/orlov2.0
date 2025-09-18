@@ -1,5 +1,5 @@
-import { StateCreator } from 'zustand/vanilla'
 import { ExampleStore } from './example'
+import { StateCreator } from 'zustand/vanilla'
 
 export type Store = ExampleStore
 
