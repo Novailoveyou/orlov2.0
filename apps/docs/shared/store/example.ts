@@ -9,7 +9,7 @@ export type ExampleStore = {
 
 export const exampleSlice = createSlice<ExampleStore>(set => ({
   example: {
-    name: 'Docs',
+    name: 'Web',
     updateName: name =>
       set(state => {
         state.example.name = name

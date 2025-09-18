@@ -2,24 +2,20 @@
 import 'client-only'
 
 import { useStore } from '@/shared/store'
-import { Button } from '@repo/ui/components/shadcnui/button'
-import { P } from '@repo/ui/components/tags/p'
+import { Input } from '@repo/ui/components/shadcnui/input'
+import { ComponentProps } from 'react'
 
 export function ExampleName() {
   const name = useStore(state => state.example.name)
   const updateName = useStore(state => state.example.updateName)
 
+  const handleInput: ComponentProps<typeof Input>['onChange'] = e => {
+    updateName(e.target.value)
+  }
+
   return (
     <>
-      <P>
-        Example Name: {name}
-        <Button
-          onClick={() =>
-            updateName(name === 'New Name' ? 'Old Name' : 'New Name')
-          }>
-          Update Name
-        </Button>
-      </P>
+      <Input type='text' value={name} name='name' onChange={handleInput} />
     </>
   )
 }

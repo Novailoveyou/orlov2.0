@@ -2,11 +2,12 @@ import {
   createStore as createZustandVanillaStore,
   // StateCreator,
 } from 'zustand/vanilla'
-import { devtools, persist, createJSONStorage } from 'zustand/middleware'
+import { devtools, persist } from 'zustand/middleware'
 import { immer } from 'zustand/middleware/immer'
 import packageJson from '@/package.json'
 import { Store } from './model'
 import { exampleSlice } from './example'
+import { createVersion } from './utils'
 
 export const createStore = () => {
   return createZustandVanillaStore<Store>()(
@@ -17,20 +18,12 @@ export const createStore = () => {
         })),
         {
           name: 'web-store',
-          storage:
-            process.env.NODE_ENV === 'development' ||
-            typeof window === 'undefined'
-              ? undefined
-              : // : createJSONStorage(() => sessionStorage),
-                createJSONStorage(() => sessionStorage),
-          // partialize: (state) =>
-          //   Object.fromEntries(
-          //     Object.entries(state).filter(
-          //       ([key]) =>
-          //         !(['QNAs'] as (keyof Store)[]).includes(key as keyof Store),
-          //     ),
-          //   ),
-          version: Number(packageJson.version),
+          storage: undefined,
+          // storage:
+          //   (typeof window !== 'undefined' &&
+          //     createJSONStorage(() => localStorage)) ||
+          //   undefined,
+          version: createVersion(packageJson.version),
         },
       ),
     ),

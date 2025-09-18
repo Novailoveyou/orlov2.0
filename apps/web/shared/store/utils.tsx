@@ -68,3 +68,10 @@ export const createEffect = (
   function CreatedEffect() {
     return <Effect selector={selector} action={action} cleanup={cleanup} />
   }
+
+export const createVersion = (
+  version: (string & {}) | `${number}.${number}.${number}`,
+) =>
+  version
+    .split('.')
+    .reduce((acc, cur, idx) => acc + Number(cur) * Math.pow(100, 2 - idx), 0)
