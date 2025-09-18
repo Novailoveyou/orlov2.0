@@ -24,7 +24,7 @@ export const LICENSES = {
 
 type LicenseProps = Pick<
   ComponentProps<typeof ExternalLink>,
-  'children' | 'className'
+  'children' | 'className' | 'onClick'
 > & {
   license?:
     | (License['href'] & {})
@@ -40,9 +40,14 @@ export function License({
   className,
   children,
   license = 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
+  onClick,
 }: LicenseProps) {
   return (
-    <ExternalLink rel='license' href={license} className={cn(className)}>
+    <ExternalLink
+      rel='license'
+      href={license}
+      className={cn(className)}
+      onClick={onClick}>
       {children}
     </ExternalLink>
   )

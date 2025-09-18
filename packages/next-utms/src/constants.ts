@@ -1,0 +1,5 @@
+export const utm_source = 'utm_source'
+export const utm_medium = 'utm_medium'
+export const utm_campaign = 'utm_campaign'
+export const utm_content = 'utm_content'
+export const utm_term = 'utm_term'

@@ -1,7 +1,7 @@
-import { ExampleStore } from './example'
+import { LeadStore } from '@/entities/lead/model'
 import { StateCreator } from 'zustand/vanilla'
 
-export type Store = ExampleStore
+export type Store = LeadStore
 
 type ZustandMiddleware = [['zustand/devtools', never], ['zustand/immer', never]]
 

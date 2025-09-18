@@ -77,13 +77,6 @@ const YandexMetrika = ({
     onError?.(...props)
   }
 
-  if (process.env.NODE_ENV === 'development') {
-    console.warn(
-      'Yandex Metrika is not initialized in development mode. Use `triggerEvent` to manually trigger events.',
-    )
-    return null
-  }
-
   return (
     <>
       <Script

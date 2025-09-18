@@ -10,9 +10,10 @@ import { Main } from '@repo/ui/components/tags/main'
 import { Footer } from '@repo/ui/components/tags/footer'
 import { ModeToggle } from '@repo/ui/components/mode-toggle'
 import { ThemeProvider } from '@repo/ui/providers/theme-provider'
+import { UTMs } from '@repo/next-utms'
 import { YandexMetrika } from '@/shared/yandex-metrika'
 import { APP_NAME } from '@/shared/constants'
-import { StoreProvider } from '@/shared/store'
+import { StoreProvider } from '@/app/_store'
 import { Container } from '@/shared/components/container'
 
 const geistSans = localFont({
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
             </div>
           </ThemeProvider>
           <Suspense>
+            <UTMs />
             <YandexMetrika />
           </Suspense>
         </StoreProvider>

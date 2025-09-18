@@ -7,7 +7,7 @@ import { Span } from './tags/span'
 
 type CopyrightProps = Pick<ComponentProps<typeof Small>, 'className'> & {
   name: string
-  license?: ComponentProps<typeof License>
+  license?: Omit<ComponentProps<typeof License>, 'children'>
 }
 
 /**

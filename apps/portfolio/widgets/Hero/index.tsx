@@ -2,7 +2,6 @@ import 'server-only'
 
 import { prisma } from '@repo/database'
 import { CTAButton } from './cta-button'
-import { ExampleName } from './example-name'
 import { Section } from '@repo/ui/components/tags/section'
 import { P } from '@repo/ui/components/tags/p'
 import { MyName } from '@/shared/components/my-name'
@@ -19,7 +18,6 @@ export async function Hero() {
         <Underline>TypeScript</Underline>
       </P>
       <CTAButton app={app} />
-      <ExampleName />
     </Section>
   )
 }
