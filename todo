@@ -1,9 +1,10 @@
 # Todo
 
-- Replace ESLint with Biome
+- Add locale support
 - Add Docker support
 - Add Jest
 - Add Playwright
 - Add Storybook
 - Add Vitest
-- Add zustand store to packages
+- Replace ESLint with Biome
+- Add zustand store to packages (hard)
