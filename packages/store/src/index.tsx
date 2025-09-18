@@ -103,3 +103,9 @@ export const Effect = <Selected extends ReturnType<typeof useStore>>({
 
   return null
 }
+
+export const createStoreProvider = (() => {
+  return {
+    StoreProvider,
+  }
+})()

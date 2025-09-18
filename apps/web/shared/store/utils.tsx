@@ -1,10 +1,6 @@
 import { Slice, Store } from './model'
-import { ComponentProps } from 'react'
-import { StateStorage } from 'zustand/middleware'
-import { Effect } from '.'
 
 /**
- *
  * @description Used to create a slice for the store. Currently only used to type `slice` argument
  *
  * @example
@@ -26,52 +22,3 @@ import { Effect } from '.'
 export const createSlice = <_Slice extends Partial<Store>>(
   slice: Slice<_Slice>,
 ) => slice
-
-/**
- * @todo finish this
- */
-export const createURLStorage = () => {
-  const getItem: StateStorage['getItem'] = key => {
-    const urlSearchParams = new URLSearchParams(window.location.search)
-
-    return urlSearchParams.get(key) || null
-  }
-
-  const setItem: StateStorage['setItem'] = (key, value) => {
-    const url = new URL(window.location.href)
-
-    url.searchParams.set(key, value)
-
-    return window.history.pushState(null, '', url)
-  }
-
-  const removeItem: StateStorage['removeItem'] = key => {
-    const url = new URL(window.location.href)
-
-    url.searchParams.delete(key)
-
-    return window.history.pushState(null, '', url)
-  }
-
-  return {
-    getItem,
-    setItem,
-    removeItem,
-  }
-}
-
-export const createEffect = (
-  selector: ComponentProps<typeof Effect>['selector'],
-  action: ComponentProps<typeof Effect>['action'],
-  cleanup?: ComponentProps<typeof Effect>['cleanup'],
-) =>
-  function CreatedEffect() {
-    return <Effect selector={selector} action={action} cleanup={cleanup} />
-  }
-
-export const createVersion = (
-  version: (string & {}) | `${number}.${number}.${number}`,
-) =>
-  version
-    .split('.')
-    .reduce((acc, cur, idx) => acc + Number(cur) * Math.pow(100, 2 - idx), 0)
