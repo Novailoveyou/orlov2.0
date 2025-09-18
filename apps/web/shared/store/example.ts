@@ -1,3 +1,4 @@
+import { APP_NAME } from '@/shared/constants'
 import { createSlice } from './utils'
 
 export type ExampleStore = {
@@ -9,7 +10,7 @@ export type ExampleStore = {
 
 export const exampleSlice = createSlice<ExampleStore>(set => ({
   example: {
-    name: 'Web',
+    name: APP_NAME,
     updateName: name =>
       set(state => {
         state.example.name = name

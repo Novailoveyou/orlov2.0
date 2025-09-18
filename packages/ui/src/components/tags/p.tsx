@@ -5,8 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 export const paragraphVariants = cva('', {
   variants: {
     variant: {
-      default:
-        'ui:bg-primary ui:text-primary-foreground ui:shadow-xs hover:ui:bg-primary/90',
+      default: 'ui:text-foreground',
       lead: 'ui:text-muted-foreground ui:text-xl',
       large: 'ui:text-lg ui:font-semibold',
       muted: 'ui:text-muted-foreground ui:text-sm',

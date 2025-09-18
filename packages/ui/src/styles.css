@@ -116,9 +116,17 @@
 }
 
 @layer base {
-  * {
-    @apply ui:border-border ui:outline-ring/50;
+  *,
+  *::after,
+  *::before {
+    @apply ui:box-border ui:border-border ui:outline-ring/50;
   }
+  html,
+  body {
+    max-width: 100vw;
+    max-width: 100dvw;
+  }
+
   body {
     @apply ui:bg-background ui:text-foreground;
   }
