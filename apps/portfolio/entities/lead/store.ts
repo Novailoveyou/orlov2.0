@@ -3,6 +3,11 @@ import { LeadStore } from './model'
 
 export const leadSlice = createSlice<LeadStore>(set => ({
   lead: {
+    id: '',
+    setUserId: id =>
+      set(state => {
+        state.lead.id = id
+      }),
     username: '',
     setUsername: username =>
       set(state => {

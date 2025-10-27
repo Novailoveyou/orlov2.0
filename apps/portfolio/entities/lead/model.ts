@@ -1,5 +1,7 @@
 export type LeadStore = {
   lead: {
+    id: string
+    setUserId: (name: LeadStore['lead']['id']) => void
     username: string
     setUsername: (name: LeadStore['lead']['username']) => void
     phoneNumber: string
@@ -15,5 +17,5 @@ export type LeadStore = {
 
 export type Lead = Pick<
   LeadStore['lead'],
-  'username' | 'phoneNumber' | 'telegram' | 'email' | 'description'
+  'id' | 'username' | 'phoneNumber' | 'telegram' | 'email' | 'description'
 >

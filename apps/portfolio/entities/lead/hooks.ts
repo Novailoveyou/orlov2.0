@@ -3,35 +3,37 @@ import 'client-only'
 
 import useSWRMutation from 'swr/mutation'
 
-import { leadFetcher } from './actions'
 import { ym } from '@/shared/yandex-metrika'
-import { LEAD_KEY } from './constants'
+import { serverFetcher } from '@/shared/actions'
+import { Lead } from './model'
+
+const onSuccess = (lead: Lead) => {
+  ym.setUserId(lead.id)
+  ym.firstPartyParams({
+    email: lead.email,
+    first_name: lead.username,
+    last_name: '',
+    phone_number: lead.phoneNumber,
+    yandex_cid: lead.id,
+  })
+  ym.reachGoal('lead')
+}
 
 export const useLead = () => {
   const {
     data: lead = null,
     error: leadError,
-    isMutating: leadIsMutating,
+    isMutating: isLeadMutating,
     reset: resetLead,
     trigger: triggerLead,
-  } = useSWRMutation(LEAD_KEY, leadFetcher, {
-    onSuccess: lead => {
-      ym.setUserId(lead.data.userId)
-      ym.firstPartyParams({
-        email: lead.data.email,
-        first_name: lead.data.username,
-        last_name: '',
-        phone_number: lead.data.phoneNumber,
-        yandex_cid: lead.data.userId,
-      })
-      ym.reachGoal('lead')
-    },
+  } = useSWRMutation('/lead', serverFetcher.mutation.post<Lead, Lead>, {
+    onSuccess,
   })
 
   return {
     lead,
     leadError,
-    leadIsMutating,
+    isLeadMutating,
     resetLead,
     triggerLead,
   }
