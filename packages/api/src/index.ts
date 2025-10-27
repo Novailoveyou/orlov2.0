@@ -156,5 +156,5 @@ export const createFetcher = (
     mutation,
   } as const
 
-  return { fetcher, handleAPIError }
+  return { fetcher, handleAPIError } as const
 }
