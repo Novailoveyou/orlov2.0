@@ -23,7 +23,7 @@ export const createUseFetchers = (
     )
 
     // return Object.assign({ [entity]: data })
-    return { [entity]: data }
+    return {[entity]: data, []}
   }
 
   return { useGet }
