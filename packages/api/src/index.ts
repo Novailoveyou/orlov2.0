@@ -105,8 +105,18 @@ export const createFetcher = (
     ...props: Parameters<typeof api.options<Data>>
   ) => (await api.options<Data>(...props).catch(handleAPIError)).data
 
+  const fetcher = {
+    get,
+    post,
+    patch,
+    put,
+    delete: httpDelete,
+    head,
+    options,
+  } as const
+
   const mutationGet = async <Response, Key extends string = string>(key: Key) =>
-    await post<Response>(key)
+    await get<Response>(key)
 
   const mutationPost = async <Response, Body, Key extends string = string>(
     key: Key,
@@ -145,16 +155,5 @@ export const createFetcher = (
     options: mutationOptions,
   } as const
 
-  const fetcher = {
-    get,
-    post,
-    patch,
-    put,
-    delete: httpDelete,
-    head,
-    options,
-    mutation,
-  } as const
-
-  return { fetcher, handleAPIError } as const
+  return { fetcher, mutation, handleAPIError } as const
 }

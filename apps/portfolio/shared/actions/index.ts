@@ -1,5 +1,5 @@
-'use server'
 import 'server-only'
-import { serverFetcher } from './base'
+import { createFetcher } from '@repo/api'
 
-export const { post } = serverFetcher.mutation
+export const { fetcher: serverFetcher, mutation: serverMutation } =
+  createFetcher()

@@ -5,7 +5,7 @@ import useSWRMutation from 'swr/mutation'
 
 import { ym } from '@/shared/yandex-metrika'
 import { Lead } from './model'
-import { post } from '@/shared/actions'
+import { serverMutation } from '@/shared/actions'
 
 const onSuccess = (lead: Lead) => {
   ym.setUserId(lead.id)
@@ -26,7 +26,7 @@ export const useLead = () => {
     isMutating: isLeadMutating,
     reset: resetLead,
     trigger: triggerLead,
-  } = useSWRMutation('/lead', post<Lead, Lead>, {
+  } = useSWRMutation('/lead', serverMutation.post<Lead, Lead>, {
     onSuccess,
   })
 
