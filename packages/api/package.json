@@ -6,8 +6,8 @@
   ],
   "private": true,
   "exports": {
-    "./*": "./dist/*.js",
-    ".": "./dist/index.js"
+    "./client": "./dist/client.js",
+    "./server": "./dist/server.js"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",

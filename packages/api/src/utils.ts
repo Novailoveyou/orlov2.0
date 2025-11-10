@@ -1,4 +1,4 @@
-export const getEntity = (key: string) => {
+export const getEntity = <Key extends string>(key: Key) => {
   const chunks = key.split('/').map(toCapitalCase)
 
   return chunks.join('')

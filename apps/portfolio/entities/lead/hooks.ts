@@ -6,6 +6,7 @@ import useSWRMutation from 'swr/mutation'
 import { ym } from '@/shared/yandex-metrika'
 import { Lead } from './model'
 import { serverMutation } from '@/shared/actions'
+import { useGet } from '@/shared/hooks'
 
 const onSuccess = (lead: Lead) => {
   ym.setUserId(lead.id)
@@ -20,6 +21,12 @@ const onSuccess = (lead: Lead) => {
 }
 
 export const useLead = () => {
+  const { testLead } = useGet<string, 'testLead'>('/lead', {
+    entity: 'testLead',
+  })
+
+  console.log('testLead: ', testLead)
+
   const {
     data: lead = null,
     error: leadError,
