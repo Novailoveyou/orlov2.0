@@ -1,8 +1,3 @@
-export const getEntity = <Key extends string>(key: Key) => {
-  const chunks = key.split('/').map(toCapitalCase)
-
-  return chunks.join('')
-}
-
-export const toCapitalCase = (str: string) =>
+export const toCapitalCase = <Str extends string>(str: Str): Capitalize<Str> =>
+  /** @ts-expect-error @TODO fox this */
   str.charAt(0).toUpperCase() + str.slice(1)

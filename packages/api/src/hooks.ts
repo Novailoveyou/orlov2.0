@@ -1,59 +1,53 @@
 import useSWR from 'swr'
-import { createFetcher } from '.'
 import { toCapitalCase } from './utils'
 import { createClientFetcher } from './client'
-import type { createServerFetcher } from '@repo/api/server'
-
-type UseSWRParameters<Data> = Parameters<typeof useSWR<Data>>
-
-type ToCapitalCase<S extends string> = S extends `${infer First}${infer Rest}`
-  ? `${Uppercase<First>}${Rest}`
-  : S
 
 type UseFetcherReturnType<Data, Entity extends string> = Record<
   Entity,
   Data | undefined
 > &
-  Record<`is${ToCapitalCase<Entity>}Loading`, boolean> &
-  Record<`is${ToCapitalCase<Entity>}Validating`, boolean> &
+  Record<`is${Capitalize<Entity>}Loading`, boolean> &
+  Record<`is${Capitalize<Entity>}Validating`, boolean> &
   Record<`${Entity}Error`, unknown> &
   Record<`${Entity}Mutate`, unknown>
 
-type CreateUseFetchersProps = ReturnType<
-  typeof createClientFetcher | typeof createServerFetcher
->
-
-export const createUseFetchers = (
-  props: CreateUseFetchersProps = createClientFetcher(),
-) => {
-  const fetcher =
-    'clientFetcher' in props ? props.clientFetcher : props.serverFetcher
-
-  const useGet = <Data, Entity extends string>(
-    key: UseSWRParameters<Data>[0],
-    { entity, ...options }: UseSWRParameters<Data>[2] & { entity: Entity },
-  ): UseFetcherReturnType<Data, Entity> => {
-    const { data, isLoading, isValidating, error, mutate } = useSWR(
-      key,
-      fetcher.get<Data>,
-      options,
-    )
-
-    /** @ts-expect-error @TODO fox this */
-    return {
-      [entity]: data,
-      [`is${toCapitalCase(entity)}Loading`]: isLoading,
-      [`is${toCapitalCase(entity)}Validating`]: isValidating,
-      [`${entity}Error`]: error,
-      [`${entity}Mutate`]: mutate,
-    } as const
-  }
-
-  return { useGet }
+const renameSWRData = <Data, Entity extends string>(
+  swrData: ReturnType<typeof useSWR<Data>>,
+  entity: Entity,
+): UseFetcherReturnType<Data, Entity> => {
+  /** @ts-expect-error @TODO fox this */
+  return {
+    [entity]: swrData.data,
+    [`is${toCapitalCase(entity)}Loading`]: swrData.isLoading,
+    [`is${toCapitalCase(entity)}Validating`]: swrData.isValidating,
+    [`${entity}Error`]: swrData.error,
+    [`${entity}Mutate`]: swrData.mutate,
+  } as const
 }
 
-const { useGet } = createUseFetchers()
+export const useFetcher = <Data, Entity extends string>(
+  key: Parameters<typeof useSWR<Data>>[0],
+  fetcher: Parameters<typeof useSWR<Data>>[1],
+  {
+    entity,
+    ...options
+  }: Parameters<typeof useSWR<Data>>[2] & { entity: Entity },
+) => {
+  const data = useSWR(key, fetcher, options)
+
+  return renameSWRData(data, entity)
+}
 
 const Test = () => {
-  const {} = useGet<string, 'test1'>('/test', { entity: 'test1' })
+  const { products } = useFetcher(
+    '/test',
+    createClientFetcher().clientFetcher.get<number[]>,
+    { entity: 'products', fallbackData: [] },
+  )
+
+  const { data } = useSWR(
+    '/test',
+    createClientFetcher().clientFetcher.get<number[]>,
+    { fallbackData: [] },
+  )
 }
