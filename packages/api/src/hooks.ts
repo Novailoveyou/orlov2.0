@@ -25,13 +25,16 @@ const renameSWRData = <Data, Entity extends string>(
   } as const
 }
 
+// TODO: type properly with fallbackData etc
 export const useFetcher = <Data, Entity extends string>(
   key: Parameters<typeof useSWR<Data>>[0],
   fetcher: Parameters<typeof useSWR<Data>>[1],
   {
     entity,
     ...options
-  }: Parameters<typeof useSWR<Data>>[2] & { entity: Entity },
+  }: Parameters<typeof useSWR<Data>>[2] & {
+    entity: Entity
+  },
 ) => {
   const data = useSWR(key, fetcher, options)
 
