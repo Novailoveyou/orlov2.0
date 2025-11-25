@@ -1,38 +1,51 @@
-import useSWR from 'swr'
+import useSWR, { Fetcher, SWRConfiguration, SWRResponse, Key } from 'swr'
 import { toCapitalCase } from './utils'
 import { createClientFetcher } from './client'
 
-type UseFetcherReturnType<Data, Entity extends string> = Record<
-  Entity,
-  Data | undefined
-> &
-  Record<`is${Capitalize<Entity>}Loading`, boolean> &
-  Record<`is${Capitalize<Entity>}Validating`, boolean> &
-  Record<`${Entity}Error`, unknown> &
-  Record<`${Entity}Mutate`, unknown>
+type SWRParams<Data, Error> = Parameters<typeof useSWR<Data, Error>>
 
-const renameSWRData = <Data, Entity extends string>(
-  swrData: ReturnType<typeof useSWR<Data>>,
+type HelpingVerb<Data> = Data extends unknown[] ? 'are' : 'is'
+
+const makeHelpingVerb = <Data>(data: Data) =>
+  Array.isArray(data) ? 'are' : 'is'
+
+const renameSWRData = <Data, Error, Entity extends string>(
+  {
+    data,
+    error,
+    isLoading,
+    isValidating,
+    mutate,
+  }: ReturnType<typeof useSWR<Data, Error>>,
   entity: Entity,
-): UseFetcherReturnType<Data, Entity> => {
-  /** @ts-expect-error @TODO fox this */
-  return {
-    [entity]: swrData.data,
-    [`is${toCapitalCase(entity)}Loading`]: swrData.isLoading,
-    [`is${toCapitalCase(entity)}Validating`]: swrData.isValidating,
-    [`${entity}Error`]: swrData.error,
-    [`${entity}Mutate`]: swrData.mutate,
-  } as const
-}
+) =>
+  ({
+    [entity]: data,
+    [`${makeHelpingVerb(data)}${toCapitalCase(entity)}Loading`]: isLoading,
+    [`${makeHelpingVerb(data)}${toCapitalCase(entity)}Validating`]:
+      isValidating,
+    [`${entity}Error`]: error,
+    [`${entity}Mutate`]: mutate,
+  }) as const as Record<Entity, typeof data> &
+    Record<
+      `${HelpingVerb<typeof data>}${Capitalize<Entity>}Loading`,
+      typeof isLoading
+    > &
+    Record<
+      `${HelpingVerb<typeof data>}${Capitalize<Entity>}Validating`,
+      typeof isValidating
+    > &
+    Record<`${Entity}Error`, typeof error> &
+    Record<`${Entity}Mutate`, typeof mutate>
 
 // TODO: type properly with fallbackData etc
-export const useFetcher = <Data, Entity extends string>(
-  key: Parameters<typeof useSWR<Data>>[0],
-  fetcher: Parameters<typeof useSWR<Data>>[1],
+export const useFetcher = <Data, Error, Entity extends string>(
+  key: SWRParams<Data, Error>[0],
+  fetcher: Fetcher<Data, typeof key>,
   {
     entity,
     ...options
-  }: Parameters<typeof useSWR<Data>>[2] & {
+  }: SWRParams<Data, Error>[2] & {
     entity: Entity
   },
 ) => {
