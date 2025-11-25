@@ -1,4 +1,4 @@
-import useSWR, { Fetcher, SWRConfiguration, SWRResponse, Key } from 'swr'
+import useSWR from 'swr'
 import { toCapitalCase } from './utils'
 import { createClientFetcher } from './client'
 
@@ -41,7 +41,7 @@ const renameSWRData = <Data, Error, Entity extends string>(
 // TODO: type properly with fallbackData etc
 export const useFetcher = <Data, Error, Entity extends string>(
   key: SWRParams<Data, Error>[0],
-  fetcher: Fetcher<Data, typeof key>,
+  fetcher: SWRParams<Data, Error>[1],
   {
     entity,
     ...options
