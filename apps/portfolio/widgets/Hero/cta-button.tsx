@@ -8,7 +8,6 @@ import { useLead } from '@/entities/lead/hooks'
 export function CTAButton({ app }: { app: App | null }) {
   const { lead, triggerLead } = useLead()
 
-  console.log('lead: ', lead)
   return (
     <Button
       onClick={() =>

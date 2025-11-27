@@ -74,5 +74,14 @@ export const useStore = (() => {
     return storeRef.subscribe(listener)
   }
 
+  // useStoreHook.use = {} as {
+  //   [K in keyof Store]: () => Store[K]
+  // }
+
+  // for (const k of objectKeys(useStoreHook.getState())) {
+  //   ;(useStoreHook.use as any)[k] = () =>
+  //     useStoreHook(s => s[k as keyof typeof s])
+  // }
+
   return useStoreHook
 })()
