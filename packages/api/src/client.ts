@@ -14,4 +14,5 @@ export const createClientFetcher = (
   return { clientFetcher, clientMutation, handleClientAPIError } as const
 }
 
-export * from './hooks'
+export * from './hooks/useFetcher'
+export * from './hooks/useMutation'
