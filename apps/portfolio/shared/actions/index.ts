@@ -5,4 +5,4 @@ const { serverFetcher, serverMutation } = createServerFetcher()
 
 export const { get, post } = serverFetcher
 
-export const { mutationPost } = serverMutation
+export const { mutationGet, mutationPost } = serverMutation
