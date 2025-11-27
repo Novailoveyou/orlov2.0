@@ -1,8 +1,6 @@
-import useSWR from 'swr'
+import useSWR, { Fetcher, SWRConfiguration } from 'swr'
 import { toCapitalCase } from './utils'
 import { createClientFetcher } from './client'
-
-type SWRParams<Data, Error> = Parameters<typeof useSWR<Data, Error>>
 
 type HelpingVerb<Data> = Data extends unknown[] ? 'are' : 'is'
 
@@ -39,13 +37,18 @@ const renameSWRData = <Data, Error, Entity extends string>(
     Record<`${Entity}Mutate`, typeof mutate>
 
 // TODO: type properly with fallbackData etc
-export const useFetcher = <Data, Error, Entity extends string>(
-  key: SWRParams<Data, Error>[0],
-  fetcher: SWRParams<Data, Error>[1],
+export const useFetcher = <
+  Data,
+  Error,
+  Entity extends string,
+  Key extends string | null,
+>(
+  key: Key,
+  fetcher: Fetcher<Data, Key>,
   {
     entity,
     ...options
-  }: SWRParams<Data, Error>[2] & {
+  }: SWRConfiguration<Data, Error> & {
     entity: Entity
   },
 ) => {
