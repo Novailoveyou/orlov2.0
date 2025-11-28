@@ -1,6 +1,6 @@
 import 'server-only'
 
-import { createFetcher } from './index'
+import { createFetcher } from './base'
 
 export const createServerFetcher = (
   ...params: Parameters<typeof createFetcher>

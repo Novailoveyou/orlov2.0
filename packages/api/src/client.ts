@@ -1,6 +1,6 @@
 'use client'
 import 'client-only'
-import { createFetcher } from './index'
+import { createFetcher } from './base'
 
 export const createClientFetcher = (
   ...params: Parameters<typeof createFetcher>

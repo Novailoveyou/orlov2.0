@@ -1,3 +1,4 @@
+'use server'
 import 'server-only'
 import { createServerFetcher } from '@repo/api/server'
 
