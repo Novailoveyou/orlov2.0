@@ -4,7 +4,7 @@ import 'client-only'
 import { ym } from '@/shared/yandex-metrika'
 import { Lead } from './model'
 import { mutationPost } from '@/shared/actions'
-import { useMutation } from '@repo/api/client'
+import { useMutation } from '@/shared/api'
 
 const onSuccess = (lead: Lead) => {
   ym.setUserId(lead.id)

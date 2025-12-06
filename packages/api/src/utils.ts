@@ -5,6 +5,9 @@ import useSWRMutation from 'swr/mutation'
 export const toCapitalCase = <Str extends string>(str: Str) =>
   capitalCase(str) as Capitalize<Str>
 
+export const makeHelpingVerb = <Data>(data: Data) =>
+  Array.isArray(data) ? 'are' : 'is'
+
 export const renameSWRData = <Data, Entity extends string>(
   {
     data,

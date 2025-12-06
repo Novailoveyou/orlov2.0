@@ -1,6 +1,8 @@
 'use client'
 import 'client-only'
 import { createFetcher } from './base'
+import { useFetcher } from './hooks/useFetcher'
+import { useMutation } from './hooks/useMutation'
 
 export const createClientFetcher = (
   ...params: Parameters<typeof createFetcher>
@@ -11,8 +13,11 @@ export const createClientFetcher = (
     handleAPIError: handleClientAPIError,
   } = createFetcher(...params)
 
-  return { clientFetcher, clientMutation, handleClientAPIError } as const
+  return {
+    clientFetcher,
+    clientMutation,
+    handleClientAPIError,
+    useFetcher,
+    useMutation,
+  } as const
 }
-
-export * from './hooks/useFetcher'
-export * from './hooks/useMutation'

@@ -3,4 +3,5 @@ import 'client-only'
 
 import { createClientFetcher } from '@repo/api/client'
 
-export const { clientFetcher, clientMutation } = createClientFetcher()
+export const { clientFetcher, clientMutation, useFetcher, useMutation } =
+  createClientFetcher()
