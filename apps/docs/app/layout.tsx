@@ -12,6 +12,8 @@ import { Footer } from '@repo/ui/components/tags/footer'
 import { YandexMetrika } from '@/shared/yandex-metrika'
 import { APP_NAME } from '@/shared/constants'
 import { StoreProvider } from '@/app/store'
+import { exampleSlice } from '@/entities/example/store'
+import { example2Slice } from '@/entities/example2/store'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -32,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     <html lang='en' suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <StoreProvider>
+        <StoreProvider slices={[exampleSlice, example2Slice]}>
           <ThemeProvider
             attribute='class'
             defaultTheme='system'
