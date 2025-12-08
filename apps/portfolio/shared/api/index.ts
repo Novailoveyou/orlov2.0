@@ -1,5 +1,7 @@
 'use client'
 import 'client-only'
-import { createFetcher } from '@repo/api'
 
-export const { fetcher: clientFetcher } = createFetcher()
+import { createClientFetcher } from '@repo/api/client'
+
+export const { clientFetcher, clientMutation, useFetcher, useMutation } =
+  createClientFetcher()

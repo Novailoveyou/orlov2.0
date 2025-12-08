@@ -1,11 +1,10 @@
 'use client'
 import 'client-only'
 
-import useSWRMutation from 'swr/mutation'
-
 import { ym } from '@/shared/yandex-metrika'
 import { Lead } from './model'
-import { serverMutation } from '@/shared/actions'
+import { mutationPost } from '@/shared/actions'
+import { useMutation } from '@/shared/api'
 
 const onSuccess = (lead: Lead) => {
   ym.setUserId(lead.id)
@@ -19,22 +18,8 @@ const onSuccess = (lead: Lead) => {
   ym.reachGoal('lead')
 }
 
-export const useLead = () => {
-  const {
-    data: lead = null,
-    error: leadError,
-    isMutating: isLeadMutating,
-    reset: resetLead,
-    trigger: triggerLead,
-  } = useSWRMutation('/lead', serverMutation.post<Lead, Lead>, {
+export const useLead = () =>
+  useMutation('/lead', mutationPost<Lead, Lead>, {
+    entity: 'lead',
     onSuccess,
   })
-
-  return {
-    lead,
-    leadError,
-    isLeadMutating,
-    resetLead,
-    triggerLead,
-  }
-}

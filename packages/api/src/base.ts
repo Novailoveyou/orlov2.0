@@ -146,13 +146,13 @@ export const createFetcher = (
   ) => await options<Response>(key)
 
   const mutation = {
-    get: mutationGet,
-    post: mutationPost,
-    patch: mutationPatch,
-    put: mutationPut,
-    delete: mutationDelete,
-    head: mutationHead,
-    options: mutationOptions,
+    mutationGet,
+    mutationPost,
+    mutationPatch,
+    mutationPut,
+    mutationDelete,
+    mutationHead,
+    mutationOptions,
   } as const
 
   return { fetcher, mutation, handleAPIError } as const

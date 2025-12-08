@@ -11,7 +11,7 @@ import { Main } from '@repo/ui/components/tags/main'
 import { Footer } from '@repo/ui/components/tags/footer'
 import { YandexMetrika } from '@/shared/yandex-metrika'
 import { APP_NAME } from '@/shared/constants'
-import { StoreProvider } from '@/shared/store'
+import { StoreProvider } from '@/app/store'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
