@@ -13,8 +13,9 @@ import { ThemeProvider } from '@repo/ui/providers/theme-provider'
 import { UTMs } from '@repo/next-utms'
 import { YandexMetrika } from '@/shared/yandex-metrika'
 import { APP_NAME } from '@/shared/constants'
-import { StoreProvider } from '@/app/_store'
 import { Container } from '@/shared/components/container'
+import { StoreProvider } from './store'
+import { leadSlice } from '@/entities/lead/store'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -35,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     <html lang='en' suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <StoreProvider>
+        <StoreProvider slices={[leadSlice]}>
           <ThemeProvider
             attribute='class'
             defaultTheme='system'
