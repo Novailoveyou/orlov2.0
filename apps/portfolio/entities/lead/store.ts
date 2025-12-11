@@ -1,4 +1,4 @@
-import { createSlice } from '@/app/_store/utils'
+import { createSlice } from '@/app/store'
 import { LeadStore } from './model'
 
 export const leadSlice = createSlice<LeadStore>(set => ({

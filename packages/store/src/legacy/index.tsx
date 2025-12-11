@@ -1,7 +1,14 @@
 'use client'
 import 'client-only'
 
-import { createContext, useRef, useContext, ComponentProps, JSX } from 'react'
+import {
+  createContext,
+  useRef,
+  useContext,
+  ComponentProps,
+  JSX,
+  useEffect,
+} from 'react'
 import { useStore as useZustandStore } from 'zustand'
 import { createStore } from './store'
 import { Store } from './model'
@@ -84,4 +91,30 @@ export const useStore = (() => {
   // }
 
   return useStoreHook
+})()
+
+export const Effect = <Selected extends ReturnType<typeof useStore>>({
+  selector,
+  action,
+  cleanup,
+}: {
+  selector: (store: Store) => Selected
+  action: (value: Selected) => void
+  cleanup?: () => void
+}) => {
+  const value = useStore(selector)
+
+  useEffect(() => {
+    action(value)
+
+    return cleanup?.()
+  }, [value, action, cleanup])
+
+  return null
+}
+
+export const createStoreProvider = (() => {
+  return {
+    StoreProvider,
+  }
 })()
