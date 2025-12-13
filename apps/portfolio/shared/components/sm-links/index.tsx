@@ -1,6 +1,7 @@
-import { List } from '@/shared/components/typography/list'
+import { Ul } from '@/shared/components/ul'
+
 import { SM_LINKS } from './constants'
 
 export function SMLinks() {
-  return <List items={SM_LINKS} />
+  return <Ul items={SM_LINKS} />
 }

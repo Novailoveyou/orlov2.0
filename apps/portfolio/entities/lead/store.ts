@@ -1,3 +1,6 @@
+'use client'
+import 'client-only'
+
 import { createSlice } from '@/app/store'
 import { LeadStore } from './model'
 

@@ -2,28 +2,71 @@ import 'server-only'
 
 import './globals.css'
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
+// import localFont from 'next/font/local'
+import { Poppins, Lato } from 'next/font/google'
 import { Suspense } from 'react'
-import { Copyright } from '@repo/ui/components/copyright'
-import { Header } from '@repo/ui/components/tags/header'
-import { Main } from '@repo/ui/components/tags/main'
-import { Footer } from '@repo/ui/components/tags/footer'
-import { ModeToggle } from '@repo/ui/components/mode-toggle'
-import { ThemeProvider } from '@repo/ui/providers/theme-provider'
-import { UTMs } from '@repo/next-utms'
 import { YandexMetrika } from '@/shared/yandex-metrika'
-import { APP_NAME } from '@/shared/constants'
 import { Container } from '@/shared/components/container'
 import { StoreProvider } from './store'
 import { leadSlice } from '@/entities/lead/store'
+import { Footer } from '@/widgets/Footer'
+import { NavMenu } from '@/shared/components/nav-menu'
+import { cn } from '@/shared/utils'
+import { Header } from '@/shared/components/header'
+import { Main } from '@/shared/components/main'
+import { ThemeProvider } from '@/shared/components/theme-provider'
+import { ModeToggle } from '@/shared/components/mode-toggle'
+import { UTMs } from '@/shared/components/utms'
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
+// const geistSans = localFont({
+//   src: './fonts/GeistVF.woff',
+//   variable: '--font-geist-sans',
+// })
+// const geistMono = localFont({
+//   src: './fonts/GeistMonoVF.woff',
+//   variable: '--font-geist-mono',
+// })
+
+const poppinsFont = Poppins({
+  subsets: ['latin-ext'],
+  weight: ['400', '500', '700'],
+  variable: '--font-poppins',
+  style: 'normal',
+  display: 'swap',
+  preload: true,
+  fallback: [
+    'system-ui',
+    'ui-sans-serif',
+    '-apple-system',
+    'BlinkMacMacSystemFont',
+    'Segoe UI',
+    'arial',
+    'Roboto',
+    'Ubuntu',
+    'sans-serif',
+  ],
+  adjustFontFallback: true,
 })
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
+
+const latoFont = Lato({
+  subsets: ['latin-ext'],
+  weight: ['400'],
+  variable: '--font-lato',
+  style: 'normal',
+  display: 'swap',
+  preload: true,
+  fallback: [
+    'system-ui',
+    'ui-sans-serif',
+    '-apple-system',
+    'BlinkMacMacSystemFont',
+    'Segoe UI',
+    'arial',
+    'Roboto',
+    'Ubuntu',
+    'sans-serif',
+  ],
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
@@ -35,24 +78,21 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={cn(
+          poppinsFont.variable,
+          latoFont.variable,
+          'antialiased p-5 font-poppins',
+        )}>
         <StoreProvider slices={[leadSlice]}>
-          <ThemeProvider
-            attribute='class'
-            defaultTheme='system'
-            enableSystem
-            disableTransitionOnChange>
-            <div className='p-[1.6rem]'>
-              <Container>
-                <Header>
-                  <ModeToggle />
-                </Header>
-                <Main>{children}</Main>
-                <Footer>
-                  <Copyright name={APP_NAME} />
-                </Footer>
-              </Container>
-            </div>
+          <ThemeProvider>
+            <Container>
+              <Header>
+                <ModeToggle />
+              </Header>
+              <Main>{children}</Main>
+              <Footer />
+            </Container>
+            <NavMenu />
           </ThemeProvider>
           <Suspense>
             <UTMs />

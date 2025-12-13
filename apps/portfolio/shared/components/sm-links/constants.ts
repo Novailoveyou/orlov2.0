@@ -1,5 +1,5 @@
+import type { Ul } from '@/shared/components/ul'
 import { ComponentProps } from 'react'
-import type { List } from '@/shared/components/typography/list'
 
 export const SM_LINKS = [
   {
@@ -18,4 +18,4 @@ export const SM_LINKS = [
     id: '932188a1-39dd-45a8-b4ac-9109c0594b83',
     children: 'more',
   },
-] as const satisfies ComponentProps<typeof List>['items']
+] as const satisfies ComponentProps<typeof Ul>['items']

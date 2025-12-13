@@ -1,11 +1,10 @@
 'use client'
 import 'client-only'
 
-import { Button } from '@repo/ui/components/shadcnui/button'
-import type { App } from '@repo/database'
 import { useLead } from '@/entities/lead/hooks'
+import { Button } from '@/shared/components/button'
 
-export function CTAButton({ app }: { app: App | null }) {
+export const LeadButton = () => {
   const { lead, triggerLead } = useLead()
 
   return (
@@ -20,7 +19,7 @@ export function CTAButton({ app }: { app: App | null }) {
           username: '',
         })
       }>
-      Button {app?.name}
+      Hire Me
     </Button>
   )
 }

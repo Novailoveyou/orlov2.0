@@ -1,6 +1,6 @@
-import { List } from '@/shared/components/typography/list'
+import { Ul } from '@/shared/components/ul'
 import { LEGAL_LINKS } from './constatns'
 
 export function LegalLinks() {
-  return <List items={LEGAL_LINKS} />
+  return <Ul items={LEGAL_LINKS} />
 }

@@ -1,7 +1,7 @@
 import 'server-only'
 
 import { Hero } from '@/widgets/Hero'
-import { View } from '@repo/ui/components/view'
+import { View } from '@/shared/components/view'
 
 export function HomeView() {
   return (
