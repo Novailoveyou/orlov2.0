@@ -7,7 +7,7 @@ import { Poppins, Lato } from 'next/font/google'
 import { Suspense } from 'react'
 import { YandexMetrika } from '@/shared/yandex-metrika'
 import { Container } from '@/shared/components/container'
-import { StoreProvider } from './store'
+import { StoreProvider } from '@/app/store'
 import { leadSlice } from '@/entities/lead/store'
 import { Footer } from '@/widgets/Footer'
 import { NavMenu } from '@/shared/components/nav-menu'
@@ -17,6 +17,7 @@ import { Main } from '@/shared/components/main'
 import { ThemeProvider } from '@/shared/components/theme-provider'
 import { ModeToggle } from '@/shared/components/mode-toggle'
 import { UTMs } from '@/shared/components/utms'
+import { SWRConfig } from '@/shared/api'
 
 // const geistSans = localFont({
 //   src: './fonts/GeistVF.woff',
@@ -81,23 +82,25 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         className={cn(
           poppinsFont.variable,
           latoFont.variable,
-          'antialiased p-5 font-poppins',
+          'antialiased p-5 font-poppins min-h-dvh',
         )}>
         <StoreProvider slices={[leadSlice]}>
-          <ThemeProvider>
-            <Container>
-              <Header>
-                <ModeToggle />
-              </Header>
-              <Main>{children}</Main>
-              <Footer />
-            </Container>
-            <NavMenu />
-          </ThemeProvider>
-          <Suspense>
-            <UTMs />
-            <YandexMetrika />
-          </Suspense>
+          <SWRConfig>
+            <ThemeProvider>
+              <Container className='min-h-dvh'>
+                <Header>
+                  <ModeToggle />
+                </Header>
+                <Main>{children}</Main>
+                <Footer />
+              </Container>
+              <NavMenu />
+            </ThemeProvider>
+            <Suspense>
+              <UTMs />
+              <YandexMetrika />
+            </Suspense>
+          </SWRConfig>
         </StoreProvider>
       </body>
     </html>

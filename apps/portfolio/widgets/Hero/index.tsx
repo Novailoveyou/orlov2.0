@@ -35,7 +35,7 @@ export async function Hero() {
         Full Stack Web Developer specializing in{' '}
         <Underline>TypeScript</Underline>
       </P>
-      <LeadButton />
+      <LeadButton>Hire Me</LeadButton>
     </Section>
   )
 }

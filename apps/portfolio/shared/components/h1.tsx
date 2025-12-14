@@ -3,5 +3,5 @@ import { cn } from '@/shared/utils'
 import { ComponentProps } from 'react'
 
 export const H1 = ({ className, ...props }: ComponentProps<typeof H1Base>) => {
-  return <H1Base className={cn(className)} {...props} />
+  return <H1Base className={cn('font-poppins', className)} {...props} />
 }

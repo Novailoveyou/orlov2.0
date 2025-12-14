@@ -1,7 +1,7 @@
-import type { Ul } from '@/shared/components/ul'
+import { Ul } from '@/shared/components/ul'
 import { ComponentProps } from 'react'
 
-export const LEGAL_LINKS = [
+const LEGAL_LINKS = [
   {
     id: '84c1f688-c1bf-4387-9ecd-afc3ba5f2a36',
     children: 'Terms',
@@ -11,3 +11,7 @@ export const LEGAL_LINKS = [
     children: 'Privacy',
   },
 ] as const satisfies ComponentProps<typeof Ul>['items']
+
+export function LegalLinks() {
+  return <Ul items={LEGAL_LINKS} />
+}
