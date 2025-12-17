@@ -1,3 +1,5 @@
+// TODO: figure out server only
+
 import { Menu as MenuBase } from '@repo/ui/components/tags/menu'
 import { ComponentProps } from 'react'
 

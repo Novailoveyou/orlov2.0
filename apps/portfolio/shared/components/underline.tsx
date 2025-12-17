@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { Underline as UnderlineBase } from '@repo/ui/components/underline'
 import { ComponentProps } from 'react'
 

@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { View as ViewBase } from '@repo/ui/components/view'
 import { ComponentProps } from 'react'
 

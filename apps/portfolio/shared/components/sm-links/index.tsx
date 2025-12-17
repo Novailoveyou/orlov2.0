@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { Ul } from '@/shared/components/ul'
 
 import { SM_LINKS } from './constants'

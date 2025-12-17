@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { Main as MainBase } from '@repo/ui/components/tags/main'
 import { ComponentProps } from 'react'
 

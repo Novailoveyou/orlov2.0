@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { ThemeProvider as ThemeProviderBase } from '@repo/ui/providers/theme-provider'
 
 import { ComponentProps } from 'react'

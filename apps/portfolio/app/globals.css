@@ -22,8 +22,8 @@
 }
 
 @theme inline {
-  --font-poppins: var(--font-poppins);
-  --font-lato: var(--font-lato);
+  --font-poppins: var(--next-font-poppins);
+  --font-lato: var(--next-font-lato);
   --color-alpha: var(--alpha);
   --color-beta: var(--beta);
   --gradient-primary: 180deg, #ffc700 -15.62%, #ff00d6 100%;

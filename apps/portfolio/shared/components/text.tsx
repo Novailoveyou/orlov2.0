@@ -1,3 +1,5 @@
+// TODO: figure out server only
+
 import { cn } from '@/shared/utils'
 import { Span } from '@/shared/components/span'
 import { ComponentProps } from 'react'

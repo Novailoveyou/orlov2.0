@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { LegalLinks } from '@/shared/components/legal-links'
 import { SMLinks } from '@/shared/components/sm-links'
 import { APP_NAME } from '@/shared/constants'

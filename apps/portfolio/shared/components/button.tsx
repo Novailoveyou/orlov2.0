@@ -8,6 +8,11 @@ import LoadingIcons from 'react-loading-icons'
 import { MdErrorOutline } from 'react-icons/md'
 import { Icon } from '@/shared/components/icon'
 
+export const i18n = {
+  loading: 'Loading...',
+  error: 'Error',
+}
+
 export const Button = ({
   children,
   className,
@@ -29,13 +34,18 @@ export const Button = ({
     {isLoading && (
       <Icon
         Icon={LoadingIcons.Bars}
-        aria-label='Loading...'
+        aria-label={i18n.loading}
         width='w-5'
         height='h-5'
       />
     )}
     {!!error && !isLoading && (
-      <Icon Icon={MdErrorOutline} aria-label='Error' width='w-5' height='h-5' />
+      <Icon
+        Icon={MdErrorOutline}
+        aria-label={i18n.error}
+        width='w-5'
+        height='h-5'
+      />
     )}
   </BaseButton>
 )

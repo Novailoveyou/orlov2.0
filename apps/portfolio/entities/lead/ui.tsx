@@ -3,7 +3,8 @@ import 'client-only'
 
 import { useLead } from '@/entities/lead/hooks'
 import { Button } from '@/shared/components/button'
-import { ComponentProps, useCallback, useEffect, useState } from 'react'
+import { ComponentProps, useCallback } from 'react'
+import { i18n } from './constants'
 
 export const LeadButton = ({
   children,
@@ -48,7 +49,7 @@ export const LeadButton = ({
   // TODO: handle error state
   return (
     <Button isLoading={isLeadMutating} error={isError} onClick={handleLead}>
-      {isError ? 'Try again' : children}
+      {isError ? i18n.tryAgain : children}
     </Button>
   )
 }

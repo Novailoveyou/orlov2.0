@@ -15,10 +15,26 @@ type ImageProps = ComponentProps<typeof NextImage> & {
  * @todo finish width calculation
  */
 export const Image = ({
-  className,
+  src,
+  alt,
+  width: widthProp,
+  height: heightProp,
+  fill,
+  loader,
+  quality = 100,
+  priority = false,
+  loading = 'lazy',
   placeholder = 'blur',
   blurDataURL = BLUR_DATA_URL,
-  quality = 100,
+  unoptimized = false,
+  overrideSrc,
+  onLoadingComplete,
+  layout,
+  objectFit,
+  objectPosition,
+  lazyBoundary,
+  lazyRoot,
+  className,
   desiredWidth,
   ...props
 }: ImageProps) => {
@@ -26,11 +42,41 @@ export const Image = ({
   // const calculatedWidth = toNumber(desiredWidth)
   // const calculatedHeight = props.height || 0
 
+  const isSrcObj = typeof src === 'object'
+
+  const width = Number(
+    isSrcObj ? ('default' in src ? src.default.width : src.width) : widthProp,
+  )
+
+  const height = Number(
+    isSrcObj
+      ? 'default' in src
+        ? src.default.height
+        : src.height
+      : heightProp,
+  )
+
   return (
     <NextImage
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      fill={fill}
+      loader={loader}
       quality={quality}
+      priority={priority}
+      loading={priority && loading === 'lazy' ? undefined : loading}
       placeholder={placeholder}
-      blurDataURL={blurDataURL}
+      blurDataURL={placeholder === 'blur' ? blurDataURL : undefined}
+      unoptimized={unoptimized}
+      overrideSrc={overrideSrc}
+      onLoadingComplete={onLoadingComplete}
+      layout={layout}
+      objectFit={objectFit}
+      objectPosition={objectPosition}
+      lazyBoundary={lazyBoundary}
+      lazyRoot={lazyRoot}
       className={cn(
         'ui:w-full ui:max-w-full ui:h-auto ui:max-h-full',
         className,

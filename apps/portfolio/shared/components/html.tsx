@@ -1,0 +1,72 @@
+import 'server-only'
+
+import { Html as HtmlBase } from '@repo/ui/components/tags/html'
+import { ComponentProps } from 'react'
+import { Poppins, Lato } from 'next/font/google'
+import { cn } from '@repo/ui/utils/index'
+// import localFont from 'next/font/local'
+
+const poppinsFont = Poppins({
+  subsets: ['latin-ext'],
+  weight: ['400', '500', '700'],
+  variable: '--next-font-poppins',
+  style: 'normal',
+  display: 'swap',
+  preload: true,
+  fallback: [
+    'system-ui',
+    'ui-sans-serif',
+    '-apple-system',
+    'BlinkMacMacSystemFont',
+    'Segoe UI',
+    'arial',
+    'Roboto',
+    'Ubuntu',
+    'sans-serif',
+  ],
+  adjustFontFallback: true,
+})
+
+const latoFont = Lato({
+  subsets: ['latin-ext'],
+  weight: ['400'],
+  variable: '--next-font-lato',
+  style: 'normal',
+  display: 'swap',
+  preload: true,
+  fallback: [
+    'system-ui',
+    'ui-sans-serif',
+    '-apple-system',
+    'BlinkMacMacSystemFont',
+    'Segoe UI',
+    'arial',
+    'Roboto',
+    'Ubuntu',
+    'sans-serif',
+  ],
+  adjustFontFallback: true,
+})
+
+// const geistSans = localFont({
+//   src: './fonts/GeistVF.woff',
+//   variable: '--font-geist-sans',
+// })
+// const geistMono = localFont({
+//   src: './fonts/GeistMonoVF.woff',
+//   variable: '--font-geist-mono',
+// })
+
+export function Html({
+  className,
+  ...props
+}: Omit<ComponentProps<typeof HtmlBase>, 'lang' | 'dir'>) {
+  return (
+    <HtmlBase
+      lang='en'
+      dir='ltr'
+      className={cn(poppinsFont.variable, latoFont.variable, className)}
+      {...props}
+    />
+  )
+}

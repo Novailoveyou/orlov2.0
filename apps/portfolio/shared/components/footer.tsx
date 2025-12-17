@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { Footer as FooterBase } from '@repo/ui/components/tags/footer'
 import { ComponentProps } from 'react'
 
