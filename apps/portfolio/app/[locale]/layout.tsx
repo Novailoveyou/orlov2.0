@@ -65,7 +65,7 @@ export default async function RootLayout({
                   <Header />
                   <Main>{children}</Main>
                   <Footer />
-                  {/* <NavMenu /> */}
+                  <NavMenu />
                 </Container>
               </ThemeProvider>
               <Suspense>

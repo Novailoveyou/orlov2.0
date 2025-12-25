@@ -5,8 +5,11 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { hasLocale } from 'next-intl'
+import { Metadata } from 'next'
 
-export async function generateMetadata({ params }: PageProps<'/[locale]'>) {
+export async function generateMetadata({
+  params,
+}: PageProps<'/[locale]'>): Promise<Metadata> {
   const { locale } = await params
 
   if (!hasLocale(routing.locales, locale))
