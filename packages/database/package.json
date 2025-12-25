@@ -8,7 +8,7 @@
   },
   "private": true,
   "scripts": {
-    "prisma:generate": "pnpm dlx prisma generate",
+    "prisma:generate1": "pnpm dlx prisma generate",
     "prisma:migrate": "pnpm dlx prisma migrate dev",
     "prisma:reset": "pnpm dlx prisma migrate reset",
     "prisma:studio": "pnpm dlx prisma studio",
