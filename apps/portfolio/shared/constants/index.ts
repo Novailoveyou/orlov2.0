@@ -1,6 +1,6 @@
 import 'server-only'
 
-import { name } from '../package.json'
+import { name } from '../../package.json'
 
 export const APP_NAME = name
 

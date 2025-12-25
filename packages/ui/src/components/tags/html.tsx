@@ -1,8 +1,9 @@
 import { ComponentProps } from 'react'
+import Locale from 'intl-locale-textinfo-polyfill'
 
 type BaseHtmlProps = ComponentProps<'html'>
 
-type HtmlProps = BaseHtmlProps & Required<Pick<BaseHtmlProps, 'lang' | 'dir'>>
+type HtmlProps = BaseHtmlProps & Required<Pick<BaseHtmlProps, 'lang'>>
 
 /**
  * @description Html component to display html
@@ -10,14 +11,16 @@ type HtmlProps = BaseHtmlProps & Required<Pick<BaseHtmlProps, 'lang' | 'dir'>>
  */
 export function Html({
   children,
-  lang = 'en',
-  dir = 'ltr',
+  lang: locale = 'en',
+  dir: dirProp = 'ltr',
   suppressHydrationWarning = true,
   ...props
 }: HtmlProps) {
+  const { direction: dir = dirProp } = new Locale(locale).getTextInfo()
+
   return (
     <html
-      lang={lang}
+      lang={locale}
       dir={dir}
       suppressHydrationWarning={suppressHydrationWarning}
       {...props}>

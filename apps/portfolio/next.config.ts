@@ -1,8 +1,19 @@
+import { NextConfig } from 'next'
 import nextConfigBase from '@repo/next-config'
+import createNextIntlPlugin from 'next-intl/plugin'
 
-/** @type {import('next').NextConfig} */
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
+
 const nextConfig = {
   ...nextConfigBase,
-}
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/en',
+  //     },
+  //   ]
+  // },
+} as const satisfies NextConfig
 
-export default nextConfig
+export default withNextIntl(nextConfig)

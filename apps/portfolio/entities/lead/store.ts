@@ -1,7 +1,7 @@
 'use client'
 import 'client-only'
 
-import { createSlice } from '@/app/store'
+import { createSlice } from '@/store'
 import { LeadStore } from './model'
 
 export const leadSlice = createSlice<LeadStore>(set => ({

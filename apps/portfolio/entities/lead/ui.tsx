@@ -5,11 +5,13 @@ import { useLead } from '@/entities/lead/hooks'
 import { Button } from '@/shared/components/button'
 import { ComponentProps, useCallback } from 'react'
 import { i18n } from './constants'
+import { useTranslations } from 'next-intl'
 
 export const LeadButton = ({
   children,
 }: Pick<ComponentProps<typeof Button>, 'children'>) => {
   // const [retryCount, setRetryCount] = useState(0)
+  const t = useTranslations('HomePage')
 
   const { lead, isLeadMutating, leadError, triggerLead } = useLead()
 
@@ -50,6 +52,8 @@ export const LeadButton = ({
   return (
     <Button isLoading={isLeadMutating} error={isError} onClick={handleLead}>
       {isError ? i18n.tryAgain : children}
+      {t('title')}
+      {t('count', { count: 21 })}
     </Button>
   )
 }

@@ -59,12 +59,12 @@ const latoFont = Lato({
 
 export function Html({
   className,
+  lang,
   ...props
-}: Omit<ComponentProps<typeof HtmlBase>, 'lang' | 'dir'>) {
+}: Omit<ComponentProps<typeof HtmlBase>, 'dir'>) {
   return (
     <HtmlBase
-      lang='en'
-      dir='ltr'
+      lang={lang}
       className={cn(poppinsFont.variable, latoFont.variable, className)}
       {...props}
     />

@@ -5,5 +5,11 @@
       "mode": "auto"
     }
   ],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "i18n-ally.enabledFrameworks": ["next-intl", "react"],
+  "i18n-ally.localesPaths": [
+    "apps/portfolio/app/i18n",
+    "apps/portfolio/app/i18n/messages"
+  ],
+  "i18n-ally.keystyle": "nested"
 }

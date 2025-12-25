@@ -4,7 +4,9 @@
 - Add Docker support
 - Add Jest
 - Add Playwright
-- Add Storybook
+- Add Storybook (with next-intl https://next-intl.dev/docs/workflows/storybook)
 - Add Vitest
 - Replace ESLint with Biome
-- Add zustand store to packages (hard)
+- ✅ Add zustand store to packages (hard)
+- ✅ Make i18nAlly work
+- Set up Crowding

@@ -3,8 +3,8 @@ import 'client-only'
 
 import { cn } from '@/shared/utils'
 import { Link } from '@/shared/components/link'
-import { usePathname } from 'next/navigation'
 import { ComponentProps } from 'react'
+import { usePathname } from '@/i18n/navigation'
 
 export const NavLink = ({
   href,
