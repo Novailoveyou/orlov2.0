@@ -6,6 +6,7 @@ import { Suspense } from 'react'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
+import NextTopLoader from 'nextjs-toploader'
 import { routing } from '@/i18n/routing'
 import { StoreProvider } from '@/store/provider'
 import { YandexMetrika } from '@/shared/yandex-metrika'
@@ -23,11 +24,6 @@ import { Html } from '@/shared/components/html'
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }))
 }
-
-// export const metadata: Metadata = {
-//   title: i18n.title,
-//   description: i18n.description,
-// }
 
 export async function generateMetadata({
   params,
@@ -64,11 +60,12 @@ export default async function RootLayout({
           <StoreProvider>
             <SWRConfig>
               <ThemeProvider>
+                <NextTopLoader />
                 <Container>
                   <Header />
                   <Main>{children}</Main>
                   <Footer />
-                  <NavMenu />
+                  {/* <NavMenu /> */}
                 </Container>
               </ThemeProvider>
               <Suspense>

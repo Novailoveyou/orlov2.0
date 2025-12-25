@@ -4,8 +4,12 @@ import 'client-only'
 import NextLink, { useLinkStatus } from 'next/link'
 import { cn } from '../utils'
 import { ComponentProps } from 'react'
+import { Slot } from '@radix-ui/react-slot'
 
-type ImageProps = ComponentProps<typeof NextLink> & { pending: string }
+type ImageProps = ComponentProps<typeof NextLink> & {
+  pending: string
+  asChild?: boolean
+}
 
 /**
  * @description Link component to display link component
@@ -28,19 +32,23 @@ export const Link = ({
   className,
   children,
   'aria-label': ariaLabel,
+  asChild = false,
   ...props
 }: ImageProps) => {
+  const Comp = asChild ? Slot : NextLink
+
   const { pending } = useLinkStatus()
 
   return (
-    <NextLink
+    <Comp
+      data-slot='link'
       href={href}
       as={as}
       replace={replace}
       scroll={scroll}
       shallow={shallow}
       passHref={passHref}
-      prefetch={prefetch}
+      prefetch={locale ? false : prefetch}
       locale={locale}
       onMouseEnter={onMouseEnter}
       onTouchStart={onTouchStart}
@@ -54,6 +62,6 @@ export const Link = ({
       aria-label={pending ? pendingProp : ariaLabel}
       {...props}>
       {children}
-    </NextLink>
+    </Comp>
   )
 }

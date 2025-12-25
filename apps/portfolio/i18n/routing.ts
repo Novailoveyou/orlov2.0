@@ -5,39 +5,38 @@ export const routing = defineRouting({
   locales: ['en', 'ru'],
   defaultLocale: 'en',
   localeDetection: true,
-  localePrefix: 'as-needed',
+  localePrefix: {
+    mode: 'as-needed',
+    prefixes: {
+      en: '/en',
+      ru: '/ru',
+    },
+  },
   localeCookie: {
     name: LOCALE_COOKIE_NAME,
     sameSite: 'lax',
     // Expire in one year
     maxAge: ONE_YEAR,
   },
-  // localePrefix: {
-  //   mode: 'as-needed',
-  //   prefixes: {
-  //     en: '/en',
-  //     ru: '/eu',
-  //   },
-  // },
-  // pathnames: {
-  //   '/': '/',
-  //   '/chat': {
-  //     ru: '/chat',
-  //   },
-  //   '/portfolio': {
-  //     ru: '/portfolio',
-  //   },
-  //   '/skills': {
-  //     ru: '/navyki',
-  //   },
-  //   '/stories': {
-  //     ru: '/istorii',
-  //   },
-  //   // '/news/[articleSlug]': {
-  //   //   de: '/neuigkeiten/[articleSlug]',
-  //   // },
-  //   // '/categories/[...slug]': {
-  //   //   de: '/kategorien/[...slug]',
-  //   // },
-  // },
+  pathnames: {
+    '/': '/',
+    '/chat': {
+      ru: '/chat',
+    },
+    '/portfolio': {
+      ru: '/portfolio',
+    },
+    '/skills': {
+      ru: '/navyki',
+    },
+    '/stories': {
+      ru: '/istorii',
+    },
+    // '/news/[articleSlug]': {
+    //   de: '/neuigkeiten/[articleSlug]',
+    // },
+    // '/categories/[...slug]': {
+    //   de: '/kategorien/[...slug]',
+    // },
+  },
 })

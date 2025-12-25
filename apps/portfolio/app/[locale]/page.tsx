@@ -34,5 +34,6 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
 
   const t = await getTranslations('HomePage')
 
-  return <HomeView />
+  return <>{t('title')}</>
+  // return <HomeView />
 }
