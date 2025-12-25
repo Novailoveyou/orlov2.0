@@ -6,7 +6,10 @@ import { cn } from '../utils'
 import { ComponentProps } from 'react'
 import { Slot } from '@radix-ui/react-slot'
 
-type ImageProps = ComponentProps<typeof NextLink> & {
+type ImageProps = Omit<
+  ComponentProps<typeof NextLink>,
+  'passHref' | 'legacyBehavior'
+> & {
   pending: string
   asChild?: boolean
 }
@@ -22,7 +25,6 @@ export const Link = ({
   replace = false,
   scroll = true,
   shallow = false,
-  passHref = false,
   prefetch = true,
   locale,
   onMouseEnter,
@@ -47,7 +49,6 @@ export const Link = ({
       replace={replace}
       scroll={scroll}
       shallow={shallow}
-      passHref={passHref}
       prefetch={locale ? false : prefetch}
       locale={locale}
       onMouseEnter={onMouseEnter}
