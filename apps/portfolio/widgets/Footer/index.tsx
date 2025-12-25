@@ -2,9 +2,9 @@ import 'server-only'
 
 import { LegalLinks } from '@/shared/components/legal-links'
 import { SMLinks } from '@/shared/components/sm-links'
-import { APP_NAME } from '@/shared/constants'
+// import { APP_NAME } from '@/shared/constants'
 import { Footer as FooterBase } from '@/shared/components/footer'
-import { Copyright } from '@/shared/components/copyright'
+// import { Copyright } from '@/shared/components/copyright'
 
 export const Footer = () => {
   return (
@@ -14,7 +14,7 @@ export const Footer = () => {
       </div>
       <div className='flex flex-row-reverse justify-between gap-4'>
         <LegalLinks />
-        <Copyright name={APP_NAME} />
+        {/* <Copyright name={APP_NAME} /> */}
       </div>
     </FooterBase>
   )

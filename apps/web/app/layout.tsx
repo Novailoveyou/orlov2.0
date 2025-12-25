@@ -4,13 +4,13 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { Suspense } from 'react'
-import { Copyright } from '@repo/ui/components/copyright'
+// import { Copyright } from '@repo/ui/components/copyright'
 import { ThemeProvider } from '@repo/ui/providers/theme-provider'
 import { Header } from '@repo/ui/components/tags/header'
 import { Main } from '@repo/ui/components/tags/main'
 import { Footer } from '@repo/ui/components/tags/footer'
 import { YandexMetrika } from '@/shared/yandex-metrika'
-import { APP_NAME } from '@/shared/constants'
+// import { APP_NAME } from '@/shared/constants'
 import { StoreProvider } from './store'
 import { exampleSlice } from '@/entities/example/store'
 import { example2Slice } from '@/entities/example2/store'
@@ -42,9 +42,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
             disableTransitionOnChange>
             <Header>header</Header>
             <Main>{children}</Main>
-            <Footer>
-              <Copyright name={APP_NAME} />
-            </Footer>
+            <Footer>{/* <Copyright name={APP_NAME} /> */}</Footer>
           </ThemeProvider>
           <Suspense>
             <YandexMetrika />

@@ -1,16 +1,13 @@
 import createMiddleware from 'next-intl/middleware'
 import { routing } from '@/i18n/routing'
-import { NextRequest, NextResponse } from 'next/server'
-import { getLocale } from 'next-intl/server'
+import { NextRequest } from 'next/server'
 
 const handleI18nRouting = createMiddleware(routing)
 
-export default async function proxy(request: NextRequest) {
-  console.log('proxy: ')
+export default function proxy(request: NextRequest) {
   const response = handleI18nRouting(request)
-  const locale = await getLocale()
 
-  return NextResponse.rewrite(new URL(`/${locale}`, '/'), response)
+  return response
 }
 
 export const config = {

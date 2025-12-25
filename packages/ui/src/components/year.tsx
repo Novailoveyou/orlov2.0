@@ -14,6 +14,8 @@ export function Year({ year: defaultYear }: YearProps) {
   const [year, setYear] = useState(defaultYear)
 
   useEffect(() => {
+    // TODO: fix this
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setYear(new Date().getFullYear())
   }, [])
 

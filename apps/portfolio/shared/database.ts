@@ -1,5 +1,5 @@
 import 'server-only'
 
-import { prisma as prismaBase } from '@repo/database'
+// import { prisma as prismaBase } from '../../../_database/src'
 
-export const prisma = prismaBase
+// export const prisma = prismaBase

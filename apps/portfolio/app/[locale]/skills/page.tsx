@@ -2,6 +2,6 @@ import 'server-only'
 
 import { SkillsView } from '@/views/skills-view'
 
-export default function SkillsPage({ params }: PageProps<'/'>) {
+export default function SkillsPage({ params }: PageProps<'/[locale]'>) {
   return <SkillsView />
 }

@@ -4,6 +4,11 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   trailingSlash: false,
+  // reactCompiler: true,
+  cacheComponents: true,
+  images: {
+    qualities: [50, 75, 100],
+  },
   logging: {
     fetches: {
       fullUrl: true,
@@ -14,7 +19,6 @@ const nextConfig = {
   experimental: {
     webVitalsAttribution: ['CLS', 'FCP', 'FID', 'INP', 'LCP', 'TTFB'],
     scrollRestoration: true,
-    appDocumentPreloading: true,
     cssChunking: true,
     optimizeServerReact: true,
     optimisticClientCache: true,
