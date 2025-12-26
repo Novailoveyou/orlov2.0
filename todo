@@ -13,3 +13,6 @@
 - Insure everything works correctly with turborepo from 2.5 to 2.7 and next from
   15 to 16
 - Figure out tailwind styles so that they are not duplicated
+- Figure out i18n for testing https://next-intl.dev/docs/environments/testing
+- Figure out i18n polyfill
+  https://next-intl.dev/docs/environments/runtime-requirements
