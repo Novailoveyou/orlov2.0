@@ -2,7 +2,7 @@ import { NextConfig } from 'next'
 import nextConfigBase from '@repo/next-config'
 import createNextIntlPlugin from 'next-intl/plugin'
 
-const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
+const withNextIntl = createNextIntlPlugin('./app/_/i18n/request.ts')
 
 const nextConfig = {
   ...nextConfigBase,

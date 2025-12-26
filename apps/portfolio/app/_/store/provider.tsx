@@ -1,6 +1,6 @@
 import 'server-only'
 
-import { StoreProvider as BaseStoreProvider } from '@/store'
+import { StoreProvider as BaseStoreProvider } from '@/app/_/store'
 import { ComponentProps } from 'react'
 import { leadSlice } from '@/entities/lead/store'
 

@@ -3,7 +3,7 @@ import 'server-only'
 import { HomeView } from '@/views/home-view'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
-import { routing } from '@/i18n/routing'
+import { routing } from '@/app/_/i18n/routing'
 import { hasLocale } from 'next-intl'
 import { Metadata } from 'next'
 

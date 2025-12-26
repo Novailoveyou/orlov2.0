@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint --max-warnings 0",
     "check-types": "tsc --noEmit",
-    "i18n:check": "i18n-check --source en --locales ./i18n/messages"
+    "i18n:check": "i18n-check --source en --locales ./app/_/i18n/messages"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.7.2",
