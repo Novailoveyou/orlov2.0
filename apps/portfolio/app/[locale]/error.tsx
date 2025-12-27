@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 // TODO: figure out error props { error, reset }
 // { error, reset }
 export default function Error() {
-  const t = useTranslations('HomePage')
+  const t = useTranslations('Test1')
 
   return (
     <div>

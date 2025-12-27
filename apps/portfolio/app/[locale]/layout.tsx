@@ -20,6 +20,7 @@ import { UTMs } from '@/shared/components/utms'
 import { SWRConfig } from '@/shared/api'
 import { Body } from '@/shared/components/body'
 import { Html } from '@/shared/components/html'
+import { WebVitals } from '@/shared/components/web-vitals'
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }))
@@ -35,7 +36,7 @@ export async function generateMetadata({
       title: '',
     }
 
-  const t = await getTranslations({ locale, namespace: 'HomePage' })
+  const t = await getTranslations({ locale, namespace: 'Test1' })
 
   return {
     title: t('title'),
@@ -60,6 +61,7 @@ export default async function RootLayout({
           <StoreProvider>
             <SWRConfig>
               <ThemeProvider>
+                <WebVitals />
                 <NextTopLoader />
                 <Container>
                   <Header />

@@ -1,6 +1,13 @@
 {
-  "HomePage": {
+  "Test1": {
     "title": "Привет мир!",
     "count": "У вас {count, plural, =0 {нет подписчиков} one {# подписчик} few {# подписчика} many {# подписчиков} other {# подписчиков}}."
-  }
+  },
+  "entities": {
+    "lead": {}
+  },
+  "views": {},
+  "widgets": {},
+  "features": {},
+  "app": {}
 }

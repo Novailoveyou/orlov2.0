@@ -11,7 +11,7 @@ export const LeadButton = ({
   children,
 }: Pick<ComponentProps<typeof Button>, 'children'>) => {
   // const [retryCount, setRetryCount] = useState(0)
-  const t = useTranslations('HomePage')
+  const t = useTranslations('Test1')
 
   const { lead, isLeadMutating, leadError, triggerLead } = useLead()
 

@@ -6,7 +6,7 @@ import { IDS } from '@/shared/constants'
 import { useTranslations } from 'next-intl'
 
 export function HomeView() {
-  const t = useTranslations('HomePage')
+  const t = useTranslations('Test1')
 
   return (
     <View id={IDS.home}>
