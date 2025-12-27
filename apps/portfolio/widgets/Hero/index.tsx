@@ -1,14 +1,14 @@
 import 'server-only'
 
 // import { prisma } from '@/shared/database'
-import { MyName } from '@/shared/components/my-name'
-import { LeadButton } from '@/entities/lead/ui'
+import { IDS } from '@/shared/constants'
 import { Section } from '@/shared/components/section'
 import { P } from '@/shared/components/p'
 import { Underline } from '@/shared/components/underline'
-import { i18n } from './constants'
 import { Span } from '@/shared/components/span'
-import { IDS } from '@/shared/constants'
+import { LeadButton } from '@/entities/lead/ui'
+import { MyName } from '@/features/my-name'
+import { i18n } from './constants'
 
 export async function Hero() {
   // const app = await prisma.app.findFirst()

@@ -4,20 +4,21 @@ import 'client-only'
 import { cn } from '@/shared/utils'
 import { Link } from '@/shared/components/link'
 import { ComponentProps } from 'react'
-import { usePathname } from '@/app/_/i18n/navigation'
+import { useSelectedLayoutSegment } from 'next/navigation'
 
-export const NavLink = ({
+export const NavigationLink = ({
   href,
   children,
   className,
   ...props
 }: ComponentProps<typeof Link>) => {
-  const pathname = usePathname()
-
+  const selectedLayoutSegment = useSelectedLayoutSegment()
+  const pathname = selectedLayoutSegment ? `/${selectedLayoutSegment}` : '/'
   const isActive = pathname === href
 
   return (
     <Link
+      aria-current={isActive ? 'page' : undefined}
       href={href}
       className={cn(
         'flex flex-col justify-center items-center gap-1 px-1',

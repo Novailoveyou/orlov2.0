@@ -1,9 +1,9 @@
 import 'server-only'
 
-import { LegalLinks } from '@/shared/components/legal-links'
-import { SMLinks } from '@/shared/components/sm-links'
-// import { APP_NAME } from '@/shared/constants'
 import { Footer as FooterBase } from '@/shared/components/footer'
+import { LegalLinks } from '@/features/legal-links'
+import { SMLinks } from '@/features/sm-links'
+// import { APP_NAME } from '@/shared/constants'
 // import { Copyright } from '@/shared/components/copyright'
 
 export const Footer = () => {

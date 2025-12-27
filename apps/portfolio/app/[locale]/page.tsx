@@ -35,6 +35,5 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
 
   setRequestLocale(locale)
 
-  // return <>{t('title')}</>
   return <HomeView />
 }

@@ -12,7 +12,7 @@ import {
 import { Text } from '@/shared/components/text'
 import { Icon } from '@/shared/components/icon'
 import { Link } from '@/shared/components/link'
-import { NavLink } from './nav-link'
+import { NavigationLink } from './navigation-link'
 import { LINKS } from '@/shared/constants'
 
 const i18n = {
@@ -33,12 +33,12 @@ const NavMenuItem = ({
 }: ComponentProps<typeof Link> &
   Pick<ComponentProps<typeof Icon>, 'Icon' | 'aria-label'>) => {
   return (
-    <NavLink href={href} className={className} {...props}>
+    <NavigationLink href={href} className={className} {...props}>
       <Icon Icon={IconProp} width='w-5' height='h-5' aria-label={ariaLabel} />
       <Text className='font-normal text-xs uppercase leading-[100%]'>
         {children}
       </Text>
-    </NavLink>
+    </NavigationLink>
   )
 }
 
