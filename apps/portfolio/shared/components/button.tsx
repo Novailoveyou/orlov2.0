@@ -2,24 +2,24 @@
 import 'client-only'
 import { Button as BaseButton } from '@repo/ui/components/shadcnui/button'
 import { ComponentProps } from 'react'
-import { cn } from '@/shared/utils'
-import { Text } from './text'
 import LoadingIcons from 'react-loading-icons'
 import { MdErrorOutline } from 'react-icons/md'
+import { cn } from '@/shared/utils'
 import { Icon } from '@/shared/components/icon'
-
-export const i18n = {
-  loading: 'Loading...',
-  error: 'Error',
-}
+import { Text } from '@/shared/components/text'
 
 export const Button = ({
   children,
   className,
   isLoading,
   error,
+  loadingMessage,
+  errorMessage,
   ...props
-}: ComponentProps<typeof BaseButton>) => (
+}: ComponentProps<typeof BaseButton> & {
+  loadingMessage: string
+  errorMessage: string
+}) => (
   <BaseButton
     className={cn(
       'bg-linear-[var(--gradient-primary)] px-4 py-[1.375rem] rounded-4xl w-full text-white',
@@ -34,7 +34,7 @@ export const Button = ({
     {isLoading && (
       <Icon
         Icon={LoadingIcons.Bars}
-        aria-label={i18n.loading}
+        aria-label={loadingMessage}
         width='w-5'
         height='h-5'
       />
@@ -42,7 +42,7 @@ export const Button = ({
     {!!error && !isLoading && (
       <Icon
         Icon={MdErrorOutline}
-        aria-label={i18n.error}
+        aria-label={errorMessage}
         width='w-5'
         height='h-5'
       />

@@ -4,10 +4,51 @@
     "count": "У вас {count, plural, =0 {нет подписчиков} one {# подписчик} few {# подписчика} many {# подписчиков} other {# подписчиков}}."
   },
   "entities": {
-    "lead": {}
+    "lead": {
+      "hireMe": "Нанять меня сейчас",
+      "pleaseTryAgain": "Пожалуйста, попробуйте снова",
+      "loading": "Загрузка...",
+      "error": "Ошибка"
+    }
   },
   "views": {},
-  "widgets": {},
-  "features": {},
+  "widgets": {
+    "Hero": {
+      "descriptions": {
+        "principalEngineer": "Ведущий инженер",
+        "webAdvocate": "Веб проповедник",
+        "creatorOfEntityJs": "Создатель Entity.js",
+        "techGuru": "Технический гуру",
+        "businessTechConsultunt": "Бизнес техно-консультант",
+        "chiefArchitectIgnaLetuccee": "Главный архитектор Igna Letucce",
+        "techLead": "Технический лидер",
+        "interfaceEngineer": "Инженер интерфейсов",
+        "teamLead": "Руководитель команды",
+        "fullStackWebDeveloper": "Full Stack Web Developer",
+        "UXDesigner": "UX Designer",
+        "frontEndWebDeveloper": "Front End Web Developer",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Full Stack Web Developer, специализирующийся на <underline>TypeScript</underline>"
+      }
+    }
+  },
+  "features": {
+    "legal-links": {
+      "privacyPolicy": "Политика конфиденциальности",
+      "termsOfService": "Условия использования",
+      "loading": "Загрузка..."
+    },
+    "logo": {
+      "name": "Илья Орлов",
+      "loading": "Загрузка..."
+    },
+    "mode-toggle": {
+      "themeToggle": "Переключение темы"
+    },
+    "my-name": {
+      "hello": "Привет!",
+      "myNameIs": "меня зовут",
+      "iliaOrlov": "Илья Орлов"
+    }
+  },
   "app": {}
 }

@@ -1,8 +1,8 @@
 // TODO: figure out server only
 
+import { ComponentProps } from 'react'
 import { cn } from '@/shared/utils'
 import { Span } from '@/shared/components/span'
-import { ComponentProps } from 'react'
 
 export const Text = ({
   className,

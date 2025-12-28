@@ -3,17 +3,14 @@ import 'client-only'
 
 import { useLead } from '@/entities/lead/hooks'
 import { Button } from '@/shared/components/button'
-import { ComponentProps, useCallback } from 'react'
-import { i18n } from './constants'
+import { useCallback } from 'react'
 import { useTranslations } from 'next-intl'
 
-export const LeadButton = ({
-  children,
-}: Pick<ComponentProps<typeof Button>, 'children'>) => {
+export const LeadButton = () => {
   // const [retryCount, setRetryCount] = useState(0)
-  const t = useTranslations('Test1')
+  const t = useTranslations('entities.lead')
 
-  const { lead, isLeadMutating, leadError, triggerLead } = useLead()
+  const { isLeadMutating, leadError, triggerLead } = useLead()
 
   const isError = !isLeadMutating && leadError
 
@@ -50,10 +47,13 @@ export const LeadButton = ({
   // TODO: handle retries. 3 retries, each in 3 seconds, then if not 200, save data to localStorage to send to server when connection comes online
   // TODO: handle error state
   return (
-    <Button isLoading={isLeadMutating} error={isError} onClick={handleLead}>
-      {isError ? i18n.tryAgain : children}
-      {t('title')}
-      {t('count', { count: 21 })}
+    <Button
+      isLoading={isLeadMutating}
+      loadingMessage={t('loading')}
+      errorMessage={t('error')}
+      error={isError}
+      onClick={handleLead}>
+      {isError ? t('pleaseTryAgain') : t('hireMe')}
     </Button>
   )
 }

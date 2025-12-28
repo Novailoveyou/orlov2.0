@@ -2,8 +2,8 @@ import 'server-only'
 
 import { Html as HtmlBase } from '@repo/ui/components/tags/html'
 import { ComponentProps } from 'react'
-import { Poppins, Lato } from 'next/font/google'
-import { cn } from '@repo/ui/utils/index'
+import { Poppins, Lato, Cute_Font } from 'next/font/google'
+import { cn } from '@/shared/utils'
 // import localFont from 'next/font/local'
 
 const poppinsFont = Poppins({
@@ -48,6 +48,27 @@ const latoFont = Lato({
   adjustFontFallback: true,
 })
 
+const cuteFont = Cute_Font({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--next-font-cute',
+  style: 'normal',
+  display: 'swap',
+  preload: true,
+  fallback: [
+    'system-ui',
+    'ui-sans-serif',
+    '-apple-system',
+    'BlinkMacMacSystemFont',
+    'Segoe UI',
+    'arial',
+    'Roboto',
+    'Ubuntu',
+    'sans-serif',
+  ],
+  adjustFontFallback: true,
+})
+
 // const geistSans = localFont({
 //   src: './fonts/GeistVF.woff',
 //   variable: '--font-geist-sans',
@@ -65,7 +86,12 @@ export function Html({
   return (
     <HtmlBase
       lang={lang}
-      className={cn(poppinsFont.variable, latoFont.variable, className)}
+      className={cn(
+        poppinsFont.variable,
+        latoFont.variable,
+        cuteFont.variable,
+        className,
+      )}
       {...props}
     />
   )

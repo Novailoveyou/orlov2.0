@@ -1,12 +1,13 @@
 import 'server-only'
 
-import { ModeToggle as ModeToggleBase } from '@/shared/components/mode-toggle'
+import { useTranslations } from 'next-intl'
 import { ComponentProps } from 'react'
+import { ModeToggle as ModeToggleBase } from '@/shared/components/mode-toggle'
 
-export const i18n = {
-  themeToggle: 'Theme Toggle',
-}
+export const ModeToggle = ({
+  className,
+}: Pick<ComponentProps<typeof ModeToggleBase>, 'className'>) => {
+  const t = useTranslations('features.mode-toggle')
 
-export const ModeToggle = (props: ComponentProps<typeof ModeToggleBase>) => {
-  return <ModeToggleBase aria-label={i18n.themeToggle} {...props} />
+  return <ModeToggleBase className={className} aria-label={t('themeToggle')} />
 }

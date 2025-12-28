@@ -4,10 +4,51 @@
     "count": "You have {count, plural, =0 {no followers yet} =1 {one follower} other {# followers}}."
   },
   "entities": {
-    "lead": {}
+    "lead": {
+      "hireMe": "Hire Me Now",
+      "pleaseTryAgain": "Please Try Again",
+      "loading": "Loading...",
+      "error": "Error"
+    }
   },
   "views": {},
-  "widgets": {},
-  "features": {},
+  "widgets": {
+    "Hero": {
+      "descriptions": {
+        "principalEngineer": "Principal Engineer",
+        "webAdvocate": "Web Advocate",
+        "creatorOfEntityJs": "Creator of Entity.js",
+        "techGuru": "Tech Guru",
+        "businessTechConsultunt": "Business tech consultunt",
+        "chiefArchitectIgnaLetuccee": "Chief Architect Igna Letucce",
+        "techLead": "Tech Lead",
+        "interfaceEngineer": "Interface Engineer",
+        "teamLead": "Team Lead",
+        "fullStackWebDeveloper": "Full Stack Web Developer",
+        "UXDesigner": "UX Designer",
+        "frontEndWebDeveloper": "Front End Web Developer",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Full Stack Web Developer specializing in <underline>TypeScript</underline>"
+      }
+    }
+  },
+  "features": {
+    "legal-links": {
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "loading": "Loading..."
+    },
+    "logo": {
+      "name": "Ilia Orlov",
+      "loading": "Loading..."
+    },
+    "mode-toggle": {
+      "themeToggle": "Theme Toggle"
+    },
+    "my-name": {
+      "hello": "Hello!",
+      "myNameIs": "my name is",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
   "app": {}
 }

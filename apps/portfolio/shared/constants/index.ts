@@ -10,13 +10,21 @@ export const LINKS = {
   skills: '/skills',
   stories: '/stories',
   chat: '/chat',
+  // TODO: termsOfService terms of service link
+  termsOfService: '/',
+  // TODO: add privacyPolicy of service link
+  privacyPolicy: '/',
 } as const
 
 export const IDS = {
+  /** app */
   home: 'home',
-  hero: 'hero',
   portfolio: 'portfolio',
   skills: 'skills',
   stories: 'stories',
   chat: 'chat',
+  /** /app */
+  /** widgets */
+  hero: 'hero',
+  /** /widgets */
 } as const

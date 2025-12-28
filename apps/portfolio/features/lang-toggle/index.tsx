@@ -26,9 +26,9 @@ export const LangToggle = () => {
   }
 
   return (
-    <>
+    <div>
       <button onClick={() => changeLocaleWithParams('ru')}>ru</button>
       <button onClick={() => changeLocaleWithParams('en')}>en</button>
-    </>
+    </div>
   )
 }

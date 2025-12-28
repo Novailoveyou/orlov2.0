@@ -1,0 +1,4 @@
+.text {
+  background-color: var(--color-beta);
+  @apply bg-linear-[var(--gradient-primary--x)];
+}

@@ -4,27 +4,30 @@ import 'server-only'
 import { IDS } from '@/shared/constants'
 import { Section } from '@/shared/components/section'
 import { P } from '@/shared/components/p'
-import { Underline } from '@/shared/components/underline'
-import { Span } from '@/shared/components/span'
 import { LeadButton } from '@/entities/lead/ui'
 import { MyName } from '@/features/my-name'
-import { i18n } from './constants'
+import { useMessages, useTranslations } from 'next-intl'
+import { objectKeys } from '@/shared/utils'
+import { RichText } from '@/shared/components/rich-text'
 
-export async function Hero() {
+export function Hero() {
   // const app = await prisma.app.findFirst()
+  const t = useTranslations('widgets.Hero.descriptions')
+
+  const messages = useMessages()
+  const descriptionKeys = objectKeys(messages.widgets.Hero.descriptions)
 
   return (
     <Section id={IDS.hero}>
       <MyName />
       <P>
-        {i18n.descriptions.map(description => (
-          <Span key={description}>
-            {description} <br />
-          </Span>
+        {descriptionKeys.map(descriptionKey => (
+          <RichText key={descriptionKey} className='inline-block w-full'>
+            {tags => t.rich(descriptionKey, tags)}
+          </RichText>
         ))}
-        <Underline>{i18n.typeScript}</Underline>
       </P>
-      <LeadButton>{i18n.hireMe}</LeadButton>
+      <LeadButton />
     </Section>
   )
 }

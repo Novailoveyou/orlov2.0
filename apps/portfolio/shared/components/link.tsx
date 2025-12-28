@@ -3,9 +3,9 @@
 import 'client-only'
 
 import { Link as LinkBase } from '@repo/ui/components/link'
-import { Link as I18NLink } from '@/app/_/i18n/navigation'
 import { ComponentProps } from 'react'
 import { cn } from '@/shared/utils'
+import { Link as I18NLink } from '@/app/_/i18n/navigation'
 
 export function Link({
   className,
