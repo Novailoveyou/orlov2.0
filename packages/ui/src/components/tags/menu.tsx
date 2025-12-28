@@ -1,8 +1,12 @@
+import { ComponentProps, FC } from 'react'
 import { cn } from '../../utils'
-import { ComponentProps } from 'react'
 
-type MenuItemProps = ComponentProps<'li'> &
-  Required<Pick<ComponentProps<'li'>, 'id'>>
+type BaseMenuItemProps = ComponentProps<'li'>
+
+type MenuItemProps = Omit<BaseMenuItemProps, 'children'> &
+  Required<Pick<ComponentProps<'li'>, 'id'>> & {
+    children: BaseMenuItemProps['children'] | FC
+  }
 
 type MenuProps = Omit<ComponentProps<'menu'>, 'children'> & {
   items: MenuItemProps[]
@@ -15,9 +19,9 @@ type MenuProps = Omit<ComponentProps<'menu'>, 'children'> & {
 export function Menu({ className, items, ...props }: MenuProps) {
   return (
     <menu className={cn('ui:mt-6 ui:pl-6', className)} {...props}>
-      {items.map(({ id, children, className }) => (
+      {items.map(({ id, children: Children, className }) => (
         <li key={id} className={cn(className)}>
-          {children}
+          {typeof Children === 'function' ? <Children /> : Children}
         </li>
       ))}
     </menu>

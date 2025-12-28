@@ -7,12 +7,12 @@ import { routing } from '@/app/_/i18n/routing'
 // TODO: figure out manifest with i18n
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
   const locale = routing.defaultLocale
-  const t = await getTranslations({ locale, namespace: 'Test1' })
+  const t = await getTranslations({ locale, namespace: 'app.manifest' })
 
   return {
-    name: t('title'),
-    short_name: 'NextPWA',
-    description: 'A Progressive Web App built with Next.js',
+    name: t('name'),
+    short_name: t('short_name'),
+    description: t('description'),
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

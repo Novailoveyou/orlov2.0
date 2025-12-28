@@ -1,17 +1,14 @@
 'use client'
 import 'client-only'
 
+import { ComponentProps } from 'react'
 import { useTranslations } from 'next-intl'
+import { Error as SharedError } from '@/shared/components/error'
 
-// TODO: figure out error props { error, reset }
-// { error, reset }
-export default function Error() {
-  const t = useTranslations('Test1')
+export default function Error(props: ComponentProps<typeof SharedError>) {
+  const t = useTranslations('app.home.error')
 
   return (
-    <div>
-      <h1>{t('title')}</h1>
-      {/* <button onClick={reset}>{t('retry')}</button> */}
-    </div>
+    <SharedError title={t('title')} buttonText={t('buttonText')} {...props} />
   )
 }

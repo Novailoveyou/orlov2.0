@@ -14,6 +14,13 @@ export const LINKS = {
   termsOfService: '/',
   // TODO: add privacyPolicy of service link
   privacyPolicy: '/',
+  external: {
+    github: 'https://github.com/novailoveyou',
+    linkedIn: 'https://www.linkedin.com/in/novailoveyou/',
+  },
+  email: {
+    default: 'mailto:novailoveyou3@gmail.com',
+  },
 } as const
 
 export const IDS = {

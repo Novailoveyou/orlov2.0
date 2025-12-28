@@ -6,16 +6,18 @@ import { Span } from './tags/span'
 type Tag = 'underline'
 
 type RichTextProps = Omit<ComponentProps<typeof Span>, 'children'> & {
-  children(tags: Record<Tag, (chunks: ReactNode) => ReactNode>): ReactNode
+  children: (tags: Record<Tag, (chunks: ReactNode) => ReactNode>) => ReactNode
 }
 
-export const RichText = ({ className, children, ...props }: RichTextProps) => {
+export const RichText = ({
+  className,
+  children: Children,
+  ...props
+}: RichTextProps) => {
   return (
     // 'prose'
     <Span className={cn(className)} {...props}>
-      {children({
-        underline: chunk => <Underline>{chunk}</Underline>,
-      })}
+      <Children underline={chunk => <Underline>{chunk}</Underline>} />
     </Span>
   )
 }

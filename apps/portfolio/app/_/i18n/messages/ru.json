@@ -1,14 +1,23 @@
 {
-  "Test1": {
-    "title": "Привет мир!",
-    "count": "У вас {count, plural, =0 {нет подписчиков} one {# подписчик} few {# подписчика} many {# подписчиков} other {# подписчиков}}."
-  },
-  "entities": {
-    "lead": {
-      "hireMe": "Нанять меня сейчас",
-      "pleaseTryAgain": "Пожалуйста, попробуйте снова",
-      "loading": "Загрузка...",
-      "error": "Ошибка"
+  "app": {
+    "countTest": "У вас {count, plural, =0 {нет подписчиков} one {# подписчик} few {# подписчика} many {# подписчиков} other {# подписчиков}}.",
+    "manifest": {
+      "name": "Портфолио Ильи Орлова",
+      "short_name": "Илья Орлов",
+      "description": "Добро пожаловать на сайт портфолио Ильи Орлова. Изучите проекты, навыки и свяжитесь со мной."
+    },
+    "home": {
+      "meta": {
+        "title": "Илья Орлов - Портфолио",
+        "description": "Добро пожаловать на сайт портфолио Ильи Орлова. Изучите проекты, навыки и свяжитесь со мной."
+      },
+      "loading": {
+        "loading": "Загрузка..."
+      },
+      "error": {
+        "title": "Что-то пошло не так!",
+        "buttonText": "Попробуйте снова"
+      }
     }
   },
   "views": {},
@@ -32,6 +41,31 @@
     }
   },
   "features": {
+    "navigation-menu-links": {
+      "loading": "Загрузка...",
+      "portfolio": "Портфолио",
+      "skills": "Навыки",
+      "stories": "Истории",
+      "chat": "Чат"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "Ссылка на GitHub"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "Ссылка на LinkedIn"
+      },
+      "emailLink": {
+        "title": "Электронная почта",
+        "ariaLabel": "Адрес электронной почты"
+      },
+      "moreLink": {
+        "title": "Еще",
+        "ariaLabel": "Другие ссылки"
+      }
+    },
     "legal-links": {
       "privacyPolicy": "Политика конфиденциальности",
       "termsOfService": "Условия использования",
@@ -50,5 +84,12 @@
       "iliaOrlov": "Илья Орлов"
     }
   },
-  "app": {}
+  "entities": {
+    "lead": {
+      "hireMe": "Нанять меня сейчас",
+      "pleaseTryAgain": "Пожалуйста, попробуйте снова",
+      "loading": "Загрузка...",
+      "error": "Ошибка"
+    }
+  }
 }

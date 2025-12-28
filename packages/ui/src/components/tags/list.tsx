@@ -1,8 +1,12 @@
 import { cn } from '../../utils'
-import { ComponentProps } from 'react'
+import { ComponentProps, FC } from 'react'
 
-type ListItemProps = ComponentProps<'li'> &
-  Required<Pick<ComponentProps<'li'>, 'id'>>
+type BaseListItemProps = ComponentProps<'li'>
+
+type ListItemProps = Omit<BaseListItemProps, 'children'> &
+  Required<Pick<BaseListItemProps, 'id'>> & {
+    children: BaseListItemProps['children'] | FC
+  }
 
 type UlProps = Omit<ComponentProps<'ul'>, 'children'> & {
   items: ListItemProps[]
@@ -17,9 +21,9 @@ export function Ul({ className, items, ...props }: UlProps) {
     <ul
       className={cn('ui:mt-6 ui:pl-6 ui:border-l-2 ui:italic', className)}
       {...props}>
-      {items.map(({ id, children, className }) => (
+      {items.map(({ id, children: Children, className }) => (
         <li key={id} className={cn(className)}>
-          {children}
+          {typeof Children === 'function' ? <Children /> : Children}
         </li>
       ))}
     </ul>

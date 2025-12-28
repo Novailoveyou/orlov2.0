@@ -1,14 +1,23 @@
 {
-  "Test1": {
-    "title": "Hello world!",
-    "count": "You have {count, plural, =0 {no followers yet} =1 {one follower} other {# followers}}."
-  },
-  "entities": {
-    "lead": {
-      "hireMe": "Hire Me Now",
-      "pleaseTryAgain": "Please Try Again",
-      "loading": "Loading...",
-      "error": "Error"
+  "app": {
+    "countTest": "You have {count, plural, =0 {no followers yet} =1 {one follower} other {# followers}}.",
+    "manifest": {
+      "name": "Ilia Orlov's Portfolio",
+      "short_name": "Ilia Orlov",
+      "description": "Welcome to Ilia Orlov's portfolio website. Explore projects, skills, and get in touch."
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Portfolio",
+        "description": "Welcome to Ilia Orlov's portfolio website. Explore projects, skills, and get in touch."
+      },
+      "loading": {
+        "loading": "Loading..."
+      },
+      "error": {
+        "title": "Something went wrong!",
+        "buttonText": "Try again"
+      }
     }
   },
   "views": {},
@@ -32,6 +41,31 @@
     }
   },
   "features": {
+    "navigation-menu-links": {
+      "loading": "Loading...",
+      "portfolio": "Portfolio",
+      "skills": "Skills",
+      "stories": "Stories",
+      "chat": "Chat"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub Link"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn Link"
+      },
+      "emailLink": {
+        "title": "Email",
+        "ariaLabel": "Email Link"
+      },
+      "moreLink": {
+        "title": "More",
+        "ariaLabel": "More Links"
+      }
+    },
     "legal-links": {
       "privacyPolicy": "Privacy Policy",
       "termsOfService": "Terms of Service",
@@ -50,5 +84,12 @@
       "iliaOrlov": "Ilia Orlov"
     }
   },
-  "app": {}
+  "entities": {
+    "lead": {
+      "hireMe": "Hire Me Now",
+      "pleaseTryAgain": "Please Try Again",
+      "loading": "Loading...",
+      "error": "Error"
+    }
+  }
 }

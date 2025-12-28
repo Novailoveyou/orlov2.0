@@ -4,9 +4,13 @@ import { useEffect } from 'react'
 // import NextError from 'next/error'
 
 export function Error({
+  title = 'Something went wrong!',
+  buttonText = 'Try again',
   error,
   reset,
 }: {
+  title?: string
+  buttonText?: string
   error: Error & { digest?: string }
   reset: () => void
 }) {
@@ -17,8 +21,8 @@ export function Error({
 
   return (
     <div>
-      <h1>Something went wrong!</h1>
-      <button onClick={reset}>Try again</button>
+      <h1>{title}</h1>
+      <button onClick={reset}>{buttonText}</button>
     </div>
   )
 }

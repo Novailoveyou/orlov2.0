@@ -17,10 +17,11 @@ export async function generateMetadata({
       title: '',
     }
 
-  const t = await getTranslations({ locale, namespace: 'Test1' })
+  const t = await getTranslations({ locale, namespace: 'app.home.meta' })
 
   return {
     title: t('title'),
+    description: t('description'),
   }
 }
 

@@ -13,7 +13,7 @@ import { YandexMetrika } from '@/shared/yandex-metrika'
 import { Container } from '@/shared/components/container'
 import { Header } from '@/widgets/Header'
 import { Footer } from '@/widgets/Footer'
-import { NavMenu } from '@/features/navigation-menu'
+import { NavigationMenu } from '@/features/navigation-menu'
 import { Main } from '@/shared/components/main'
 import { ThemeProvider } from '@/shared/components/theme-provider'
 import { UTMs } from '@/shared/components/utms'
@@ -36,10 +36,11 @@ export async function generateMetadata({
       title: '',
     }
 
-  const t = await getTranslations({ locale, namespace: 'Test1' })
+  const t = await getTranslations({ locale, namespace: 'app.home.meta' })
 
   return {
     title: t('title'),
+    description: t('description'),
   }
 }
 
@@ -67,7 +68,7 @@ export default async function RootLayout({
                   <Header />
                   <Main>{children}</Main>
                   <Footer />
-                  <NavMenu />
+                  <NavigationMenu />
                 </Container>
               </ThemeProvider>
               <Suspense>
