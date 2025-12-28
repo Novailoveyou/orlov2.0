@@ -12,7 +12,6 @@ type ImageProps = ComponentProps<typeof NextImage> & {
 /**
  * @description Image component to display an image with optimized loading and optional blur placeholder
  * @see https://nextjs.org/docs/api-reference/next/image
- * @todo finish width calculation
  */
 export const Image = ({
   src,
