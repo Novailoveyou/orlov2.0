@@ -24,7 +24,7 @@ export const Logo = ({
         'flex flex-wrap justify-center items-center gap-4',
         className,
       )}>
-      <Image className='max-w-[2.375rem]' src={logo} alt={t('name')} priority />
+      <Image src={logo} desiredWidth={38} alt={t('name')} priority />
       <Text
         className={cn(
           'bg-clip-text [-webkit-text-fill-color:transparent] font-cute font-normal text-[2rem] align-middle leading-[100%]',

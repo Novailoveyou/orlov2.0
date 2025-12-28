@@ -130,4 +130,10 @@
   body {
     @apply ui:bg-background ui:text-foreground;
   }
+
+  .ui\:img {
+    max-inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 1/1;
+  }
 }
