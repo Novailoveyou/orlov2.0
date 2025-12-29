@@ -2,6 +2,10 @@
 @import 'tailwindcss' prefix(ui);
 @import 'tw-animate-css' prefix(ui);
 @import '@repo/tailwind-config';
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+  preferredstrategy: 'pseudoelements';
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -131,7 +135,7 @@
     @apply ui:bg-background ui:text-foreground;
   }
 
-  .ui\:img {
+  img {
     max-inline-size: 100%;
     block-size: auto;
     aspect-ratio: 1/1;

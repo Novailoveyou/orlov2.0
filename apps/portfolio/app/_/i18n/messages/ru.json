@@ -22,13 +22,16 @@
   },
   "views": {},
   "widgets": {
-    "Hero": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
       "descriptions": {
         "principalEngineer": "Ведущий инженер",
         "webAdvocate": "Веб проповедник",
         "creatorOfEntityJs": "Создатель Entity.js",
         "techGuru": "Технический гуру",
-        "businessTechConsultunt": "Бизнес техно-консультант",
+        "businessTechConsultant": "Бизнес техно-консультант",
         "chiefArchitectIgnaLetuccee": "Главный архитектор Igna Letucce",
         "techLead": "Технический лидер",
         "interfaceEngineer": "Инженер интерфейсов",
@@ -36,11 +39,9 @@
         "fullStackWebDeveloper": "Full Stack Web Developer",
         "UXDesigner": "UX Designer",
         "frontEndWebDeveloper": "Front End Web Developer",
-        "fullStackWebDeveloperSpecializingInTypeScript": "Full Stack Web Developer, специализирующийся на <underline>TypeScript</underline>"
+        "fullStackWebDeveloperSpecializingInTypeScript": "Full Stack Web Developer, специализирующийся на TypeScript"
       }
-    }
-  },
-  "features": {
+    },
     "navigation-menu-links": {
       "loading": "Загрузка...",
       "portfolio": "Портфолио",

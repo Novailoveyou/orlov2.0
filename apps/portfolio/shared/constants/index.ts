@@ -1,6 +1,7 @@
 import 'server-only'
 
 import { name } from '../../package.json'
+export * from '@repo/ui/constants/index'
 
 export const APP_NAME = name
 

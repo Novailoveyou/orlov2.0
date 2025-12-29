@@ -8,7 +8,7 @@ import { SMLinks } from '@/features/sm-links'
 
 export const Footer = () => {
   return (
-    <FooterBase>
+    <FooterBase role='contentinfo'>
       <div className='flex justify-between gap-4'>
         <SMLinks />
       </div>

@@ -22,13 +22,16 @@
   },
   "views": {},
   "widgets": {
-    "Hero": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
       "descriptions": {
         "principalEngineer": "Principal Engineer",
         "webAdvocate": "Web Advocate",
         "creatorOfEntityJs": "Creator of Entity.js",
         "techGuru": "Tech Guru",
-        "businessTechConsultunt": "Business tech consultunt",
+        "businessTechConsultant": "Business tech consultant",
         "chiefArchitectIgnaLetuccee": "Chief Architect Igna Letucce",
         "techLead": "Tech Lead",
         "interfaceEngineer": "Interface Engineer",
@@ -36,11 +39,9 @@
         "fullStackWebDeveloper": "Full Stack Web Developer",
         "UXDesigner": "UX Designer",
         "frontEndWebDeveloper": "Front End Web Developer",
-        "fullStackWebDeveloperSpecializingInTypeScript": "Full Stack Web Developer specializing in <underline>TypeScript</underline>"
+        "fullStackWebDeveloperSpecializingInTypeScript": "Full Stack Web Developer specializing in TypeScript"
       }
-    }
-  },
-  "features": {
+    },
     "navigation-menu-links": {
       "loading": "Loading...",
       "portfolio": "Portfolio",

@@ -84,7 +84,7 @@ export const Image = ({
       lazyBoundary={lazyBoundary}
       lazyRoot={lazyRoot}
       className={cn(
-        'ui:max-w-full ui:max-h-full ui:img',
+        'ui:max-w-full ui:max-h-full',
         desiredWidth
           ? `ui:w-(--dynamic-width) ui:h-(--dynamic-height)`
           : 'ui:w-full ui:h-auto',

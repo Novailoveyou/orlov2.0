@@ -1,14 +1,18 @@
 import 'server-only'
 
+import { ComponentProps } from 'react'
 import { useTranslations } from 'next-intl'
 import { H1 } from '@/shared/components/h1'
 import { Text } from '@/shared/components/text'
+import { cn } from '@/shared/utils'
 
-export function MyName() {
+export function MyName({
+  className,
+}: Pick<ComponentProps<typeof H1>, 'className'>) {
   const t = useTranslations('features.my-name')
 
   return (
-    <H1 className='flex flex-col mb-8'>
+    <H1 className={cn('flex flex-col', className)}>
       <Text className='font-bold text-[5.125rem] uppercase leading-[100%]'>
         {t('hello')}
       </Text>

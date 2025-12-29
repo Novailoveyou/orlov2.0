@@ -1,5 +1,3 @@
-import 'server-only'
-
 import { P as PBase } from '@repo/ui/components/tags/p'
 import { ComponentProps } from 'react'
 import { cn } from '@/shared/utils'

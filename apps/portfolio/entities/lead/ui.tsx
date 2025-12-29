@@ -1,12 +1,15 @@
 'use client'
 import 'client-only'
 
+import { ComponentProps, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 import { useLead } from '@/entities/lead/hooks'
 import { Button } from '@/shared/components/button'
-import { useCallback } from 'react'
-import { useTranslations } from 'next-intl'
+import { cn } from '@/shared/utils'
 
-export const LeadButton = () => {
+export const LeadButton = ({
+  className,
+}: Pick<ComponentProps<typeof Button>, 'className'>) => {
   // const [retryCount, setRetryCount] = useState(0)
   const t = useTranslations('entities.lead')
 
@@ -48,6 +51,7 @@ export const LeadButton = () => {
   // TODO: handle error state
   return (
     <Button
+      className={cn(className)}
       isLoading={isLeadMutating}
       loadingMessage={t('loading')}
       errorMessage={t('error')}

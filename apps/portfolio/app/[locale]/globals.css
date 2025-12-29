@@ -1,5 +1,9 @@
 @import '@repo/ui/styles.css';
 @import '@repo/tailwind-config';
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+  preferredstrategy: 'pseudoelements';
+}
 
 :root {
   --background: oklch(1 0 0);
