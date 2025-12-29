@@ -3,8 +3,9 @@ import 'client-only'
 import { ComponentProps } from 'react'
 import { TypeAnimation as BaseTypeAnimation } from '@repo/ui/components/type-animation'
 
-type TypeAnimationProps = Required<
-  Pick<ComponentProps<typeof BaseTypeAnimation>, 'aria-label' | 'role'>
+type TypeAnimationProps = Pick<
+  ComponentProps<typeof BaseTypeAnimation>,
+  'role' | 'aria-hidden' | 'aria-label'
 > & {
   items: string[]
 }

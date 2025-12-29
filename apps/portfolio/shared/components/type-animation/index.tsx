@@ -8,18 +8,28 @@ import { cn } from '@/shared/utils'
 type TypeAnimationProps = Pick<ComponentProps<typeof Div>, 'className'> &
   Pick<
     ComponentProps<typeof BaseTypeAnimation>,
-    'items' | 'role' | 'aria-label'
-  >
+    'items' | 'role' | 'aria-label' | 'aria-hidden'
+  > & {
+    srOnlyText?: string
+  }
 
-export const TypeAnimation = ({ className, ...props }: TypeAnimationProps) => {
+export const TypeAnimation = ({
+  className,
+  srOnlyText,
+  'aria-hidden': ariaHidden,
+  ...props
+}: TypeAnimationProps) => {
   return (
     <Div
       className={cn(
         'flex flex-row-reverse scrollbar-w-0 max-w-full scrollbar-h-0 overflow-x-auto whitespace-nowrap scrollbar',
         className,
       )}>
+      {ariaHidden === 'true' && srOnlyText && (
+        <P className='sr-only'>{srOnlyText}</P>
+      )}
       <P className='mr-auto'>
-        <BaseTypeAnimation {...props} />
+        <BaseTypeAnimation aria-hidden={ariaHidden} {...props} />
       </P>
     </Div>
   )

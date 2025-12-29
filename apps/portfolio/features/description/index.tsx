@@ -17,14 +17,15 @@ export const Description = ({
 
   const items = descriptionKeys.map(descriptionKey => t(descriptionKey))
 
-  const ariaLabel = format.list(items, { type: 'conjunction' })
+  const srOnlyText = format.list(items, { type: 'conjunction' })
 
   return (
     <TypeAnimation
       className={className}
       items={items}
-      role='note'
-      aria-label={ariaLabel}
+      srOnlyText={srOnlyText}
+      role='marquee'
+      aria-hidden='true'
     />
   )
 }
