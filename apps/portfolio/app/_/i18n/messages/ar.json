@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "لديك {count, plural, =0 {لا متابعين بعد} =1 {متابع واحد} other {# متابعين}}.",
+    "manifest": {
+      "name": "معرض أعمال إيليا أورلوف",
+      "short_name": "إيليا أورلوف",
+      "description": "مرحباً بك في موقع معرض أعمال إيليا أورلوف. استكشف المشاريع والمهارات وتواصل معنا."
+    },
+    "OpenGraphImage": {
+      "alt": "معرض أعمال إيليا أورلوف"
+    },
+    "home": {
+      "meta": {
+        "title": "إيليا أورلوف - معرض الأعمال",
+        "description": "مرحباً بك في موقع معرض أعمال إيليا أورلوف. استكشف المشاريع والمهارات وتواصل معنا."
+      },
+      "loading": {
+        "loading": "جاري التحميل..."
+      },
+      "error": {
+        "title": "حدث خطأ ما!",
+        "buttonText": "حاول مرة أخرى"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "مهندس رئيسي",
+        "webAdvocate": "داعم الويب",
+        "creatorOfEntityJs": "مبتكر Entity.js",
+        "techGuru": "خبير تقني",
+        "businessTechConsultant": "مستشار تقني للأعمال",
+        "chiefArchitectIgnaLetuccee": "كبير المهندسين المعماريين Igna Letucce",
+        "techLead": "قائد تقني",
+        "interfaceEngineer": "مهندس واجهات",
+        "teamLead": "قائد فريق",
+        "fullStackWebDeveloper": "مطور ويب متكامل",
+        "UXDesigner": "مصمم تجربة مستخدم",
+        "frontEndWebDeveloper": "مطور واجهات أمامية",
+        "fullStackWebDeveloperSpecializingInTypeScript": "مطور ويب متكامل متخصص في TypeScript"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "معرض الأعمال",
+      "skills": "المهارات",
+      "stories": "القصص",
+      "chat": "الدردشة"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "رابط GitHub"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "رابط LinkedIn"
+      },
+      "emailLink": {
+        "title": "البريد الإلكتروني",
+        "ariaLabel": "رابط البريد الإلكتروني"
+      },
+      "moreLink": {
+        "title": "المزيد",
+        "ariaLabel": "المزيد من الروابط"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "سياسة الخصوصية",
+      "termsOfService": "شروط الخدمة"
+    },
+    "logo": {
+      "name": "إيليا أورلوف"
+    },
+    "mode-toggle": {
+      "themeToggle": "تبديل السمة"
+    },
+    "my-name": {
+      "hello": "مرحباً!",
+      "myNameIs": "اسمي",
+      "iliaOrlov": "إيليا أورلوف"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "وظفني الآن",
+      "pleaseTryAgain": "يرجى المحاولة مرة أخرى",
+      "loading": "جاري التحميل...",
+      "error": "خطأ"
+    }
+  }
+}

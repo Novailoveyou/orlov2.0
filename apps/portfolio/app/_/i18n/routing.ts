@@ -2,7 +2,7 @@ import { defineRouting } from 'next-intl/routing'
 import { LOCALE_COOKIE_NAME, ONE_YEAR } from '@/shared/constants/client'
 
 export const routing = defineRouting({
-  locales: ['en', 'ru'],
+  locales: ['en', 'ru', 'ar', 'zh', 'tr'],
   defaultLocale: 'en',
   localeDetection: true,
   localePrefix: {

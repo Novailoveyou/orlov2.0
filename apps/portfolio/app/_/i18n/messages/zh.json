@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "您有 {count, plural, =0 {还没有粉丝} =1 {一个粉丝} other {# 个粉丝}}。",
+    "manifest": {
+      "name": "伊利亚·奥尔洛夫的作品集",
+      "short_name": "伊利亚·奥尔洛夫",
+      "description": "欢迎来到伊利亚·奥尔洛夫的作品集网站。探索项目、技能，并与我们联系。"
+    },
+    "OpenGraphImage": {
+      "alt": "伊利亚·奥尔洛夫的作品集"
+    },
+    "home": {
+      "meta": {
+        "title": "伊利亚·奥尔洛夫 - 作品集",
+        "description": "欢迎来到伊利亚·奥尔洛夫的作品集网站。探索项目、技能，并与我们联系。"
+      },
+      "loading": {
+        "loading": "加载中..."
+      },
+      "error": {
+        "title": "出错了！",
+        "buttonText": "重试"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "首席工程师",
+        "webAdvocate": "网络倡导者",
+        "creatorOfEntityJs": "Entity.js 创建者",
+        "techGuru": "技术大师",
+        "businessTechConsultant": "商业技术顾问",
+        "chiefArchitectIgnaLetuccee": "首席架构师 Igna Letucce",
+        "techLead": "技术负责人",
+        "interfaceEngineer": "界面工程师",
+        "teamLead": "团队负责人",
+        "fullStackWebDeveloper": "全栈网页开发者",
+        "UXDesigner": "用户体验设计师",
+        "frontEndWebDeveloper": "前端网页开发者",
+        "fullStackWebDeveloperSpecializingInTypeScript": "专注于 TypeScript 的全栈网页开发者"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "作品集",
+      "skills": "技能",
+      "stories": "故事",
+      "chat": "聊天"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub 链接"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn 链接"
+      },
+      "emailLink": {
+        "title": "邮箱",
+        "ariaLabel": "邮箱链接"
+      },
+      "moreLink": {
+        "title": "更多",
+        "ariaLabel": "更多链接"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "隐私政策",
+      "termsOfService": "服务条款"
+    },
+    "logo": {
+      "name": "伊利亚·奥尔洛夫"
+    },
+    "mode-toggle": {
+      "themeToggle": "主题切换"
+    },
+    "my-name": {
+      "hello": "你好！",
+      "myNameIs": "我的名字是",
+      "iliaOrlov": "伊利亚·奥尔洛夫"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "立即雇用我",
+      "pleaseTryAgain": "请重试",
+      "loading": "加载中...",
+      "error": "错误"
+    }
+  }
+}

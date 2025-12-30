@@ -42,7 +42,9 @@ export const LangToggleDropdown = <Locale extends string>({
       <DropdownMenuContent className='ui:min-w-4' align='center'>
         {locales.map(locale => (
           <DropdownMenuItem key={locale} onClick={() => setLocale(locale)}>
-            {getUnicodeFlagIcon(locale === 'en' ? 'us' : locale)}
+            {getUnicodeFlagIcon(
+              locale === 'en' ? 'us' : locale === 'zh' ? 'cn' : locale,
+            )}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
