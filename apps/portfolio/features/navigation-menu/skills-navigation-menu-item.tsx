@@ -9,7 +9,6 @@ export const SkillsNavigationMenuItem = () => {
   return (
     <NavigationMenuItem
       href={LINKS.skills}
-      pending={t('loading')}
       Icon={RiCodeSSlashLine}
       aria-label={t('skills')}>
       {t('skills')}

@@ -1,7 +1,7 @@
 'use client'
 import 'client-only'
 
-import NextLink, { useLinkStatus } from 'next/link'
+import NextLink from 'next/link'
 import { cn } from '../utils'
 import { ComponentProps } from 'react'
 import { Slot } from '@radix-ui/react-slot'
@@ -10,7 +10,6 @@ type ImageProps = Omit<
   ComponentProps<typeof NextLink>,
   'passHref' | 'legacyBehavior'
 > & {
-  pending: string
   asChild?: boolean
 }
 
@@ -19,7 +18,6 @@ type ImageProps = Omit<
  * @see https://nextjs.org/docs/api-reference/next/link
  */
 export const Link = ({
-  pending: pendingProp = 'Loading...',
   href,
   as,
   replace = false,
@@ -39,7 +37,7 @@ export const Link = ({
 }: ImageProps) => {
   const Comp = asChild ? Slot : NextLink
 
-  const { pending } = useLinkStatus()
+  // const [pending, setIsPending] = useState(false)
 
   return (
     <Comp
@@ -57,12 +55,29 @@ export const Link = ({
       onNavigate={onNavigate}
       className={cn(
         'ui:cursor-pointer',
-        pending && 'ui:cursor-progress ui:opacity-50',
+        // pending && 'ui:cursor-progress ui:opacity-50',
         className,
       )}
-      aria-label={pending ? pendingProp : ariaLabel}
+      aria-label={ariaLabel}
+      // aria-disabled={pending ? 'true' : undefined}
       {...props}>
       {children}
+      {/* <LinkChildren setIsPending={setIsPending}>{children}</LinkChildren> */}
     </Comp>
   )
 }
+
+// function LinkChildren({
+//   children,
+//   setIsPending,
+// }: Pick<ImageProps, 'children'> & {
+//   setIsPending: (value: boolean | ((prevState: boolean) => boolean)) => void
+// }) {
+//   const { pending } = useLinkStatus()
+
+//   useEffect(() => {
+//     setIsPending(pending)
+//   }, [pending, setIsPending])
+
+//   return <>{children}</>
+// }

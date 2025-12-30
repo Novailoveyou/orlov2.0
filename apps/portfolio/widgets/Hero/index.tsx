@@ -11,7 +11,9 @@ export function Hero() {
   // const app = await prisma.app.findFirst()
 
   return (
-    <Section id={IDS.hero}>
+    <Section
+      id={IDS.hero}
+      className='flex flex-col flex-wrap justify-between items-center'>
       <MyName />
       <Description className='mt-8' />
       <LeadButton className='mt-8' />

@@ -17,8 +17,8 @@ export const Button = ({
   errorMessage,
   ...props
 }: ComponentProps<typeof BaseButton> & {
-  loadingMessage: string
-  errorMessage: string
+  loadingMessage?: string
+  errorMessage?: string
 }) => (
   <BaseButton
     className={cn(
@@ -34,7 +34,7 @@ export const Button = ({
     {isLoading && (
       <Icon
         Icon={LoadingIcons.Bars}
-        aria-label={loadingMessage}
+        aria-label={loadingMessage!}
         width='w-5'
         height='h-5'
       />
@@ -42,7 +42,7 @@ export const Button = ({
     {!!error && !isLoading && (
       <Icon
         Icon={MdErrorOutline}
-        aria-label={errorMessage}
+        aria-label={errorMessage!}
         width='w-5'
         height='h-5'
       />

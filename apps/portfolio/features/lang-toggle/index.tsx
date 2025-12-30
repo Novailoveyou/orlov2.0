@@ -1,11 +1,12 @@
 'use client'
 import 'client-only'
 
-import { usePathname, useRouter } from '@/app/_/i18n/navigation'
 import { useParams } from 'next/navigation'
 import { Locale } from '@/shared/types'
+import { usePathname, useRouter } from '@/app/_/i18n/navigation'
+import { LangToggleDropdown } from '@/shared/components/lang-toggle-dropdown'
+import { routing } from '@/app/_/i18n/routing'
 
-// TODO: figure out loading state for lang toggle && figure out a way to switch locale without going back to home page
 export const LangToggle = () => {
   const pathname = usePathname()
   const router = useRouter()
@@ -26,9 +27,10 @@ export const LangToggle = () => {
   }
 
   return (
-    <div>
-      <button onClick={() => changeLocaleWithParams('ru')}>ru</button>
-      <button onClick={() => changeLocaleWithParams('en')}>en</button>
-    </div>
+    <LangToggleDropdown
+      name='language'
+      locales={routing.locales}
+      setLocale={changeLocaleWithParams}
+    />
   )
 }

@@ -6,6 +6,9 @@
       "short_name": "Ilia Orlov",
       "description": "Welcome to Ilia Orlov's portfolio website. Explore projects, skills, and get in touch."
     },
+    "OpenGraphImage": {
+      "alt": "Ilia Orlov's Portfolio"
+    },
     "home": {
       "meta": {
         "title": "Ilia Orlov - Portfolio",
@@ -43,7 +46,6 @@
       }
     },
     "navigation-menu-links": {
-      "loading": "Loading...",
       "portfolio": "Portfolio",
       "skills": "Skills",
       "stories": "Stories",
@@ -69,12 +71,10 @@
     },
     "legal-links": {
       "privacyPolicy": "Privacy Policy",
-      "termsOfService": "Terms of Service",
-      "loading": "Loading..."
+      "termsOfService": "Terms of Service"
     },
     "logo": {
-      "name": "Ilia Orlov",
-      "loading": "Loading..."
+      "name": "Ilia Orlov"
     },
     "mode-toggle": {
       "themeToggle": "Theme Toggle"

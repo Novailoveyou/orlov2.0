@@ -8,7 +8,6 @@ export const ChatMenuItem = () => {
   return (
     <NavigationMenuItem
       href={LINKS.chat}
-      pending={t('loading')}
       Icon={RiChat3Line}
       aria-label={t('chat')}>
       {t('chat')}

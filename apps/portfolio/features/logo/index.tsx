@@ -19,7 +19,6 @@ export const Logo = ({
   return (
     <Link
       href={LINKS.root}
-      pending={t('loading')}
       className={cn(
         'flex flex-wrap justify-center items-center gap-4',
         className,

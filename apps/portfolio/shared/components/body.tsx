@@ -5,5 +5,5 @@ import { ComponentProps } from 'react'
 import { cn } from '@/shared/utils'
 
 export function Body({ className, ...props }: ComponentProps<typeof BodyBase>) {
-  return <BodyBase className={cn('p-5 font-poppins', className)} {...props} />
+  return <BodyBase className={cn('font-poppins', className)} {...props} />
 }

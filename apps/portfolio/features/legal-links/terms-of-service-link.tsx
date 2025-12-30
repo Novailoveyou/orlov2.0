@@ -6,9 +6,5 @@ import { LINKS } from '@/shared/constants'
 
 export const TermsOfService = () => {
   const t = useTranslations('features.legal-links')
-  return (
-    <Link href={LINKS.termsOfService} pending={t('loading')}>
-      {t('termsOfService')}
-    </Link>
-  )
+  return <Link href={LINKS.termsOfService}>{t('termsOfService')}</Link>
 }

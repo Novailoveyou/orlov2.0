@@ -9,7 +9,6 @@ export const StoriesMenuItem = () => {
   return (
     <NavigationMenuItem
       href={LINKS.stories}
-      pending={t('loading')}
       Icon={RiBookLine}
       aria-label={t('stories')}>
       {t('stories')}

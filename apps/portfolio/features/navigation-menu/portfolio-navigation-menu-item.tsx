@@ -8,7 +8,6 @@ export const PortfolioNavigationMenuItem = () => {
   return (
     <NavigationMenuItem
       href={LINKS.portfolio}
-      pending={t('loading')}
       Icon={RiGalleryLine}
       aria-label={t('portfolio')}>
       {t('portfolio')}
