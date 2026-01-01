@@ -23,6 +23,18 @@ export const routing = defineRouting({
     'ta', // Tamil
     'yue', // Cantonese (Yue Chinese)
     'vi', // Vietnamese
+    'la', // Latin
+    'kk', // Kazakh
+    'uz', // Uzbek
+    'eo', // Esperanto
+    'egz', // English GenZ Slang
+    'sov', // Soviet language
+    'orv', // Old East Slavic language
+    'dov', // Dovahzul (Dragon Language)
+    'sim', // Simlish (Sim Language)
+    'nav', // Na'vi (Avatar Language)
+    'kli', // Klingon (Star Trek Language)
+    'sss', // Parsel Tongue (Harry Potter Language)
   ],
   defaultLocale: 'en',
   localeDetection: true,

@@ -8,3 +8,6 @@ export function cn(...inputs: ClassValue[]) {
 export const objectKeys = <Obj extends Record<string, unknown>>(
   obj: Obj,
 ): (keyof Obj)[] => Object.keys(obj) as (keyof Obj)[]
+
+export const toUpperCase = <Str extends string>(str: Str): Uppercase<Str> =>
+  str.toUpperCase() as Uppercase<Str>

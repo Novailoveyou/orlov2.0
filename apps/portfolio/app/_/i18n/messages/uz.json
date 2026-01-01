@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "Sizda {count, plural, =0 {hali hech qanday obunachi yo'q} =1 {bitta obunachi bor} other {# ta obunachi bor}}.",
+    "manifest": {
+      "name": "Iliya Orlovning Portfoliosi",
+      "short_name": "Iliya Orlov",
+      "description": "Iliya Orlovning portfolio veb-saytiga xush kelibsiz. Loyihalarni, ko'nikmalarni o'rganing va bog'laning."
+    },
+    "OpenGraphImage": {
+      "alt": "Iliya Orlovning Portfoliosi"
+    },
+    "home": {
+      "meta": {
+        "title": "Iliya Orlov - Portfolio",
+        "description": "Iliya Orlovning portfolio veb-saytiga xush kelibsiz. Loyihalarni, ko'nikmalarni o'rganing va bog'laning."
+      },
+      "loading": {
+        "loading": "Yuklanmoqda..."
+      },
+      "error": {
+        "title": "Nimadir noto'g'ri ketdi!",
+        "buttonText": "Qayta urinib ko'ring"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Bosh Muhandis",
+        "webAdvocate": "Veb Himoyachisi",
+        "creatorOfEntityJs": "Entity.js Yaratuvchisi",
+        "techGuru": "Texnologiya Gurusi",
+        "businessTechConsultant": "Biznes texnologiyalari bo'yicha maslahatchi",
+        "chiefArchitectIgnaLetuccee": "Bosh Arxitektor Igna Letucce",
+        "techLead": "Texnik Rahbar",
+        "interfaceEngineer": "Interfeys Muhandisi",
+        "teamLead": "Jamoa Rahbari",
+        "fullStackWebDeveloper": "To'liq Stek Veb Dasturchisi",
+        "UXDesigner": "UX Dizayneri",
+        "frontEndWebDeveloper": "Front-end Veb Dasturchisi",
+        "fullStackWebDeveloperSpecializingInTypeScript": "TypeScript ixtisoslashgan To'liq Stek Veb Dasturchisi"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Portfolio",
+      "skills": "Ko'nikmalar",
+      "stories": "Hikoyalar",
+      "chat": "Suhbat"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub Havolasi"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn Havolasi"
+      },
+      "emailLink": {
+        "title": "Elektron pochta",
+        "ariaLabel": "Elektron pochta havolasi"
+      },
+      "moreLink": {
+        "title": "Ko'proq",
+        "ariaLabel": "Ko'proq havolalar"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Maxfiylik Siyosati",
+      "termsOfService": "Xizmat Ko'rsatish Shartlari"
+    },
+    "logo": {
+      "name": "Iliya Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "Mavzu O'zgartirish"
+    },
+    "my-name": {
+      "hello": "Assalomu alaykum!",
+      "myNameIs": "mening ismim",
+      "iliaOrlov": "Iliya Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Meni Hozir Ishga Oling",
+      "pleaseTryAgain": "Iltimos Qayta Urinib Ko'ring",
+      "loading": "Yuklanmoqda...",
+      "error": "Xato"
+    }
+  }
+}

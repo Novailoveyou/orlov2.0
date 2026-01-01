@@ -1,0 +1,98 @@
+{
+  "app": {
+    "countTest": "У вас {count, plural, =0 {пока нет товарищей-подписчиков} =1 {один товарищ-подписчик} other {# товарищей-подписчиков}}.",
+    "manifest": {
+      "name": "Трудовые Достижения товарища Ильи Орлова",
+      "short_name": "Илья Орлов",
+      "description": "Добро пожаловать на страницу трудовых достижений товарища Ильи Орлова. Изучайте проекты, навыки и связывайтесь."
+    },
+    "OpenGraphImage": {
+      "alt": "Трудовые Достижения товарища Ильи Орлова"
+    },
+    "home": {
+      "meta": {
+        "title": "Илья Орлов - Трудовые Достижения",
+        "description": "Добро пожаловать на страницу трудовых достижений товарища Ильи Орлова. Изучайте проекты, навыки и связывайтесь."
+      },
+      "loading": {
+        "loading": "Загружается..."
+      },
+      "error": {
+        "title": "Произошла ошибка в работе!",
+        "buttonText": "Попробовать снова"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {
+      "test": "Это виджет передового труженика"
+    }
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Главный Инженер-Специалист",
+        "webAdvocate": "Агитатор Веб-Технологий",
+        "creatorOfEntityJs": "Создатель Entity.js",
+        "techGuru": "Передовик Технического Производства",
+        "businessTechConsultant": "Консультант по Хозяйственно-Техническим Вопросам",
+        "chiefArchitectIgnaLetuccee": "Главный Архитектор Игна Летуцце",
+        "techLead": "Руководитель Технического Отдела",
+        "interfaceEngineer": "Инженер Пользовательского Интерфейса",
+        "teamLead": "Бригадир Коллектива",
+        "fullStackWebDeveloper": "Разработчик Полного Цикла Веб-Приложений",
+        "UXDesigner": "Проектировщик Пользовательского Опыта",
+        "frontEndWebDeveloper": "Разработчик Клиентской Части Веб-Приложений",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Разработчик Полного Цикла со Специализацией в TypeScript"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Трудовые Достижения",
+      "skills": "Навыки и Умения",
+      "stories": "Очерки",
+      "chat": "Беседа"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "Ссылка на GitHub"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "Ссылка на LinkedIn"
+      },
+      "emailLink": {
+        "title": "Электронная Почта",
+        "ariaLabel": "Ссылка на Электронную Почту"
+      },
+      "moreLink": {
+        "title": "Дополнительно",
+        "ariaLabel": "Дополнительные Ссылки"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Положение о Конфиденциальности",
+      "termsOfService": "Условия Обслуживания"
+    },
+    "logo": {
+      "name": "Илья Орлов"
+    },
+    "mode-toggle": {
+      "themeToggle": "Переключатель Оформления"
+    },
+    "my-name": {
+      "hello": "Здравствуйте, товарищи!",
+      "myNameIs": "меня зовут",
+      "iliaOrlov": "Илья Орлов"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Принять на Работу Немедленно",
+      "pleaseTryAgain": "Пожалуйста, Попробуйте Ещё Раз",
+      "loading": "Загружается...",
+      "error": "Ошибка"
+    }
+  }
+}

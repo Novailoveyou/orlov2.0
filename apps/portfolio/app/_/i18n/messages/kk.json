@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "Сізде {count, plural, =0 {әлі ешқандай жазылушы жоқ} =1 {бір жазылушы бар} other {# жазылушы бар}}.",
+    "manifest": {
+      "name": "Илия Орловтың Портфолиосы",
+      "short_name": "Илия Орлов",
+      "description": "Илия Орловтың портфолио сайтына қош келдіңіз. Жобаларды, дағдыларды зерттеңіз және байланысқа шығыңыз."
+    },
+    "OpenGraphImage": {
+      "alt": "Илия Орловтың Портфолиосы"
+    },
+    "home": {
+      "meta": {
+        "title": "Илия Орлов - Портфолио",
+        "description": "Илия Орловтың портфолио сайтына қош келдіңіз. Жобаларды, дағдыларды зерттеңіз және байланысқа шығыңыз."
+      },
+      "loading": {
+        "loading": "Жүктелуде..."
+      },
+      "error": {
+        "title": "Бірдеңе дұрыс болмады!",
+        "buttonText": "Қайталап көріңіз"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Бас Инженер",
+        "webAdvocate": "Веб Қолдаушысы",
+        "creatorOfEntityJs": "Entity.js Жасаушысы",
+        "techGuru": "Технология Гуруы",
+        "businessTechConsultant": "Бизнес технологиялары бойынша кеңесші",
+        "chiefArchitectIgnaLetuccee": "Бас Архитектор Igna Letucce",
+        "techLead": "Техникалық Жетекші",
+        "interfaceEngineer": "Интерфейс Инженері",
+        "teamLead": "Топ Жетекшісі",
+        "fullStackWebDeveloper": "Толық Стек Веб Әзірлеушісі",
+        "UXDesigner": "UX Дизайнері",
+        "frontEndWebDeveloper": "Фронт-энд Веб Әзірлеушісі",
+        "fullStackWebDeveloperSpecializingInTypeScript": "TypeScript бойынша мамандандырылған Толық Стек Веб Әзірлеушісі"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Портфолио",
+      "skills": "Дағдылар",
+      "stories": "Әңгімелер",
+      "chat": "Чат"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub Сілтемесі"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn Сілтемесі"
+      },
+      "emailLink": {
+        "title": "Электрондық пошта",
+        "ariaLabel": "Электрондық пошта сілтемесі"
+      },
+      "moreLink": {
+        "title": "Тағы",
+        "ariaLabel": "Тағы сілтемелер"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Құпиялылық Саясаты",
+      "termsOfService": "Қызмет Көрсету Шарттары"
+    },
+    "logo": {
+      "name": "Илия Орлов"
+    },
+    "mode-toggle": {
+      "themeToggle": "Тақырыпты Ауыстыру"
+    },
+    "my-name": {
+      "hello": "Сәлеметсіз бе!",
+      "myNameIs": "менің атым",
+      "iliaOrlov": "Илия Орлов"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Мені Қазір Жалдаңыз",
+      "pleaseTryAgain": "Қайталап Көріңіз",
+      "loading": "Жүктелуде...",
+      "error": "Қате"
+    }
+  }
+}

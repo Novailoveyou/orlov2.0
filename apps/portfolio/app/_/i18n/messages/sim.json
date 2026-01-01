@@ -1,0 +1,98 @@
+{
+  "app": {
+    "countTest": "Vu hab {count, plural, =0 {na frenshies yesh} =1 {ooh frenshie} other {# frenshies}}.",
+    "manifest": {
+      "name": "Ilia Orlov's Woohoo Kreeshna",
+      "short_name": "Ilia Orlov",
+      "description": "Sul sul! Veena Ilia Orlov's woohoo kreeshna meshaloob. Firby sul projects, kreeshna dag mesba."
+    },
+    "OpenGraphImage": {
+      "alt": "Ilia Orlov's Woohoo Kreeshna"
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Woohoo Kreeshna",
+        "description": "Sul sul! Veena Ilia Orlov's woohoo kreeshna meshaloob. Firby sul projects, kreeshna dag mesba."
+      },
+      "loading": {
+        "loading": "Meshaloob..."
+      },
+      "error": {
+        "title": "Dag dag nooboo!",
+        "buttonText": "Firby yibs"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {
+      "test": "Dis be woohoo meshaloob"
+    }
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Sul Sul Kreeshna Woohoo",
+        "webAdvocate": "Meshaloob Dag Frenshie",
+        "creatorOfEntityJs": "Chumcha do Entity.js",
+        "techGuru": "Woohoo Dag Master",
+        "businessTechConsultant": "Simoleon Woohoo Dag",
+        "chiefArchitectIgnaLetuccee": "Sul Sul Kreeshna Igna Letucce",
+        "techLead": "Woohoo Dag Chief",
+        "interfaceEngineer": "Meshaloob Kreeshna",
+        "teamLead": "Frenshie Chief",
+        "fullStackWebDeveloper": "Meshaloob Woohoo Kreeshna",
+        "UXDesigner": "Dag Kreeshna Master",
+        "frontEndWebDeveloper": "Firby Meshaloob Kreeshna",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Meshaloob Woohoo Kreeshna TypeScript Sul"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Woohoo Kreeshna",
+      "skills": "Dag Kreeshna",
+      "stories": "Sul Sul Tales",
+      "chat": "Firby Mesba"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub Meshaloob"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn Meshaloob"
+      },
+      "emailLink": {
+        "title": "Dag Mesba",
+        "ariaLabel": "Dag Mesba Meshaloob"
+      },
+      "moreLink": {
+        "title": "Yibs",
+        "ariaLabel": "Yibs Meshaloobs"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Nooboo Dag Policy",
+      "termsOfService": "Meshaloob Dag Terms"
+    },
+    "logo": {
+      "name": "Ilia Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "Dag Kreeshna Toggle"
+    },
+    "my-name": {
+      "hello": "Sul sul!",
+      "myNameIs": "za nifty be",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Chumcha Yibs Nau",
+      "pleaseTryAgain": "Firby Yibs Dag",
+      "loading": "Meshaloob...",
+      "error": "Dag Dag"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "app": {
+    "countTest": "Nga tsun {count, plural, =0 {kehe tsulfätu set} =1 {'aw tsulfätu} other {# tsulfätu}}.",
+    "manifest": {
+      "name": "Ilia Orlov Sì'ekong",
+      "short_name": "Ilia Orlov",
+      "description": "Kaltxì si Ilia Orlov sì'ekong kelutralìri. Nì'ul tok, sngä'i ayrìk sì piveng."
+    },
+    "OpenGraphImage": {
+      "alt": "Ilia Orlov Sì'ekong"
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Sì'ekong",
+        "description": "Kaltxì si Ilia Orlov sì'ekong kelutralìri. Nì'ul tok, sngä'i ayrìk sì piveng."
+      },
+      "loading": {
+        "loading": "Sleyku..."
+      },
+      "error": {
+        "title": "Kawtu ke lu fìtseng!",
+        "buttonText": "Tsun tok taluna"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {
+      "test": "Fìtseng lu toruk makto kelku"
+    }
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Tsaheylu Sngä'ikrr",
+        "webAdvocate": "Kelutral Karyu",
+        "creatorOfEntityJs": "Tìfmetok Entity.js",
+        "techGuru": "Sngä'i Tsahìk",
+        "businessTechConsultant": "Kxeyey Sngä'i Karyu",
+        "chiefArchitectIgnaLetuccee": "Olo' Sngä'ikrr Igna Letucce",
+        "techLead": "Sngä'i Olo'eyktan",
+        "interfaceEngineer": "Txon Sngä'ikrr",
+        "teamLead": "Tsmuk Olo'eyktan",
+        "fullStackWebDeveloper": "Kelutral Sngä'ikrr Nìtxan",
+        "UXDesigner": "Txon Tìfmetok",
+        "frontEndWebDeveloper": "Kelutral Sngä'ikrr Muiä",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Kelutral Sngä'ikrr Nìtxan TypeScript Sìn"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Sì'ekong",
+      "skills": "Ayrìk",
+      "stories": "Ayvitrayä",
+      "chat": "Piveng"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub Tsaheyl"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn Tsaheyl"
+      },
+      "emailLink": {
+        "title": "Pivängkxo",
+        "ariaLabel": "Pivängkxo Tsaheyl"
+      },
+      "moreLink": {
+        "title": "Nìtxan",
+        "ariaLabel": "Nìtxan Aysaheyl"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Txonä Tìfkeytok",
+      "termsOfService": "Kelutral Tìfkeytok"
+    },
+    "logo": {
+      "name": "Ilia Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "Tìfmetok Krro"
+    },
+    "my-name": {
+      "hello": "Kaltxì!",
+      "myNameIs": "oeyä tstxo lu",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Piveng Oer Sweya",
+      "pleaseTryAgain": "Rutxe Tsun Tok Taluna",
+      "loading": "Sleyku...",
+      "error": "Kawtu"
+    }
+  }
+}

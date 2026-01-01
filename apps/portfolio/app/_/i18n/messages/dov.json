@@ -1,0 +1,98 @@
+{
+  "app": {
+    "countTest": "Hi lost {count, plural, =0 {nid folook} =1 {jun folook} other {# folook}}.",
+    "manifest": {
+      "name": "Ilia Orlov Krent",
+      "short_name": "Ilia Orlov",
+      "description": "Koraav wah Ilia Orlov krent lot. Frin prodah, krent ahrk mindok."
+    },
+    "OpenGraphImage": {
+      "alt": "Ilia Orlov Krent"
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Krent",
+        "description": "Koraav wah Ilia Orlov krent lot. Frin prodah, krent ahrk mindok."
+      },
+      "loading": {
+        "loading": "Uth..."
+      },
+      "error": {
+        "title": "Nis kotin ofaal!",
+        "buttonText": "Kotin nok"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {
+      "test": "Daar los qethsegol dovah"
+    }
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Monahven Suleyk",
+        "webAdvocate": "Lot Kendov",
+        "creatorOfEntityJs": "Lahvu do Entity.js",
+        "techGuru": "Krent Dovah",
+        "businessTechConsultant": "Viing Krent Sahlok",
+        "chiefArchitectIgnaLetuccee": "Monahven Krongrah Igna Letucce",
+        "techLead": "Krent Monahven",
+        "interfaceEngineer": "Kroniid Suleyk",
+        "teamLead": "Kopraan Monahven",
+        "fullStackWebDeveloper": "Lot Lahvuv Pah",
+        "UXDesigner": "Krongrah Krent",
+        "frontEndWebDeveloper": "Lot Lahvuv Faas",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Lot Lahvuv Pah Krent TypeScript"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Krent",
+      "skills": "Krent",
+      "stories": "Krongrah",
+      "chat": "Mindok"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub Kendov"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn Kendov"
+      },
+      "emailLink": {
+        "title": "Krent Lot",
+        "ariaLabel": "Krent Lot Kendov"
+      },
+      "moreLink": {
+        "title": "Maar",
+        "ariaLabel": "Maar Kendov"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Qethsegol Aar",
+      "termsOfService": "Kendov Qethsegol"
+    },
+    "logo": {
+      "name": "Ilia Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "Krongrah Kendov"
+    },
+    "my-name": {
+      "hello": "Drem yol lok!",
+      "myNameIs": "zey los",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Koraav Zey Nau",
+      "pleaseTryAgain": "Kotin Nok",
+      "loading": "Uth...",
+      "error": "Ofaal"
+    }
+  }
+}

@@ -7,7 +7,7 @@ import { LangToggle } from '@/features/lang-toggle'
 
 export const Header = () => {
   return (
-    <HeaderBase className='flex flex-wrap items-center justify-between gap-4 mb-6'>
+    <HeaderBase className='flex flex-wrap justify-between items-center gap-4 mb-6'>
       <LangToggle />
       <Logo />
       <ModeToggle />

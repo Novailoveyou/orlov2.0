@@ -1,0 +1,98 @@
+{
+  "app": {
+    "countTest": "Sss have {count, plural, =0 {no ssslithererss yet} =1 {one ssslitherer} other {# ssslithererss}}.",
+    "manifest": {
+      "name": "Ilia Orlov'ss Nesst Collectionsss",
+      "short_name": "Ilia Orlov",
+      "description": "Sssslither to Ilia Orlov'ss nesst collectionsss webssite. Sssee projectsss, ssskillsss, and hisssss."
+    },
+    "OpenGraphImage": {
+      "alt": "Ilia Orlov'ss Nesst Collectionsss"
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Nesst Collectionsss",
+        "description": "Sssslither to Ilia Orlov'ss nesst collectionsss webssite. Sssee projectsss, ssskillsss, and hisssss."
+      },
+      "loading": {
+        "loading": "Sssslithering..."
+      },
+      "error": {
+        "title": "Sssomething ssshed wrongsss!",
+        "buttonText": "Ssstrike again"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {
+      "test": "Thisss isss a sserpent nesst thing"
+    }
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Massster Ssscale Builder",
+        "webAdvocate": "Nesst Sspeaker",
+        "creatorOfEntityJs": "Ssspawner of Entity.jsss",
+        "techGuru": "Ssskilled Sserpent",
+        "businessTechConsultant": "Nesst Ssskill Advisor",
+        "chiefArchitectIgnaLetuccee": "Chief Nesst Massster Igna Letucce",
+        "techLead": "Ssskill Leader",
+        "interfaceEngineer": "Ssskin Ssscale Builder",
+        "teamLead": "Nesst Leader",
+        "fullStackWebDeveloper": "Full Nesst Websss Builder",
+        "UXDesigner": "Sskin Sshaper",
+        "frontEndWebDeveloper": "Front Ssscale Websss Builder",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Full Nesst Websss Builder Massstering TypeSsscript"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Nesst Collectionsss",
+      "skills": "Ssskillsss",
+      "stories": "Talesss",
+      "chat": "Hisssss"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub Ssslither"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn Ssslither"
+      },
+      "emailLink": {
+        "title": "Messssage",
+        "ariaLabel": "Messssage Ssslither"
+      },
+      "moreLink": {
+        "title": "Moresss",
+        "ariaLabel": "Moresss Ssslitherss"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Sssecret Nesst Rulesss",
+      "termsOfService": "Ssservice Rulesss"
+    },
+    "logo": {
+      "name": "Ilia Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "Ssskin Change"
+    },
+    "my-name": {
+      "hello": "Hisssss!",
+      "myNameIs": "my name isss",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Sssummon Me Nowsss",
+      "pleaseTryAgain": "Pleassse Ssstrike Again",
+      "loading": "Sssslithering...",
+      "error": "Ssshed"
+    }
+  }
+}

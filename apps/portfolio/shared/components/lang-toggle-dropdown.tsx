@@ -2,10 +2,20 @@
 import 'client-only'
 
 import { ComponentProps } from 'react'
-import { LangToggleDropdown as BaseLangToggleDropdown } from '@repo/ui/components/lang-toggle-dropdown'
+import {
+  LangToggleDropdown as BaseLangToggleDropdown,
+  type Locale,
+} from '@repo/ui/components/lang-toggle-dropdown'
 
-export const LangToggleDropdown = <Locale extends string>(
-  props: ComponentProps<typeof BaseLangToggleDropdown<Locale>>,
+export const LangToggleDropdown = <TLocale extends Locale>(
+  props: ComponentProps<typeof BaseLangToggleDropdown<TLocale>>,
 ) => {
-  return <BaseLangToggleDropdown {...props} />
+  return (
+    <BaseLangToggleDropdown
+      dropdownMenuItemProps={{
+        className: 'font-poppins',
+      }}
+      {...props}
+    />
+  )
 }

@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "{count, plural, =0 {Nullos sectatores adhuc habes} =1 {unum sectatorem habes} other {# sectatores habes}}.",
+    "manifest": {
+      "name": "Portatorium Iliae Orlov",
+      "short_name": "Ilia Orlov",
+      "description": "Salve ad situm interretialem portatorii Iliae Orlov. Explora opera, artes, et nobiscum communica."
+    },
+    "OpenGraphImage": {
+      "alt": "Portatorium Iliae Orlov"
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Portatorium",
+        "description": "Salve ad situm interretialem portatorii Iliae Orlov. Explora opera, artes, et nobiscum communica."
+      },
+      "loading": {
+        "loading": "Oneratur..."
+      },
+      "error": {
+        "title": "Aliquid male cessit!",
+        "buttonText": "Iterum conare"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Architectus Principalis",
+        "webAdvocate": "Defensor Retis",
+        "creatorOfEntityJs": "Conditor Entity.js",
+        "techGuru": "Magister Artis Technicae",
+        "businessTechConsultant": "Consiliarius Technicus Negotiorum",
+        "chiefArchitectIgnaLetuccee": "Architectus Supremus Igna Letucce",
+        "techLead": "Dux Technicus",
+        "interfaceEngineer": "Architectus Interfaciei",
+        "teamLead": "Dux Cohortis",
+        "fullStackWebDeveloper": "Artifex Plenus Retis Interretialis",
+        "UXDesigner": "Designator Experientiae Usorum",
+        "frontEndWebDeveloper": "Artifex Anterioris Retis",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Artifex Plenus Retis in TypeScript Peritus"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Portatorium",
+      "skills": "Artes",
+      "stories": "Narrationes",
+      "chat": "Colloquium"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "Nexus GitHub"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "Nexus LinkedIn"
+      },
+      "emailLink": {
+        "title": "Epistula Electronica",
+        "ariaLabel": "Nexus Epistulae Electronicae"
+      },
+      "moreLink": {
+        "title": "Plura",
+        "ariaLabel": "Plures Nexus"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Lex Secreti",
+      "termsOfService": "Conditiones Servitii"
+    },
+    "logo": {
+      "name": "Ilia Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "Mutatio Thematis"
+    },
+    "my-name": {
+      "hello": "Salve!",
+      "myNameIs": "nomen mihi est",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Conduc Me Nunc",
+      "pleaseTryAgain": "Quaeso Iterum Conare",
+      "loading": "Oneratur...",
+      "error": "Error"
+    }
+  }
+}

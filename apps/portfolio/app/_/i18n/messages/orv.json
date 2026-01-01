@@ -1,0 +1,98 @@
+{
+  "app": {
+    "countTest": "Имаши {count, plural, =0 {нѣ послѣдователѣи єщє} =1 {єдинъ послѣдователь} other {# послѣдователѣи}}.",
+    "manifest": {
+      "name": "Портфолїо Илїѧ Орлова",
+      "short_name": "Илїѧ Орловъ",
+      "description": "Добрѣ пожаловати къ портфолїо Илїѧ Орлова. Вижди дѣла, умѣнїѧ и пишѣ."
+    },
+    "OpenGraphImage": {
+      "alt": "Портфолїо Илїѧ Орлова"
+    },
+    "home": {
+      "meta": {
+        "title": "Илїѧ Орловъ - Портфолїо",
+        "description": "Добрѣ пожаловати къ портфолїо Илїѧ Орлова. Вижди дѣла, умѣнїѧ и пишѣ."
+      },
+      "loading": {
+        "loading": "Грузитсѧ..."
+      },
+      "error": {
+        "title": "Нѣчто нє добро стало!",
+        "buttonText": "Пробуи паки"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {
+      "test": "Сѥ єсть храброго виджетъ"
+    }
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Главныи Мастеръ",
+        "webAdvocate": "Сѣтнои Заступникъ",
+        "creatorOfEntityJs": "Творѣцъ Entity.js",
+        "techGuru": "Умѣнїѧ Учитель",
+        "businessTechConsultant": "Дѣловои Умѣнїѧ Совѣтникъ",
+        "chiefArchitectIgnaLetuccee": "Главныи Зодчїи Игна Летуцце",
+        "techLead": "Умѣнїѧ Вождь",
+        "interfaceEngineer": "Лицѣвои Мастеръ",
+        "teamLead": "Дружины Вождь",
+        "fullStackWebDeveloper": "Полнои Сѣтнои Творѣцъ",
+        "UXDesigner": "Видъ Зодчїи",
+        "frontEndWebDeveloper": "Прѣднїи Сѣтнои Творѣцъ",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Полнои Сѣтнои Творѣцъ въ TypeScript искусныи"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Портфолїо",
+      "skills": "Умѣнїѧ",
+      "stories": "Повѣсти",
+      "chat": "Бесѣда"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub Связь"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn Связь"
+      },
+      "emailLink": {
+        "title": "Посланїє",
+        "ariaLabel": "Посланїє Связь"
+      },
+      "moreLink": {
+        "title": "Болѣє",
+        "ariaLabel": "Болѣє Связи"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Тайны Правила",
+      "termsOfService": "Служєнїѧ Правила"
+    },
+    "logo": {
+      "name": "Илїѧ Орловъ"
+    },
+    "mode-toggle": {
+      "themeToggle": "Видъ Прѣмѣна"
+    },
+    "my-name": {
+      "hello": "Здравствуи!",
+      "myNameIs": "имѧ моє єсть",
+      "iliaOrlov": "Илїѧ Орловъ"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Наими Мѧ Нынѣ",
+      "pleaseTryAgain": "Молю Пробуи Паки",
+      "loading": "Грузитсѧ...",
+      "error": "Погрѣшность"
+    }
+  }
+}

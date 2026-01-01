@@ -7,8 +7,6 @@
 - Add Storybook (with next-intl https://next-intl.dev/docs/workflows/storybook)
 - Add Vitest
 - Replace ESLint with Biome
-- ✅ Add zustand store to packages (hard)
-- ✅ Make i18nAlly work
 - Set up Crowding
 - Insure everything works correctly with turborepo from 2.5 to 2.7 and next from
   15 to 16
@@ -16,3 +14,5 @@
 - Figure out i18n for testing https://next-intl.dev/docs/environments/testing
 - Figure out i18n polyfill
   https://next-intl.dev/docs/environments/runtime-requirements
+- Integrate Crowdin for i18n
+- Figure out custom scrollbars

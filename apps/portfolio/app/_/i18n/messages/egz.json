@@ -1,0 +1,98 @@
+{
+  "app": {
+    "countTest": "You have {count, plural, =0 {no followers yet bestie} =1 {one follower fr} other {# followers ngl}}.",
+    "manifest": {
+      "name": "Ilia Orlov's Portfolio - It's Giving Professional",
+      "short_name": "Ilia Orlov",
+      "description": "Welcome to Ilia Orlov's portfolio website lowkey. Peep the projects, skills, and slide into the DMs fr fr."
+    },
+    "OpenGraphImage": {
+      "alt": "Ilia Orlov's Portfolio Vibes"
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Portfolio",
+        "description": "Welcome to Ilia Orlov's portfolio website lowkey. Peep the projects, skills, and slide into the DMs fr fr."
+      },
+      "loading": {
+        "loading": "Loading rn..."
+      },
+      "error": {
+        "title": "Something Hit Different - Not In A Good Way!",
+        "buttonText": "Try Again Bestie"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {
+      "test": "This widget is bussin fr"
+    }
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Built Different Head Engineer",
+        "webAdvocate": "Web Hype Person",
+        "creatorOfEntityJs": "Entity.js Creator Who Ate and Left No Crumbs",
+        "techGuru": "Tech Guru Giving Genius Vibes",
+        "businessTechConsultant": "Biz Tech Consultant No Cap",
+        "chiefArchitectIgnaLetuccee": "Chief Architect Igna Letucce With Main Character Energy",
+        "techLead": "Tech Lead - The Blueprint",
+        "interfaceEngineer": "UI Engineer Aesthetic AF",
+        "teamLead": "Team Lead - The Vibe Curator",
+        "fullStackWebDeveloper": "Versatile King/Queen Full Stack Dev",
+        "UXDesigner": "UX Designer Who Understood The Assignment",
+        "frontEndWebDeveloper": "Frontend Dev - The Face Card Never Declines",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Full Stack Dev Specializing In TypeScript And That's On Period"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Portfolio",
+      "skills": "Skills",
+      "stories": "Lore",
+      "chat": "Chat"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub Link"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn Link"
+      },
+      "emailLink": {
+        "title": "Email",
+        "ariaLabel": "Email Link - Slide Here"
+      },
+      "moreLink": {
+        "title": "More",
+        "ariaLabel": "More Links - Tea Incoming"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Privacy Policy - Respectfully",
+      "termsOfService": "Terms of Service - Read The Room"
+    },
+    "logo": {
+      "name": "Ilia Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "Vibe Switch"
+    },
+    "my-name": {
+      "hello": "Yo what's good!",
+      "myNameIs": "the name's",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Hire Me Rn No Cap",
+      "pleaseTryAgain": "Bestie Please Try Again",
+      "loading": "Loading rn...",
+      "error": "Error - Not Slay"
+    }
+  }
+}

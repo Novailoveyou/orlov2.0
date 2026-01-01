@@ -1,0 +1,98 @@
+{
+  "app": {
+    "countTest": "{count, plural, =0 {baHwI' DaSuqbe'} =1 {wa' baHwI' DaSuq} other {# baHwI'pu' DaSuq}}.",
+    "manifest": {
+      "name": "Ilia Orlov Qu' bey",
+      "short_name": "Ilia Orlov",
+      "description": "Ilia Orlov Qu' bey De'wI' yISuch. Qu'mey, laH je yIlegh. bIQum."
+    },
+    "OpenGraphImage": {
+      "alt": "Ilia Orlov Qu' bey"
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Qu' bey",
+        "description": "Ilia Orlov Qu' bey De'wI' yISuch. Qu'mey, laH je yIlegh. bIQum."
+      },
+      "loading": {
+        "loading": "chab..."
+      },
+      "error": {
+        "title": "Qagh qaSpu'!",
+        "buttonText": "yInIDqa'"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {
+      "test": "SuvwI' jan 'oH"
+    }
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "che' QujwI'",
+        "webAdvocate": "De'wI' QanwI'",
+        "creatorOfEntityJs": "Entity.js chenmoHwI'",
+        "techGuru": "Qu' pIn",
+        "businessTechConsultant": "mIw Qu' qeSwI'",
+        "chiefArchitectIgnaLetuccee": "che' qach Igna Letucce",
+        "techLead": "Qu' DevwI'",
+        "interfaceEngineer": "nachHom QujwI'",
+        "teamLead": "ghom DevwI'",
+        "fullStackWebDeveloper": "De'wI' chenmoHwI' naQ",
+        "UXDesigner": "lo'laH qach",
+        "frontEndWebDeveloper": "De'wI' chenmoHwI' wa'DIch",
+        "fullStackWebDeveloperSpecializingInTypeScript": "De'wI' chenmoHwI' naQ TypeScript pIj lo'taH"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Qu' bey",
+      "skills": "laH",
+      "stories": "jang",
+      "chat": "jatlh"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub ghItlh"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn ghItlh"
+      },
+      "emailLink": {
+        "title": "QIn",
+        "ariaLabel": "QIn ghItlh"
+      },
+      "moreLink": {
+        "title": "latlh",
+        "ariaLabel": "latlh ghItlhmey"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "pegh chut",
+      "termsOfService": "toy' chut"
+    },
+    "logo": {
+      "name": "Ilia Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "qach choH"
+    },
+    "my-name": {
+      "hello": "nuqneH!",
+      "myNameIs": "pongwIj 'oH",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "DaH HIlo'",
+      "pleaseTryAgain": "yInIDqa' HIja'",
+      "loading": "chab...",
+      "error": "Qagh"
+    }
+  }
+}
