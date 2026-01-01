@@ -11,7 +11,7 @@ export function Body({ children, className, ...props }: BodyProps) {
   return (
     <body
       className={cn(
-        'ui:min-h-dvh ui:transition-[color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,transform,translate,scale,rotate] ui:antialiased',
+        'ui:min-h-dvh ui:transition-[color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,transform,translate,scale,rotate] ui:antialiased ui:text-balance',
         className,
       )}
       {...props}>

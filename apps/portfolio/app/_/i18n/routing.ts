@@ -2,7 +2,28 @@ import { defineRouting } from 'next-intl/routing'
 import { LOCALE_COOKIE_NAME, ONE_YEAR } from '@/shared/constants/client'
 
 export const routing = defineRouting({
-  locales: ['en', 'ru', 'ar', 'zh', 'tr'],
+  locales: [
+    'en', // English
+    'zh', // Mandarin Chinese
+    'hi', // Hindi
+    'es', // Spanish
+    'fr', // French
+    'ar', // Arabic
+    'bn', // Bengali
+    'pt', // Portuguese
+    'ru', // Russian
+    'ur', // Urdu
+    'id', // Indonesian
+    'de', // German
+    'ja', // Japanese
+    'pcm', // Nigerian Pidgin
+    'mr', // Marathi
+    'te', // Telugu
+    'tr', // Turkish
+    'ta', // Tamil
+    'yue', // Cantonese (Yue Chinese)
+    'vi', // Vietnamese
+  ],
   defaultLocale: 'en',
   localeDetection: true,
   localePrefix: {

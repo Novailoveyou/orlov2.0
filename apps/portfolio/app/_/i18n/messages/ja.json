@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "{count, plural, =0 {まだフォロワーはいません} =1 {1人のフォロワーがいます} other {#人のフォロワーがいます}}。",
+    "manifest": {
+      "name": "イリヤ・オルロフのポートフォリオ",
+      "short_name": "イリヤ・オルロフ",
+      "description": "イリヤ・オルロフのポートフォリオウェブサイトへようこそ。プロジェクトやスキルをご覧いただき、お気軽にお問い合わせください。"
+    },
+    "OpenGraphImage": {
+      "alt": "イリヤ・オルロフのポートフォリオ"
+    },
+    "home": {
+      "meta": {
+        "title": "イリヤ・オルロフ - ポートフォリオ",
+        "description": "イリヤ・オルロフのポートフォリオウェブサイトへようこそ。プロジェクトやスキルをご覧いただき、お気軽にお問い合わせください。"
+      },
+      "loading": {
+        "loading": "読み込み中..."
+      },
+      "error": {
+        "title": "問題が発生しました！",
+        "buttonText": "再試行"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "プリンシパルエンジニア",
+        "webAdvocate": "ウェブアドボケイト",
+        "creatorOfEntityJs": "Entity.jsの開発者",
+        "techGuru": "テクノロジーグル",
+        "businessTechConsultant": "ビジネステクノロジーコンサルタント",
+        "chiefArchitectIgnaLetuccee": "チーフアーキテクト Igna Letucce",
+        "techLead": "テックリード",
+        "interfaceEngineer": "インターフェースエンジニア",
+        "teamLead": "チームリード",
+        "fullStackWebDeveloper": "フルスタックウェブデベロッパー",
+        "UXDesigner": "UXデザイナー",
+        "frontEndWebDeveloper": "フロントエンドウェブデベロッパー",
+        "fullStackWebDeveloperSpecializingInTypeScript": "TypeScript専門のフルスタックウェブデベロッパー"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "ポートフォリオ",
+      "skills": "スキル",
+      "stories": "ストーリー",
+      "chat": "チャット"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHubリンク"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedInリンク"
+      },
+      "emailLink": {
+        "title": "メール",
+        "ariaLabel": "メールリンク"
+      },
+      "moreLink": {
+        "title": "もっと見る",
+        "ariaLabel": "その他のリンク"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "プライバシーポリシー",
+      "termsOfService": "利用規約"
+    },
+    "logo": {
+      "name": "イリヤ・オルロフ"
+    },
+    "mode-toggle": {
+      "themeToggle": "テーマ切り替え"
+    },
+    "my-name": {
+      "hello": "こんにちは！",
+      "myNameIs": "私の名前は",
+      "iliaOrlov": "イリヤ・オルロフ"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "今すぐ採用する",
+      "pleaseTryAgain": "もう一度お試しください",
+      "loading": "読み込み中...",
+      "error": "エラー"
+    }
+  }
+}

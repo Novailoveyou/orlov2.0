@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "你有 {count, plural, =0 {未有追蹤者} =1 {一個追蹤者} other {# 個追蹤者}}.",
+    "manifest": {
+      "name": "伊利亞·奧爾洛夫嘅作品集",
+      "short_name": "伊利亞·奧爾洛夫",
+      "description": "歡迎嚟到伊利亞·奧爾洛夫嘅作品集網站。探索項目、技能，同埋聯絡我哋。"
+    },
+    "OpenGraphImage": {
+      "alt": "伊利亞·奧爾洛夫嘅作品集"
+    },
+    "home": {
+      "meta": {
+        "title": "伊利亞·奧爾洛夫 - 作品集",
+        "description": "歡迎嚟到伊利亞·奧爾洛夫嘅作品集網站。探索項目、技能，同埋聯絡我哋。"
+      },
+      "loading": {
+        "loading": "載入緊..."
+      },
+      "error": {
+        "title": "出咗啲問題！",
+        "buttonText": "再試過"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "首席工程師",
+        "webAdvocate": "網絡倡導者",
+        "creatorOfEntityJs": "Entity.js 創造者",
+        "techGuru": "科技大師",
+        "businessTechConsultant": "商業科技顧問",
+        "chiefArchitectIgnaLetuccee": "首席架構師 Igna Letucce",
+        "techLead": "技術主管",
+        "interfaceEngineer": "界面工程師",
+        "teamLead": "團隊主管",
+        "fullStackWebDeveloper": "全端網頁開發員",
+        "UXDesigner": "用戶體驗設計師",
+        "frontEndWebDeveloper": "前端網頁開發員",
+        "fullStackWebDeveloperSpecializingInTypeScript": "專攻 TypeScript 嘅全端網頁開發員"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "作品集",
+      "skills": "技能",
+      "stories": "故事",
+      "chat": "傾計"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub 連結"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn 連結"
+      },
+      "emailLink": {
+        "title": "電郵",
+        "ariaLabel": "電郵連結"
+      },
+      "moreLink": {
+        "title": "更多",
+        "ariaLabel": "更多連結"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "私隱政策",
+      "termsOfService": "服務條款"
+    },
+    "logo": {
+      "name": "伊利亞·奧爾洛夫"
+    },
+    "mode-toggle": {
+      "themeToggle": "主題切換"
+    },
+    "my-name": {
+      "hello": "你好！",
+      "myNameIs": "我個名係",
+      "iliaOrlov": "伊利亞·奧爾洛夫"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "而家就聘請我",
+      "pleaseTryAgain": "請再試過",
+      "loading": "載入緊...",
+      "error": "錯誤"
+    }
+  }
+}

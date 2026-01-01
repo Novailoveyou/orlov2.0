@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "Bạn có {count, plural, =0 {chưa có người theo dõi} =1 {một người theo dõi} other {# người theo dõi}}.",
+    "manifest": {
+      "name": "Portfolio của Ilia Orlov",
+      "short_name": "Ilia Orlov",
+      "description": "Chào mừng đến với trang web portfolio của Ilia Orlov. Khám phá các dự án, kỹ năng và liên hệ."
+    },
+    "OpenGraphImage": {
+      "alt": "Portfolio của Ilia Orlov"
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Portfolio",
+        "description": "Chào mừng đến với trang web portfolio của Ilia Orlov. Khám phá các dự án, kỹ năng và liên hệ."
+      },
+      "loading": {
+        "loading": "Đang tải..."
+      },
+      "error": {
+        "title": "Đã xảy ra lỗi!",
+        "buttonText": "Thử lại"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Kỹ Sư Trưởng",
+        "webAdvocate": "Người Ủng Hộ Web",
+        "creatorOfEntityJs": "Người Tạo Ra Entity.js",
+        "techGuru": "Chuyên Gia Công Nghệ",
+        "businessTechConsultant": "Tư Vấn Công Nghệ Kinh Doanh",
+        "chiefArchitectIgnaLetuccee": "Kiến Trúc Sư Trưởng Igna Letucce",
+        "techLead": "Trưởng Nhóm Kỹ Thuật",
+        "interfaceEngineer": "Kỹ Sư Giao Diện",
+        "teamLead": "Trưởng Nhóm",
+        "fullStackWebDeveloper": "Lập Trình Viên Web Full Stack",
+        "UXDesigner": "Nhà Thiết Kế UX",
+        "frontEndWebDeveloper": "Lập Trình Viên Web Front End",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Lập Trình Viên Web Full Stack Chuyên Về TypeScript"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Portfolio",
+      "skills": "Kỹ Năng",
+      "stories": "Câu Chuyện",
+      "chat": "Trò Chuyện"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "Liên Kết GitHub"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "Liên Kết LinkedIn"
+      },
+      "emailLink": {
+        "title": "Email",
+        "ariaLabel": "Liên Kết Email"
+      },
+      "moreLink": {
+        "title": "Thêm",
+        "ariaLabel": "Thêm Liên Kết"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Chính Sách Bảo Mật",
+      "termsOfService": "Điều Khoản Dịch Vụ"
+    },
+    "logo": {
+      "name": "Ilia Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "Chuyển Đổi Giao Diện"
+    },
+    "my-name": {
+      "hello": "Xin chào!",
+      "myNameIs": "tên tôi là",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Thuê Tôi Ngay",
+      "pleaseTryAgain": "Vui Lòng Thử Lại",
+      "loading": "Đang tải...",
+      "error": "Lỗi"
+    }
+  }
+}

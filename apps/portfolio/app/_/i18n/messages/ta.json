@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "உங்களுக்கு {count, plural, =0 {இன்னும் பின்தொடர்பவர்கள் இல்லை} =1 {ஒரு பின்தொடர்பவர் உள்ளார்} other {# பின்தொடர்பவர்கள் உள்ளனர்}}.",
+    "manifest": {
+      "name": "இலியா ஓர்லோவ் இன் போர்ட்ஃபோலியோ",
+      "short_name": "இலியா ஓர்லோவ்",
+      "description": "இலியா ஓர்லோவ் இன் போர்ட்ஃபோலியோ இணையதளத்திற்கு வரவேற்கிறோம். திட்டங்கள், திறன்களை ஆராய்ந்து தொடர்பு கொள்ளுங்கள்."
+    },
+    "OpenGraphImage": {
+      "alt": "இலியா ஓர்லோவ் இன் போர்ட்ஃபோலியோ"
+    },
+    "home": {
+      "meta": {
+        "title": "இலியா ஓர்லோவ் - போர்ட்ஃபோலியோ",
+        "description": "இலியா ஓர்லோவ் இன் போர்ட்ஃபோலியோ இணையதளத்திற்கு வரவேற்கிறோம். திட்டங்கள், திறன்களை ஆராய்ந்து தொடர்பு கொள்ளுங்கள்."
+      },
+      "loading": {
+        "loading": "ஏற்றுகிறது..."
+      },
+      "error": {
+        "title": "ஏதோ தவறு நடந்துவிட்டது!",
+        "buttonText": "மீண்டும் முயற்சிக்கவும்"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "முதன்மை பொறியாளர்",
+        "webAdvocate": "வலை வழக்கறிஞர்",
+        "creatorOfEntityJs": "Entity.js இன் படைப்பாளர்",
+        "techGuru": "தொழில்நுட்ப குரு",
+        "businessTechConsultant": "வணிக தொழில்நுட்ப ஆலோசகர்",
+        "chiefArchitectIgnaLetuccee": "தலைமை கட்டிடக்கலைஞர் இக்னா லெட்யூசி",
+        "techLead": "தொழில்நுட்ப தலைவர்",
+        "interfaceEngineer": "இடைமுக பொறியாளர்",
+        "teamLead": "குழு தலைவர்",
+        "fullStackWebDeveloper": "முழு அடுக்கு வலை உருவாக்குநர்",
+        "UXDesigner": "UX வடிவமைப்பாளர்",
+        "frontEndWebDeveloper": "முன்புற வலை உருவாக்குநர்",
+        "fullStackWebDeveloperSpecializingInTypeScript": "TypeScript இல் நிபுணத்துவம் பெற்ற முழு அடுக்கு வலை உருவாக்குநர்"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "போர்ட்ஃபோலியோ",
+      "skills": "திறன்கள்",
+      "stories": "கதைகள்",
+      "chat": "அரட்டை"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub இணைப்பு"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn இணைப்பு"
+      },
+      "emailLink": {
+        "title": "மின்னஞ்சல்",
+        "ariaLabel": "மின்னஞ்சல் இணைப்பு"
+      },
+      "moreLink": {
+        "title": "மேலும்",
+        "ariaLabel": "மேலும் இணைப்புகள்"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "தனியுரிமை கொள்கை",
+      "termsOfService": "சேவை விதிமுறைகள்"
+    },
+    "logo": {
+      "name": "இலியா ஓர்லோவ்"
+    },
+    "mode-toggle": {
+      "themeToggle": "தீம் மாற்றி"
+    },
+    "my-name": {
+      "hello": "வணக்கம்!",
+      "myNameIs": "என் பெயர்",
+      "iliaOrlov": "இலியா ஓர்லோவ்"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "இப்போதே என்னை நியமிக்கவும்",
+      "pleaseTryAgain": "தயவுசெய்து மீண்டும் முயற்சிக்கவும்",
+      "loading": "ஏற்றுகிறது...",
+      "error": "பிழை"
+    }
+  }
+}

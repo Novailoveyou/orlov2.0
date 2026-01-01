@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "आपके {count, plural, =0 {अभी तक कोई फॉलोअर नहीं हैं} =1 {एक फॉलोअर है} other {# फॉलोअर हैं}}।",
+    "manifest": {
+      "name": "इलिया ओर्लोव का पोर्टफोलियो",
+      "short_name": "इलिया ओर्लोव",
+      "description": "इलिया ओर्लोव की पोर्टफोलियो वेबसाइट में आपका स्वागत है। परियोजनाओं, कौशल का अन्वेषण करें और संपर्क में रहें।"
+    },
+    "OpenGraphImage": {
+      "alt": "इलिया ओर्लोव का पोर्टफोलियो"
+    },
+    "home": {
+      "meta": {
+        "title": "इलिया ओर्लोव - पोर्टफोलियो",
+        "description": "इलिया ओर्लोव की पोर्टफोलियो वेबसाइट में आपका स्वागत है। परियोजनाओं, कौशल का अन्वेषण करें और संपर्क में रहें।"
+      },
+      "loading": {
+        "loading": "लोड हो रहा है..."
+      },
+      "error": {
+        "title": "कुछ गलत हो गया!",
+        "buttonText": "पुनः प्रयास करें"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "प्रमुख इंजीनियर",
+        "webAdvocate": "वेब अधिवक्ता",
+        "creatorOfEntityJs": "Entity.js के निर्माता",
+        "techGuru": "तकनीकी गुरु",
+        "businessTechConsultant": "व्यवसाय तकनीकी सलाहकार",
+        "chiefArchitectIgnaLetuccee": "मुख्य वास्तुकार Igna Letucce",
+        "techLead": "तकनीकी लीड",
+        "interfaceEngineer": "इंटरफेस इंजीनियर",
+        "teamLead": "टीम लीड",
+        "fullStackWebDeveloper": "फुल स्टैक वेब डेवलपर",
+        "UXDesigner": "यूएक्स डिज़ाइनर",
+        "frontEndWebDeveloper": "फ्रंट एंड वेब डेवलपर",
+        "fullStackWebDeveloperSpecializingInTypeScript": "TypeScript में विशेषज्ञता वाले फुल स्टैक वेब डेवलपर"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "पोर्टफोलियो",
+      "skills": "कौशल",
+      "stories": "कहानियाँ",
+      "chat": "चैट"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub लिंक"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn लिंक"
+      },
+      "emailLink": {
+        "title": "ईमेल",
+        "ariaLabel": "ईमेल लिंक"
+      },
+      "moreLink": {
+        "title": "अधिक",
+        "ariaLabel": "अधिक लिंक"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "गोपनीयता नीति",
+      "termsOfService": "सेवा की शर्तें"
+    },
+    "logo": {
+      "name": "इलिया ओर्लोव"
+    },
+    "mode-toggle": {
+      "themeToggle": "थीम बदलें"
+    },
+    "my-name": {
+      "hello": "नमस्ते!",
+      "myNameIs": "मेरा नाम है",
+      "iliaOrlov": "इलिया ओर्लोव"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "अभी मुझे हायर करें",
+      "pleaseTryAgain": "कृपया पुनः प्रयास करें",
+      "loading": "लोड हो रहा है...",
+      "error": "त्रुटि"
+    }
+  }
+}

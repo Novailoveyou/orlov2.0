@@ -2,12 +2,14 @@
 import 'client-only'
 
 import { useParams } from 'next/navigation'
+import { useLocale } from 'next-intl'
 import { Locale } from '@/shared/types'
 import { usePathname, useRouter } from '@/app/_/i18n/navigation'
 import { LangToggleDropdown } from '@/shared/components/lang-toggle-dropdown'
 import { routing } from '@/app/_/i18n/routing'
 
 export const LangToggle = () => {
+  const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
   const params = useParams()
@@ -30,6 +32,7 @@ export const LangToggle = () => {
     <LangToggleDropdown
       name='language'
       locales={routing.locales}
+      currentLocale={locale}
       setLocale={changeLocaleWithParams}
     />
   )

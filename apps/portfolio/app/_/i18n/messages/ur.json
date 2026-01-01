@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "آپ کے {count, plural, =0 {ابھی تک کوئی پیروکار نہیں ہیں} =1 {ایک پیروکار ہے} other {# پیروکار ہیں}}۔",
+    "manifest": {
+      "name": "الیا اورلوف کا پورٹ فولیو",
+      "short_name": "الیا اورلوف",
+      "description": "الیا اورلوف کی پورٹ فولیو ویب سائٹ میں خوش آمدید۔ منصوبوں، مہارتوں کو دریافت کریں اور رابطہ کریں۔"
+    },
+    "OpenGraphImage": {
+      "alt": "الیا اورلوف کا پورٹ فولیو"
+    },
+    "home": {
+      "meta": {
+        "title": "الیا اورلوف - پورٹ فولیو",
+        "description": "الیا اورلوف کی پورٹ فولیو ویب سائٹ میں خوش آمدید۔ منصوبوں، مہارتوں کو دریافت کریں اور رابطہ کریں۔"
+      },
+      "loading": {
+        "loading": "لوڈ ہو رہا ہے..."
+      },
+      "error": {
+        "title": "کچھ غلط ہو گیا!",
+        "buttonText": "دوبارہ کوشش کریں"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "پرنسپل انجینئر",
+        "webAdvocate": "ویب ایڈووکیٹ",
+        "creatorOfEntityJs": "Entity.js کے تخلیق کار",
+        "techGuru": "ٹیکنالوجی گرو",
+        "businessTechConsultant": "کاروباری ٹیکنالوجی مشیر",
+        "chiefArchitectIgnaLetuccee": "چیف آرکیٹیکٹ Igna Letucce",
+        "techLead": "ٹیکنیکل لیڈ",
+        "interfaceEngineer": "انٹرفیس انجینئر",
+        "teamLead": "ٹیم لیڈ",
+        "fullStackWebDeveloper": "فل اسٹیک ویب ڈویلپر",
+        "UXDesigner": "یو ایکس ڈیزائنر",
+        "frontEndWebDeveloper": "فرنٹ اینڈ ویب ڈویلپر",
+        "fullStackWebDeveloperSpecializingInTypeScript": "TypeScript میں مہارت رکھنے والے فل اسٹیک ویب ڈویلپر"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "پورٹ فولیو",
+      "skills": "مہارتیں",
+      "stories": "کہانیاں",
+      "chat": "چیٹ"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub لنک"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn لنک"
+      },
+      "emailLink": {
+        "title": "ای میل",
+        "ariaLabel": "ای میل لنک"
+      },
+      "moreLink": {
+        "title": "مزید",
+        "ariaLabel": "مزید لنکس"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "رازداری کی پالیسی",
+      "termsOfService": "سروس کی شرائط"
+    },
+    "logo": {
+      "name": "الیا اورلوف"
+    },
+    "mode-toggle": {
+      "themeToggle": "تھیم تبدیل کریں"
+    },
+    "my-name": {
+      "hello": "ہیلو!",
+      "myNameIs": "میرا نام ہے",
+      "iliaOrlov": "الیا اورلوف"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "ابھی مجھے ملازمت دیں",
+      "pleaseTryAgain": "براہ کرم دوبارہ کوشش کریں",
+      "loading": "لوڈ ہو رہا ہے...",
+      "error": "خرابی"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "Você tem {count, plural, =0 {nenhum seguidor ainda} =1 {um seguidor} other {# seguidores}}.",
+    "manifest": {
+      "name": "Portfólio de Ilia Orlov",
+      "short_name": "Ilia Orlov",
+      "description": "Bem-vindo ao site de portfólio de Ilia Orlov. Explore projetos, habilidades e entre em contato."
+    },
+    "OpenGraphImage": {
+      "alt": "Portfólio de Ilia Orlov"
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Portfólio",
+        "description": "Bem-vindo ao site de portfólio de Ilia Orlov. Explore projetos, habilidades e entre em contato."
+      },
+      "loading": {
+        "loading": "Carregando..."
+      },
+      "error": {
+        "title": "Algo deu errado!",
+        "buttonText": "Tentar novamente"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Engenheiro Principal",
+        "webAdvocate": "Defensor da Web",
+        "creatorOfEntityJs": "Criador do Entity.js",
+        "techGuru": "Guru Tecnológico",
+        "businessTechConsultant": "Consultor de Tecnologia Empresarial",
+        "chiefArchitectIgnaLetuccee": "Arquiteto Chefe Igna Letucce",
+        "techLead": "Líder Técnico",
+        "interfaceEngineer": "Engenheiro de Interface",
+        "teamLead": "Líder de Equipe",
+        "fullStackWebDeveloper": "Desenvolvedor Web Full Stack",
+        "UXDesigner": "Designer UX",
+        "frontEndWebDeveloper": "Desenvolvedor Web Front End",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Desenvolvedor Web Full Stack especializado em TypeScript"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Portfólio",
+      "skills": "Habilidades",
+      "stories": "Histórias",
+      "chat": "Chat"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "Link do GitHub"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "Link do LinkedIn"
+      },
+      "emailLink": {
+        "title": "E-mail",
+        "ariaLabel": "Link de E-mail"
+      },
+      "moreLink": {
+        "title": "Mais",
+        "ariaLabel": "Mais links"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Política de Privacidade",
+      "termsOfService": "Termos de Serviço"
+    },
+    "logo": {
+      "name": "Ilia Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "Alternar Tema"
+    },
+    "my-name": {
+      "hello": "Olá!",
+      "myNameIs": "meu nome é",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Contrate-me Agora",
+      "pleaseTryAgain": "Por favor, tente novamente",
+      "loading": "Carregando...",
+      "error": "Erro"
+    }
+  }
+}

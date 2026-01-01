@@ -12,7 +12,11 @@ export function MyName({
   const t = useTranslations('features.my-name')
 
   return (
-    <H1 className={cn('flex flex-col', className)}>
+    <H1
+      className={cn(
+        'flex flex-col justify-center items-center text-center',
+        className,
+      )}>
       <Text className='font-bold text-[5.125rem] uppercase leading-[100%]'>
         {t('hello')}
       </Text>

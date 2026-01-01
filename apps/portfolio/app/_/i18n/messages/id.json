@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "Anda memiliki {count, plural, =0 {belum ada pengikut} =1 {satu pengikut} other {# pengikut}}.",
+    "manifest": {
+      "name": "Portofolio Ilia Orlov",
+      "short_name": "Ilia Orlov",
+      "description": "Selamat datang di situs web portofolio Ilia Orlov. Jelajahi proyek, keterampilan, dan hubungi kami."
+    },
+    "OpenGraphImage": {
+      "alt": "Portofolio Ilia Orlov"
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Portofolio",
+        "description": "Selamat datang di situs web portofolio Ilia Orlov. Jelajahi proyek, keterampilan, dan hubungi kami."
+      },
+      "loading": {
+        "loading": "Memuat..."
+      },
+      "error": {
+        "title": "Terjadi kesalahan!",
+        "buttonText": "Coba lagi"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Insinyur Utama",
+        "webAdvocate": "Advokat Web",
+        "creatorOfEntityJs": "Pencipta Entity.js",
+        "techGuru": "Guru Teknologi",
+        "businessTechConsultant": "Konsultan Teknologi Bisnis",
+        "chiefArchitectIgnaLetuccee": "Kepala Arsitek Igna Letucce",
+        "techLead": "Pemimpin Teknologi",
+        "interfaceEngineer": "Insinyur Antarmuka",
+        "teamLead": "Pemimpin Tim",
+        "fullStackWebDeveloper": "Pengembang Web Full Stack",
+        "UXDesigner": "Desainer UX",
+        "frontEndWebDeveloper": "Pengembang Web Front End",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Pengembang Web Full Stack yang mengkhususkan diri dalam TypeScript"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Portofolio",
+      "skills": "Keterampilan",
+      "stories": "Cerita",
+      "chat": "Chat"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "Tautan GitHub"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "Tautan LinkedIn"
+      },
+      "emailLink": {
+        "title": "Email",
+        "ariaLabel": "Tautan Email"
+      },
+      "moreLink": {
+        "title": "Lainnya",
+        "ariaLabel": "Tautan Lainnya"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Kebijakan Privasi",
+      "termsOfService": "Ketentuan Layanan"
+    },
+    "logo": {
+      "name": "Ilia Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "Ganti Tema"
+    },
+    "my-name": {
+      "hello": "Halo!",
+      "myNameIs": "nama saya",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Rekrut Saya Sekarang",
+      "pleaseTryAgain": "Silakan Coba Lagi",
+      "loading": "Memuat...",
+      "error": "Kesalahan"
+    }
+  }
+}

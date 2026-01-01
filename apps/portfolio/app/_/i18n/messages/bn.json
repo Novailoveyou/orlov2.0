@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "আপনার {count, plural, =0 {এখনও কোনো অনুসরণকারী নেই} =1 {একজন অনুসরণকারী আছে} other {# জন অনুসরণকারী আছে}}।",
+    "manifest": {
+      "name": "ইলিয়া অর্লভের পোর্টফোলিও",
+      "short_name": "ইলিয়া অর্লভ",
+      "description": "ইলিয়া অর্লভের পোর্টফোলিও ওয়েবসাইটে স্বাগতম। প্রকল্প, দক্ষতা অন্বেষণ করুন এবং যোগাযোগ করুন।"
+    },
+    "OpenGraphImage": {
+      "alt": "ইলিয়া অর্লভের পোর্টফোলিও"
+    },
+    "home": {
+      "meta": {
+        "title": "ইলিয়া অর্লভ - পোর্টফোলিও",
+        "description": "ইলিয়া অর্লভের পোর্টফোলিও ওয়েবসাইটে স্বাগতম। প্রকল্প, দক্ষতা অন্বেষণ করুন এবং যোগাযোগ করুন।"
+      },
+      "loading": {
+        "loading": "লোড হচ্ছে..."
+      },
+      "error": {
+        "title": "কিছু ভুল হয়েছে!",
+        "buttonText": "আবার চেষ্টা করুন"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "প্রধান প্রকৌশলী",
+        "webAdvocate": "ওয়েব অ্যাডভোকেট",
+        "creatorOfEntityJs": "Entity.js এর স্রষ্টা",
+        "techGuru": "প্রযুক্তি গুরু",
+        "businessTechConsultant": "ব্যবসায়িক প্রযুক্তি পরামর্শদাতা",
+        "chiefArchitectIgnaLetuccee": "প্রধান স্থপতি Igna Letucce",
+        "techLead": "প্রযুক্তি প্রধান",
+        "interfaceEngineer": "ইন্টারফেস প্রকৌশলী",
+        "teamLead": "টিম লিড",
+        "fullStackWebDeveloper": "ফুল স্ট্যাক ওয়েব ডেভেলপার",
+        "UXDesigner": "ইউএক্স ডিজাইনার",
+        "frontEndWebDeveloper": "ফ্রন্ট এন্ড ওয়েব ডেভেলপার",
+        "fullStackWebDeveloperSpecializingInTypeScript": "TypeScript বিশেষজ্ঞ ফুল স্ট্যাক ওয়েব ডেভেলপার"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "পোর্টফোলিও",
+      "skills": "দক্ষতা",
+      "stories": "গল্প",
+      "chat": "চ্যাট"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub লিংক"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn লিংক"
+      },
+      "emailLink": {
+        "title": "ইমেইল",
+        "ariaLabel": "ইমেইল লিংক"
+      },
+      "moreLink": {
+        "title": "আরও",
+        "ariaLabel": "আরও লিংক"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "গোপনীয়তা নীতি",
+      "termsOfService": "সেবার শর্তাবলী"
+    },
+    "logo": {
+      "name": "ইলিয়া অর্লভ"
+    },
+    "mode-toggle": {
+      "themeToggle": "থিম পরিবর্তন করুন"
+    },
+    "my-name": {
+      "hello": "হ্যালো!",
+      "myNameIs": "আমার নাম",
+      "iliaOrlov": "ইলিয়া অর্লভ"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "এখনই আমাকে নিয়োগ দিন",
+      "pleaseTryAgain": "অনুগ্রহ করে আবার চেষ্টা করুন",
+      "loading": "লোড হচ্ছে...",
+      "error": "ত্রুটি"
+    }
+  }
+}

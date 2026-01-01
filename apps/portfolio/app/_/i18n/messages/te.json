@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "మీకు {count, plural, =0 {ఇంకా ఫాలోవర్లు లేరు} =1 {ఒక ఫాలోవర్ ఉన్నారు} other {# ఫాలోవర్లు ఉన్నారు}}.",
+    "manifest": {
+      "name": "ఇలియా ఓర్లోవ్ పోర్ట్‌ఫోలియో",
+      "short_name": "ఇలియా ఓర్లోవ్",
+      "description": "ఇలియా ఓర్లోవ్ పోర్ట్‌ఫోలియో వెబ్‌సైట్‌కు స్వాగతం. ప్రాజెక్ట్‌లు, నైపుణ్యాలు అన్వేషించండి మరియు సంప్రదించండి."
+    },
+    "OpenGraphImage": {
+      "alt": "ఇలియా ఓర్లోవ్ పోర్ట్‌ఫోలియో"
+    },
+    "home": {
+      "meta": {
+        "title": "ఇలియా ఓర్లోవ్ - పోర్ట్‌ఫోలియో",
+        "description": "ఇలియా ఓర్లోవ్ పోర్ట్‌ఫోలియో వెబ్‌సైట్‌కు స్వాగతం. ప్రాజెక్ట్‌లు, నైపుణ్యాలు అన్వేషించండి మరియు సంప్రదించండి."
+      },
+      "loading": {
+        "loading": "లోడ్ అవుతోంది..."
+      },
+      "error": {
+        "title": "ఏదో తప్పు జరిగింది!",
+        "buttonText": "మళ్లీ ప్రయత్నించండి"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "ప్రధాన ఇంజనీర్",
+        "webAdvocate": "వెబ్ అడ్వకేట్",
+        "creatorOfEntityJs": "Entity.js సృష్టికర్త",
+        "techGuru": "టెక్ గురు",
+        "businessTechConsultant": "వ్యాపార సాంకేతిక సలహాదారు",
+        "chiefArchitectIgnaLetuccee": "చీఫ్ ఆర్కిటెక్ట్ ఇగ్నా లెట్యూసీ",
+        "techLead": "టెక్ లీడ్",
+        "interfaceEngineer": "ఇంటర్‌ఫేస్ ఇంజనీర్",
+        "teamLead": "టీమ్ లీడ్",
+        "fullStackWebDeveloper": "ఫుల్ స్టాక్ వెబ్ డెవలపర్",
+        "UXDesigner": "UX డిజైనర్",
+        "frontEndWebDeveloper": "ఫ్రంట్ ఎండ్ వెబ్ డెవలపర్",
+        "fullStackWebDeveloperSpecializingInTypeScript": "TypeScript లో నైపుణ్యం కలిగిన ఫుల్ స్టాక్ వెబ్ డెవలపర్"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "పోర్ట్‌ఫోలియో",
+      "skills": "నైపుణ్యాలు",
+      "stories": "కథలు",
+      "chat": "చాట్"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "GitHub లింక్"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "LinkedIn లింక్"
+      },
+      "emailLink": {
+        "title": "ఇమెయిల్",
+        "ariaLabel": "ఇమెయిల్ లింక్"
+      },
+      "moreLink": {
+        "title": "మరిన్ని",
+        "ariaLabel": "మరిన్ని లింక్‌లు"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "గోప్యతా విధానం",
+      "termsOfService": "సేవా నిబంధనలు"
+    },
+    "logo": {
+      "name": "ఇలియా ఓర్లోవ్"
+    },
+    "mode-toggle": {
+      "themeToggle": "థీమ్ టోగుల్"
+    },
+    "my-name": {
+      "hello": "నమస్కారం!",
+      "myNameIs": "నా పేరు",
+      "iliaOrlov": "ఇలియా ఓర్లోవ్"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "ఇప్పుడే నన్ను నియమించండి",
+      "pleaseTryAgain": "దయచేసి మళ్లీ ప్రయత్నించండి",
+      "loading": "లోడ్ అవుతోంది...",
+      "error": "లోపం"
+    }
+  }
+}
