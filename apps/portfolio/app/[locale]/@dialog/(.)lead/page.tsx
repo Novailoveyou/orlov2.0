@@ -6,6 +6,7 @@ import { routing } from '@/app/_/i18n/routing'
 import { hasLocale } from 'next-intl'
 import { Metadata } from 'next'
 import { LeadView } from '@/views/lead-view'
+import { Dialog } from '@/shared/components/dialog'
 
 export async function generateMetadata({
   params,
@@ -40,7 +41,9 @@ export default async function DialogLeadPage({
 
   return (
     <>
-      Modal <br /> <LeadView />
+      <Dialog>
+        <LeadView />
+      </Dialog>
     </>
   )
 }

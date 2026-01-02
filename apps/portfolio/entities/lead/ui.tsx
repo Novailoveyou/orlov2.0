@@ -4,12 +4,14 @@ import 'client-only'
 import { ComponentProps, useCallback } from 'react'
 import { useTranslations } from 'next-intl'
 import { useLead } from '@/entities/lead/hooks'
-import { Button } from '@/shared/components/button'
+import { SubmitPrimaryButton } from '@/shared/components/submit-primary-button'
 import { cn } from '@/shared/utils'
+import { PrimaryButton } from '@/shared/components/primary-button'
+import { Link } from '@/shared/components/link'
 
 export const LeadButton = ({
   className,
-}: Pick<ComponentProps<typeof Button>, 'className'>) => {
+}: Pick<ComponentProps<typeof SubmitPrimaryButton>, 'className'>) => {
   // const [retryCount, setRetryCount] = useState(0)
   const t = useTranslations('entities.lead')
 
@@ -50,7 +52,7 @@ export const LeadButton = ({
   // TODO: handle retries. 3 retries, each in 3 seconds, then if not 200, save data to localStorage to send to server when connection comes online
   // TODO: handle error state
   return (
-    <Button
+    <SubmitPrimaryButton
       className={cn(className)}
       isLoading={isLeadMutating}
       loadingMessage={t('loading')}
@@ -58,6 +60,19 @@ export const LeadButton = ({
       error={isError}
       onClick={handleLead}>
       {isError ? t('pleaseTryAgain') : t('hireMe')}
-    </Button>
+    </SubmitPrimaryButton>
+  )
+}
+
+export const OpenLeadDialogButton = ({
+  children,
+  className,
+}: Pick<ComponentProps<typeof PrimaryButton>, 'className' | 'children'>) => {
+  const t = useTranslations('entities.lead')
+
+  return (
+    <PrimaryButton className={className} asChild>
+      <Link href='/lead'>{children || t('hireMe')}</Link>
+    </PrimaryButton>
   )
 }

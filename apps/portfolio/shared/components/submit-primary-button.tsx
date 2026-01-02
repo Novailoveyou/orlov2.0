@@ -8,7 +8,8 @@ import { cn } from '@/shared/utils'
 import { Icon } from '@/shared/components/icon'
 import { Text } from '@/shared/components/text'
 
-export const Button = ({
+// TODO: finish this
+export const SubmitPrimaryButton = ({
   children,
   className,
   isLoading,

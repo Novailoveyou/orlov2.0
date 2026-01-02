@@ -6,7 +6,6 @@ import { Suspense } from 'react'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
-import NextTopLoader from 'nextjs-toploader'
 import { routing } from '@/app/_/i18n/routing'
 import { StoreProvider } from '@/app/_/store/provider'
 import { Header } from '@/widgets/Header'
@@ -21,7 +20,7 @@ import { ThemeProvider } from '@/shared/components/theme-provider'
 import { WebVitals } from '@/shared/components/web-vitals'
 import { YandexMetrika } from '@/shared/yandex-metrika'
 import { UTMs } from '@/shared/components/utms'
-import { Link } from '@/shared/components/link'
+import { NextTopLoader } from '@/shared/components/next-topbar'
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }))
