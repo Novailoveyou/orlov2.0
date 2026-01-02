@@ -7,19 +7,19 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
-        disallow: '/private/',
+        // allow: '/',
+        disallow: '*',
       },
       {
         userAgent: 'Googlebot',
-        allow: ['/'],
-        disallow: '/private/',
+        // allow: ['/'],
+        disallow: '*',
       },
       {
         userAgent: ['Applebot', 'Bingbot'],
-        disallow: ['/'],
+        disallow: ['*'],
       },
     ],
-    sitemap: 'https://acme.com/sitemap.xml',
+    // sitemap: 'https://acme.com/sitemap.xml',
   }
 }
