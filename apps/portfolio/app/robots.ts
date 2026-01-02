@@ -8,16 +8,16 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         // allow: '/',
-        disallow: '*',
+        disallow: '/',
       },
       {
         userAgent: 'Googlebot',
         // allow: ['/'],
-        disallow: '*',
+        disallow: '/',
       },
       {
         userAgent: ['Applebot', 'Bingbot'],
-        disallow: ['*'],
+        disallow: ['/'],
       },
     ],
     // sitemap: 'https://acme.com/sitemap.xml',

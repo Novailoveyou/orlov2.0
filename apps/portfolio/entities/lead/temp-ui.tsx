@@ -67,6 +67,12 @@ export function BugReportForm() {
     })
   }
 
+  const setFocus = form.setFocus
+
+  React.useEffect(() => {
+    setFocus('title')
+  }, [setFocus])
+
   return (
     <form
       id='form-rhf-demo'
