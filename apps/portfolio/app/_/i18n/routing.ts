@@ -31,6 +31,7 @@ export const routing = defineRouting({
     'sov', // Soviet language
     'orv', // Old East Slavic language
     'dov', // Dovahzul (Dragon Language)
+    'elv', // Elvish (Quenya)
     'sim', // Simlish (Sim Language)
     'nav', // Na'vi (Avatar Language)
     'kli', // Klingon (Star Trek Language)
@@ -53,6 +54,9 @@ export const routing = defineRouting({
   },
   pathnames: {
     '/': '/',
+    '/lead': {
+      ru: '/zayavka',
+    },
     '/chat': {
       ru: '/chat',
     },

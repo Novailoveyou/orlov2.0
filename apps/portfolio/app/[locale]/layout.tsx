@@ -21,6 +21,7 @@ import { ThemeProvider } from '@/shared/components/theme-provider'
 import { WebVitals } from '@/shared/components/web-vitals'
 import { YandexMetrika } from '@/shared/yandex-metrika'
 import { UTMs } from '@/shared/components/utms'
+import { Link } from '@/shared/components/link'
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }))
@@ -47,6 +48,7 @@ export async function generateMetadata({
 export default async function RootLayout({
   children,
   params,
+  dialog,
 }: LayoutProps<'/[locale]'>) {
   const { locale } = await params
 
@@ -66,7 +68,10 @@ export default async function RootLayout({
                 <NextTopLoader />
                 <Container>
                   <Header />
-                  <Main>{children}</Main>
+                  <Main>
+                    {children}
+                    {dialog}
+                  </Main>
                   <Footer />
                   <NavigationMenu />
                 </Container>

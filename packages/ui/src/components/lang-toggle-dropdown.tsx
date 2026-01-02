@@ -47,7 +47,9 @@ const LOCALE_TO_LANGUAGE_MAP = {
   egz: 'No Cap Just Vibes',
   sov: 'Советский',
   orv: 'Рѹсьскъ',
+  ept: 'Пацанский',
   dov: 'Dovahzul',
+  elv: 'Eldarin',
   sim: 'Simlish',
   nav: "Na'vi",
   kli: 'Klingon',
@@ -84,7 +86,9 @@ const LOCALE_TO_COUNTRY_MAP = {
   egz: 'us',
   sov: 'sov',
   orv: 'orv',
+  ept: 'ru',
   dov: 'dov',
+  elv: 'elv',
   sim: 'sim',
   nav: 'nav',
   kli: 'kli',
@@ -101,10 +105,22 @@ const FUN_LANGUAGES_ICONS = {
   egz: '🗣',
   sov: '🚩',
   orv: '📜',
+  ept: '🪆',
+  elv: '🧝‍♂️',
 } as const satisfies Record<
   keyof Pick<
     typeof LOCALE_TO_LANGUAGE_MAP,
-    'eo' | 'dov' | 'sim' | 'nav' | 'kli' | 'sss' | 'egz' | 'sov' | 'orv'
+    | 'eo'
+    | 'dov'
+    | 'sim'
+    | 'nav'
+    | 'kli'
+    | 'sss'
+    | 'egz'
+    | 'sov'
+    | 'orv'
+    | 'ept'
+    | 'elv'
   >,
   string
 >
@@ -149,7 +165,9 @@ export const LangToggleDropdown = <TLocale extends Locale>({
         className='ui:min-w-auto ui:min-h-40 ui:max-h-[30dvh]'
         align='center'>
         {locales.map(locale => {
-          const country = toUpperCase(LOCALE_TO_COUNTRY_MAP[locale])
+          const country = LOCALE_TO_COUNTRY_MAP[locale]
+            ? toUpperCase(LOCALE_TO_COUNTRY_MAP[locale])
+            : undefined
 
           const { direction: dir } = new LocalePolyfill(locale).getTextInfo()
 
@@ -174,7 +192,7 @@ export const LangToggleDropdown = <TLocale extends Locale>({
                     ]
                   }
                 </>
-              ) : country in countryFlags ? (
+              ) : country && country in countryFlags ? (
                 <Icon
                   width='w-[1.2rem]'
                   height='h-[1.2rem]'

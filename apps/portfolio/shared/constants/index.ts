@@ -31,6 +31,7 @@ export const IDS = {
   skills: 'skills',
   stories: 'stories',
   chat: 'chat',
+  lead: 'lead',
   /** /app */
   /** widgets */
   hero: 'hero',

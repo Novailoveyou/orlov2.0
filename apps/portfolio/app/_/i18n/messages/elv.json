@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "{count, plural, =0 {Lá ná queni ye mernuvar tye} =1 {Er quén mernuva tye} other {# queni mernuvar tye}}.",
+    "manifest": {
+      "name": "Parma Carda Ilia Orlov",
+      "short_name": "Ilia Orlov",
+      "description": "Aníra tulles i parma-carda liruvaite Ilia Orlov. Cenda i carmar, i nóti, ar queta menen."
+    },
+    "OpenGraphImage": {
+      "alt": "Parma Carda Ilia Orlov"
+    },
+    "home": {
+      "meta": {
+        "title": "Ilia Orlov - Parma Carda",
+        "description": "Aníra tulles i parma-carda liruvaite Ilia Orlov. Cenda i carmar, i nóti, ar queta menen."
+      },
+      "loading": {
+        "loading": "Ontaina..."
+      },
+      "error": {
+        "title": "Mana sa né umya!",
+        "buttonText": "Ata yesta"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Aran Samno",
+        "webAdvocate": "Estel i Liruvaitëo",
+        "creatorOfEntityJs": "Carita Entity.js",
+        "techGuru": "Istimo i Sanweo",
+        "businessTechConsultant": "Ómaquetië Sanwe Roquen",
+        "chiefArchitectIgnaLetuccee": "Aran Samno Igna Letucce",
+        "techLead": "Tereva Sanwe",
+        "interfaceEngineer": "Samno i Indómëo",
+        "teamLead": "Tereva i Hostar",
+        "fullStackWebDeveloper": "Samno Quanta i Liruvaitëo",
+        "UXDesigner": "Carindo Carmiëo Náriëo",
+        "frontEndWebDeveloper": "Samno Etta i Liruvaitëo",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Samno Quanta i Liruvaitëo ar TypeScript"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "Parma Carda",
+      "skills": "Nóti",
+      "stories": "Quenti",
+      "chat": "Quetië"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "GitHub",
+        "ariaLabel": "Tengwë GitHub"
+      },
+      "linkedInLink": {
+        "title": "LinkedIn",
+        "ariaLabel": "Tengwë LinkedIn"
+      },
+      "emailLink": {
+        "title": "Parma Lirëa",
+        "ariaLabel": "Tengwë Parmaliruva"
+      },
+      "moreLink": {
+        "title": "Yá",
+        "ariaLabel": "Yá Tengwi"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Axan Muinëo",
+      "termsOfService": "Axani Condiëo"
+    },
+    "logo": {
+      "name": "Ilia Orlov"
+    },
+    "mode-toggle": {
+      "themeToggle": "Viltë Sana"
+    },
+    "my-name": {
+      "hello": "Aiya!",
+      "myNameIs": "essenya ná",
+      "iliaOrlov": "Ilia Orlov"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "Colë Nin Sí",
+      "pleaseTryAgain": "Cé Ata Yesta",
+      "loading": "Ontaina...",
+      "error": "Úlúmë"
+    }
+  }
+}
