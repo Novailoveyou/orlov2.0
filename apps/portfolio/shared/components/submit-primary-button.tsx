@@ -16,6 +16,7 @@ export const SubmitPrimaryButton = ({
   error,
   loadingMessage,
   errorMessage,
+  type = 'submit',
   ...props
 }: ComponentProps<typeof BaseButton> & {
   loadingMessage?: string
@@ -26,6 +27,7 @@ export const SubmitPrimaryButton = ({
       'bg-linear-[var(--gradient-primary)] px-4 py-[1.375rem] rounded-4xl w-full text-white',
       className,
     )}
+    type={type}
     isLoading={isLoading}
     error={error}
     {...props}>

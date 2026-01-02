@@ -23,6 +23,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from './shadcnui/drawer'
+import { Div } from './tags/div'
 
 export const Dialog = ({
   children,
@@ -41,7 +42,7 @@ export const Dialog = ({
         {/* <DialogTrigger asChild>
           <Button variant='outline'>Edit Profile</Button>
         </DialogTrigger> */}
-        <DialogContent className='sm:max-w-[425px]'>
+        <DialogContent className='sm:max-w-[425px] ui:overflow-y-auto'>
           <DialogHeader>
             <DialogTitle>Edit profile</DialogTitle>
             <DialogDescription>
@@ -49,7 +50,7 @@ export const Dialog = ({
               done.
             </DialogDescription>
           </DialogHeader>
-          {children}
+          <Div className='ui:overflow-y-auto'>{children}</Div>
         </DialogContent>
       </DialogBase>
     )
@@ -67,7 +68,7 @@ export const Dialog = ({
             Make changes to your profile here. Click save when you&apos;re done.
           </DrawerDescription>
         </DrawerHeader>
-        {children}
+        <Div className='ui:overflow-y-auto'>{children}</Div>
         <DrawerFooter className='pt-2'>
           <DrawerClose asChild>
             <Button variant='outline'>Cancel</Button>

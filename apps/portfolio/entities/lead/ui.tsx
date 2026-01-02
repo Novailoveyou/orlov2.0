@@ -11,7 +11,8 @@ import { Link } from '@/shared/components/link'
 
 export const LeadButton = ({
   className,
-}: Pick<ComponentProps<typeof SubmitPrimaryButton>, 'className'>) => {
+  form,
+}: Pick<ComponentProps<typeof SubmitPrimaryButton>, 'className' | 'form'>) => {
   // const [retryCount, setRetryCount] = useState(0)
   const t = useTranslations('entities.lead')
 
