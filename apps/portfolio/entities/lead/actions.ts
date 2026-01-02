@@ -1,6 +1,6 @@
 'use server'
 import 'server-only'
-import { sendTelegramMessage } from '../telegram/sendMessage'
+import { sendTelegramMessage } from '../../shared/actions/telegram/sendMessage'
 import { Lead } from './model'
 
 export const sendLeadToTelegram = async <Key extends string = string>(
