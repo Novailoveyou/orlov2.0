@@ -3,8 +3,9 @@ import 'client-only'
 
 import { ym } from '@/shared/yandex-metrika'
 import { Lead } from './model'
-import { mutationPost } from '@/shared/actions'
+// import { mutationPost } from '@/shared/actions'
 import { useMutation } from '@/shared/api'
+import { sendLeadToTelegram } from './actions'
 
 const onSuccess = (lead: Lead) => {
   ym.setUserId(lead.id)
@@ -19,7 +20,12 @@ const onSuccess = (lead: Lead) => {
 }
 
 export const useLead = () =>
-  useMutation('/lead', mutationPost<Lead, Lead>, {
-    entity: 'lead',
-    onSuccess,
-  })
+  useMutation(
+    '/lead',
+    // @ts-expect-error figure out types
+    sendLeadToTelegram,
+    {
+      entity: 'lead',
+      onSuccess,
+    },
+  )

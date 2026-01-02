@@ -16,7 +16,7 @@ export function Hero() {
       className='flex flex-col flex-wrap justify-between items-center'>
       <MyName />
       <Description className='mt-8' />
-      <OpenLeadDialogButton className='mt-8' />
+      <OpenLeadDialogButton className='mt-8 max-w-1/2' />
     </Section>
   )
 }
