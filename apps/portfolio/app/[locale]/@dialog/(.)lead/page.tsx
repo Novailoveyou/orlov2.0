@@ -7,6 +7,7 @@ import { hasLocale } from 'next-intl'
 import { Metadata } from 'next'
 import { LeadView } from '@/views/lead-view'
 import { Dialog } from '@/shared/components/dialog'
+import { Suspense } from 'react'
 
 export async function generateMetadata({
   params,
@@ -41,9 +42,12 @@ export default async function DialogLeadPage({
 
   return (
     <>
-      <Dialog>
-        <LeadView />
-      </Dialog>
+      {/* TODO: figure out a way to get rid of Suspense here by doing a better Dialog */}
+      <Suspense>
+        <Dialog>
+          <LeadView />
+        </Dialog>
+      </Suspense>
     </>
   )
 }

@@ -28,7 +28,7 @@ import {
   InputGroupText,
   InputGroupTextarea,
 } from '@repo/ui/components/shadcnui/input-group'
-import { LeadButton } from './ui'
+import { LeadButton } from './lead-button'
 
 const formSchema = z.object({
   title: z
@@ -41,7 +41,7 @@ const formSchema = z.object({
     .max(100, 'Description must be at most 100 characters.'),
 })
 
-export function BugReportForm() {
+export function LeadForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {

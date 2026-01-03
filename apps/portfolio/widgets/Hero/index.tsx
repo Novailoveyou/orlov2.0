@@ -2,7 +2,7 @@ import 'server-only'
 
 import { IDS } from '@/shared/constants'
 import { Section } from '@/shared/components/section'
-import { OpenLeadDialogButton } from '@/entities/lead/ui'
+import { OpenLeadDialogButton } from '@/entities/lead/ui/open-lead-dialog-button'
 import { MyName } from '@/features/my-name'
 import { Description } from '@/features/description'
 // import { prisma } from '@/shared/database'

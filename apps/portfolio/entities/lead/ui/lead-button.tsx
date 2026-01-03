@@ -6,8 +6,6 @@ import { useTranslations } from 'next-intl'
 import { useLead } from '@/entities/lead/hooks'
 import { SubmitPrimaryButton } from '@/shared/components/submit-primary-button'
 import { cn } from '@/shared/utils'
-import { PrimaryButton } from '@/shared/components/primary-button'
-import { Link } from '@/shared/components/link'
 
 export const LeadButton = ({
   className,
@@ -62,18 +60,5 @@ export const LeadButton = ({
       onClick={handleLead}>
       {isError ? t('pleaseTryAgain') : t('hireMe')}
     </SubmitPrimaryButton>
-  )
-}
-
-export const OpenLeadDialogButton = ({
-  children,
-  className,
-}: Pick<ComponentProps<typeof PrimaryButton>, 'className' | 'children'>) => {
-  const t = useTranslations('entities.lead')
-
-  return (
-    <PrimaryButton className={className} asChild>
-      <Link href='/lead'>{children || t('hireMe')}</Link>
-    </PrimaryButton>
   )
 }
