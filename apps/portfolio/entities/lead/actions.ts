@@ -6,7 +6,11 @@ import { Lead } from './model'
 export const sendLeadToTelegram = async (
   key: string,
   { arg: data }: Readonly<{ arg: Lead }>,
-) => await sendTelegramMessage(data)
+) => {
+  await sendTelegramMessage(data)
+
+  return data
+}
 
 // {
 //   const message = await sendTelegramMessage(data)
