@@ -40,7 +40,7 @@ export const NavigationMenu = () => {
       items={NAVIGATION_MENU_ITEMS}
       role='navigation'
       className={cn(
-        'bottom-4 z-50 sticky flex flex-wrap justify-between gap-6 bg-card/35 shadow-[0_4px_35px_0_rgba(0,0,0,0.25)] backdrop-blur-xs mx-auto mt-4 px-4 py-[0.875rem] rounded-4xl max-w-[calc(21.4375rem+2rem)] transition-transform',
+        'bottom-4 z-50 sticky flex flex-wrap justify-between gap-6 bg-card/35 shadow-[0_4px_35px_0_rgba(0,0,0,0.25)] backdrop-blur-xs mx-auto mt-4 px-4 py-[0.875rem] rounded-4xl w-full max-w-[calc(21.4375rem+2rem)] transition-transform',
       )}
     />
   )
