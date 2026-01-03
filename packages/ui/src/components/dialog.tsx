@@ -52,6 +52,10 @@ export const Dialog = ({
 
   React.useEffect(() => {
     onOpenChange(true)
+
+    return () => {
+      onOpenChange(false)
+    }
   }, [onOpenChange])
 
   if (isDesktop) {
