@@ -18,11 +18,12 @@ import { SWRConfig } from '@/shared/api'
 import { Container } from '@/shared/components/container'
 import { ThemeProvider } from '@/shared/components/theme-provider'
 import { WebVitals } from '@/shared/components/web-vitals'
-import { YandexMetrika } from '@/shared/yandex-metrika'
+import { YandexMetrika } from '@/shared/components/yandex-metrika'
 import { UTMs } from '@/shared/components/utms'
 import { NextLoader } from '@/shared/components/next-topbar'
 import { PullToRefresh } from '@/shared/components/pull-to-refresh'
 import { Toaster } from '@/shared/components/sonner'
+import { GoogleTagManager } from '@/shared/components/google-tag-manager'
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }))
@@ -64,6 +65,7 @@ export default async function RootLayout({
 
   return (
     <Html lang={locale}>
+      <GoogleTagManager />
       <Body>
         {/* TODO: add timezone */}
         <NextIntlClientProvider locale={locale}>

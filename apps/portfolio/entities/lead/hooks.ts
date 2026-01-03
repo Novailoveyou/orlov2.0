@@ -1,7 +1,7 @@
 'use client'
 import 'client-only'
 
-import { ym } from '@/shared/yandex-metrika'
+import { ym } from '@/shared/components/yandex-metrika'
 import { Lead } from './model'
 // import { mutationPost } from '@/shared/actions'
 import { useMutation } from '@/shared/api'
