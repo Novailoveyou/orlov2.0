@@ -1,5 +1,3 @@
-import 'server-only'
-
 // import { P } from '@/shared/components/p'
 import LoadingIcons from 'react-loading-icons'
 import { Icon } from '@/shared/components/icon'
