@@ -78,7 +78,14 @@ export const Dialog = ({
   }
 
   return (
-    <Drawer defaultOpen modal open={isOpen} onOpenChange={onOpenChange}>
+    <Drawer
+      defaultOpen
+      modal
+      open={isOpen}
+      onOpenChange={onOpenChange}
+      autoFocus
+      shouldScaleBackground
+      repositionInputs={false}>
       {/* <DrawerTrigger asChild>
         <Button variant='outline'>Edit Profile</Button>
       </DrawerTrigger> */}
