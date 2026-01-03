@@ -39,26 +39,23 @@ export const Dialog = ({
   })
 
   /** @description due to how next intercept & parallel routes work combined with shadcn/ui dialog, this wrapper is required so that user does not get ui jumps on rapid open/close */
-  const onOpenChange = React.useCallback(
-    (
-      open: Parameters<
-        Required<React.ComponentProps<typeof DialogBase>>['onOpenChange']
-      >[0],
-    ) => {
-      setIsOpen(open)
-      return onOpenChangeProp?.(open)
-    },
-    [onOpenChangeProp],
-  )
+  const onOpenChange = (
+    open: Parameters<
+      Required<React.ComponentProps<typeof DialogBase>>['onOpenChange']
+    >[0],
+  ) => {
+    setIsOpen(open)
+    return onOpenChangeProp?.(open)
+  }
 
   /** @description due to how next intercept & parallel routes work combined with shadcn/ui dialog, this is required to be done this way instead of having `open` always set to `true` so that user does not get ui jumps on rapid open/close */
   React.useEffect(() => {
-    onOpenChange(true)
+    setIsOpen(true)
 
     return () => {
       setIsOpen(false)
     }
-  }, [onOpenChange, setIsOpen])
+  }, [setIsOpen])
 
   if (isDesktop) {
     return (

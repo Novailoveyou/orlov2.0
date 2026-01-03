@@ -26,7 +26,7 @@ export const PullToRefresh = ({
   }
   return (
     <PullToRefreshBase
-      className={cn('flex flex-col flex-1 [&>div+div]:flex-1', className)}
+      className={cn('min-h-dvh', className)}
       onRefresh={onRefresh}>
       {children}
     </PullToRefreshBase>
