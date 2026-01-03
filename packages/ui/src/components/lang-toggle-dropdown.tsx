@@ -18,6 +18,7 @@ import {
 import { Span } from './tags/span'
 import { Icon } from './icon'
 import { cn, toUpperCase } from '../utils'
+import { useLinkStatus } from 'next/link'
 
 const LOCALE_TO_LANGUAGE_MAP = {
   en: 'English',
