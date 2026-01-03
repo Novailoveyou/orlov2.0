@@ -8,24 +8,19 @@ import { useMutation } from '@/shared/api'
 import { sendLeadToTelegram } from './actions'
 
 const onSuccess = (lead: Lead) => {
-  ym.setUserId(lead.id)
-  ym.firstPartyParams({
-    email: lead.email,
-    first_name: lead.username,
-    last_name: '',
-    phone_number: lead.phoneNumber,
-    yandex_cid: lead.id,
-  })
-  ym.reachGoal('lead')
+  // ym.setUserId(lead.id)
+  // ym.firstPartyParams({
+  //   email: lead.email,
+  //   first_name: lead.username,
+  //   last_name: '',
+  //   phone_number: lead.phoneNumber,
+  //   yandex_cid: lead.id,
+  // })
+  // ym.reachGoal('lead')
 }
 
 export const useLead = () =>
-  useMutation(
-    '/lead',
-    // @ts-expect-error figure out types
-    sendLeadToTelegram,
-    {
-      entity: 'lead',
-      onSuccess,
-    },
-  )
+  useMutation('/lead', sendLeadToTelegram, {
+    entity: 'lead',
+    // onSuccess,
+  })

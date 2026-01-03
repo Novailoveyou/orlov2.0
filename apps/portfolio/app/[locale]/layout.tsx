@@ -76,13 +76,11 @@ export default async function RootLayout({
                   <WebVitals />
                   <PullToRefresh>
                     <Header />
-                    <Main>
-                      {children}
-                      {dialog}
-                    </Main>
+                    <Main>{children}</Main>
                     <Footer />
                   </PullToRefresh>
                   <NavigationMenu />
+                  {dialog}
                 </Container>
                 <Toaster />
                 <NextLoader />

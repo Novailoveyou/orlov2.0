@@ -1,12 +1,19 @@
 'use server'
 import 'server-only'
-import { sendTelegramMessage } from '../../shared/actions/telegram/sendMessage'
+import { sendTelegramMessage } from '@/shared/actions/telegram/sendMessage'
 import { Lead } from './model'
 
-export const sendLeadToTelegram = async <Key extends string = string>(
-  key: Key,
+export const sendLeadToTelegram = async (
+  key: string,
   { arg: data }: Readonly<{ arg: Lead }>,
 ) => await sendTelegramMessage(data)
+
+// {
+//   const message = await sendTelegramMessage(data)
+
+//   console.log('message: ', message)
+//   return data
+// }
 
 // import { ClientLead } from './model'
 // import { prisma } from '@/prisma'
