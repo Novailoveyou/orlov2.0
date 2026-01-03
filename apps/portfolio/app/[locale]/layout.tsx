@@ -64,7 +64,8 @@ export default async function RootLayout({
   return (
     <Html lang={locale}>
       <Body>
-        <NextIntlClientProvider locale={locale} timeZone=''>
+        {/* TODO: add timezone */}
+        <NextIntlClientProvider locale={locale}>
           <StoreProvider>
             <SWRConfig>
               <ThemeProvider>
