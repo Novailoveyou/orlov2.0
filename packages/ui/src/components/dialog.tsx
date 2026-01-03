@@ -85,7 +85,9 @@ export const Dialog = ({
       onOpenChange={onOpenChange}
       autoFocus
       shouldScaleBackground
-      repositionInputs={false}>
+      repositionInputs={false}
+      closeThreshold={0.5}
+      dismissible>
       {/* <DrawerTrigger asChild>
         <Button variant='outline'>Edit Profile</Button>
       </DrawerTrigger> */}
