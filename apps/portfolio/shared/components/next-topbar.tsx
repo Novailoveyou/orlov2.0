@@ -1,7 +1,5 @@
-import { NextTopLoader as NextTopLoaderBase } from '@repo/ui/components/next-topbar'
+import { NextLoader as NextLoaderBase } from '@repo/ui/components/next-loeader'
 
-export const NextTopLoader = () => {
-  return (
-    <NextTopLoaderBase color='linear-gradient(var(--gradient-primary--x))' />
-  )
+export const NextLoader = () => {
+  return <NextLoaderBase color='linear-gradient(var(--gradient-primary--x))' />
 }

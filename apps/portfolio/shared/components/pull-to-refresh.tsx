@@ -3,6 +3,7 @@ import 'client-only'
 
 import { PullToRefresh as PullToRefreshBase } from '@repo/ui/components/pull-to-refresh'
 import { ComponentProps } from 'react'
+import { cn } from '../utils'
 
 export const PullToRefresh = ({
   className,
@@ -21,7 +22,7 @@ export const PullToRefresh = ({
     })
   }
   return (
-    <PullToRefreshBase className={className} onRefresh={onRefresh}>
+    <PullToRefreshBase className={cn(className)} onRefresh={onRefresh}>
       {children}
     </PullToRefreshBase>
   )

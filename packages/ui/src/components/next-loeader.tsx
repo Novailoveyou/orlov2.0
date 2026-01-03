@@ -1,7 +1,7 @@
-import NextTopLoaderBase from 'nextjs-toploader'
+import NextLoaderBase from 'nextjs-toploader'
 import { ComponentProps } from 'react'
 
-export const NextTopLoader = ({
+export const NextLoader = ({
   color = '#2299DD',
   initialPosition = 0.08,
   crawlSpeed = 200,
@@ -15,9 +15,9 @@ export const NextTopLoader = ({
   zIndex = 1600,
   showAtBottom = true,
   showForHashAnchor = false,
-}: ComponentProps<typeof NextTopLoaderBase>) => {
+}: ComponentProps<typeof NextLoaderBase>) => {
   return (
-    <NextTopLoaderBase
+    <NextLoaderBase
       color={color}
       initialPosition={initialPosition}
       crawlSpeed={crawlSpeed}

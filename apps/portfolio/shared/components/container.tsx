@@ -10,7 +10,7 @@ export function Container({
 }: ComponentProps<typeof ContainerBase>) {
   return (
     <ContainerBase
-      className={cn('p-5 max-w-[63.75rem] min-d-dvh', className)}
+      className={cn('px-5 max-w-[63.75rem]', className)}
       {...props}
     />
   )

@@ -20,7 +20,7 @@ import { ThemeProvider } from '@/shared/components/theme-provider'
 import { WebVitals } from '@/shared/components/web-vitals'
 import { YandexMetrika } from '@/shared/yandex-metrika'
 import { UTMs } from '@/shared/components/utms'
-import { NextTopLoader } from '@/shared/components/next-topbar'
+import { NextLoader } from '@/shared/components/next-topbar'
 import { PullToRefresh } from '@/shared/components/pull-to-refresh'
 
 export function generateStaticParams() {
@@ -68,19 +68,19 @@ export default async function RootLayout({
           <StoreProvider>
             <SWRConfig>
               <ThemeProvider>
-                <PullToRefresh>
+                <Container>
                   <WebVitals />
-                  <NextTopLoader />
-                  <Container>
+                  <PullToRefresh>
                     <Header />
                     <Main>
                       {children}
                       {dialog}
                     </Main>
                     <Footer />
-                    <NavigationMenu />
-                  </Container>
-                </PullToRefresh>
+                  </PullToRefresh>
+                  <NavigationMenu />
+                </Container>
+                <NextLoader />
               </ThemeProvider>
               <Suspense>
                 <UTMs />
