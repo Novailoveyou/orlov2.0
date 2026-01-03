@@ -54,7 +54,11 @@ export const Dialog = ({
   /** @description due to how next intercept & parallel routes work combined with shadcn/ui dialog, this is required to be done this way instead of having `open` always set to `true` so that user does not get ui jumps on rapid open/close */
   React.useEffect(() => {
     onOpenChange(true)
-  }, [onOpenChange])
+
+    return () => {
+      setIsOpen(false)
+    }
+  }, [onOpenChange, setIsOpen])
 
   if (isDesktop) {
     return (
