@@ -11,10 +11,8 @@ export const LINKS = {
   skills: '/skills',
   stories: '/stories',
   chat: '/chat',
-  // TODO: termsOfService terms of service link
-  termsOfService: '/',
-  // TODO: add privacyPolicy of service link
-  privacyPolicy: '/',
+  terms: '/terms',
+  privacy: '/privacy',
   external: {
     github: 'https://github.com/novailoveyou',
     linkedIn: 'https://www.linkedin.com/in/novailoveyou/',
@@ -32,6 +30,8 @@ export const IDS = {
   stories: 'stories',
   chat: 'chat',
   lead: 'lead',
+  privacy: 'privacy',
+  terms: 'terms',
   /** /app */
   /** widgets */
   hero: 'hero',

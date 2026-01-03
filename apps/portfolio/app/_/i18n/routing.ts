@@ -55,9 +55,6 @@ export const routing = defineRouting({
   },
   pathnames: {
     '/': '/',
-    '/lead': {
-      ru: '/zayavka',
-    },
     '/chat': {
       ru: '/chat',
     },
@@ -69,6 +66,15 @@ export const routing = defineRouting({
     },
     '/stories': {
       ru: '/istorii',
+    },
+    '/lead': {
+      ru: '/zayavka',
+    },
+    '/terms': {
+      ru: '/uslovija-ispolzovanija',
+    },
+    '/privacy': {
+      ru: '/politika-konfidentsialnosti',
     },
     // '/news/[articleSlug]': {
     //   de: '/neuigkeiten/[articleSlug]',
