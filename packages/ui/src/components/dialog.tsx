@@ -11,7 +11,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
+  // DialogTrigger,
 } from './shadcnui/dialog'
 import {
   Drawer,
@@ -21,24 +21,35 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
+  // DrawerTrigger,
 } from './shadcnui/drawer'
 import { Div } from './tags/div'
 
 export const Dialog = ({
   children,
-  onOpenChange,
+  onOpenChange: onOpenChangeProp,
 }: Pick<
   React.ComponentProps<typeof DialogBase>,
   'children' | 'onOpenChange'
 >) => {
+  const [isOpen, setIsOpen] = React.useState(true)
+
   const isDesktop = useMediaQuery({
     query: '(min-width: 768px)',
   })
 
+  const onOpenChange: typeof onOpenChangeProp = open => {
+    setIsOpen(open)
+    return onOpenChangeProp?.(open)
+  }
+
+  React.useEffect(() => {
+    setIsOpen(true)
+  }, [setIsOpen])
+
   if (isDesktop) {
     return (
-      <DialogBase open modal onOpenChange={onOpenChange}>
+      <DialogBase defaultOpen modal open={isOpen} onOpenChange={onOpenChange}>
         {/* <DialogTrigger asChild>
           <Button variant='outline'>Edit Profile</Button>
         </DialogTrigger> */}
@@ -57,7 +68,7 @@ export const Dialog = ({
   }
 
   return (
-    <Drawer open modal onOpenChange={onOpenChange}>
+    <Drawer defaultOpen modal open={isOpen} onOpenChange={onOpenChange}>
       {/* <DrawerTrigger asChild>
         <Button variant='outline'>Edit Profile</Button>
       </DrawerTrigger> */}
