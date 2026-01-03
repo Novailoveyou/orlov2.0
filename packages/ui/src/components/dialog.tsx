@@ -38,6 +38,7 @@ export const Dialog = ({
     query: '(min-width: 768px)',
   })
 
+  /** @description due to how next intercept & parallel routes work combined with shadcn/ui dialog, this wrapper is required so that user does not get ui jumps on rapid open/close */
   const onOpenChange = React.useCallback(
     (
       open: Parameters<
@@ -50,6 +51,7 @@ export const Dialog = ({
     [onOpenChangeProp],
   )
 
+  /** @description due to how next intercept & parallel routes work combined with shadcn/ui dialog, this is required to be done this way instead of having `open` always set to `true` so that user does not get ui jumps on rapid open/close */
   React.useEffect(() => {
     onOpenChange(true)
   }, [onOpenChange])

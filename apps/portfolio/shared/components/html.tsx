@@ -90,6 +90,7 @@ export function Html({
         poppinsFont.variable,
         latoFont.variable,
         cuteFont.variable,
+        'overscroll-contain',
         className,
       )}
       {...props}
