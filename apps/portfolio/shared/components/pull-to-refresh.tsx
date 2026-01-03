@@ -22,7 +22,9 @@ export const PullToRefresh = ({
     })
   }
   return (
-    <PullToRefreshBase className={cn(className)} onRefresh={onRefresh}>
+    <PullToRefreshBase
+      className={cn('min-h-dvh', className)}
+      onRefresh={onRefresh}>
       {children}
     </PullToRefreshBase>
   )
