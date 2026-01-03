@@ -57,21 +57,12 @@ export function LeadForm() {
           <code>{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
-      position: 'bottom-right',
-      classNames: {
-        content: 'flex flex-col gap-2',
-      },
-      style: {
-        '--border-radius': 'calc(var(--radius)  + 4px)',
-      } as React.CSSProperties,
     })
   }
 
-  const setFocus = form.setFocus
-
   React.useEffect(() => {
-    setFocus('title')
-  }, [setFocus])
+    form.setFocus('title')
+  }, [form])
 
   return (
     <form

@@ -22,6 +22,7 @@ import { YandexMetrika } from '@/shared/yandex-metrika'
 import { UTMs } from '@/shared/components/utms'
 import { NextLoader } from '@/shared/components/next-topbar'
 import { PullToRefresh } from '@/shared/components/pull-to-refresh'
+import { Toaster } from '@/shared/components/sonner'
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }))
@@ -81,6 +82,7 @@ export default async function RootLayout({
                   </PullToRefresh>
                   <NavigationMenu />
                 </Container>
+                <Toaster />
                 <NextLoader />
               </ThemeProvider>
               <Suspense>
