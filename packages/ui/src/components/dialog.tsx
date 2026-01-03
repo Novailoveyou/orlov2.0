@@ -86,8 +86,9 @@ export const Dialog = ({
       autoFocus
       shouldScaleBackground
       repositionInputs={false}
-      closeThreshold={0.5}
-      dismissible>
+      closeThreshold={0.75}
+      dismissible
+      direction='bottom'>
       {/* <DrawerTrigger asChild>
         <Button variant='outline'>Edit Profile</Button>
       </DrawerTrigger> */}
