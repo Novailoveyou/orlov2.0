@@ -8,6 +8,7 @@ import { usePathname, useRouter } from '@/app/_/i18n/navigation'
 import { LangToggleDropdown } from '@/shared/components/lang-toggle-dropdown'
 import { routing } from '@/app/_/i18n/routing'
 
+/* TODO: make sure UI is responsive when user changes lang */
 export const LangToggle = () => {
   const locale = useLocale()
   const pathname = usePathname()
