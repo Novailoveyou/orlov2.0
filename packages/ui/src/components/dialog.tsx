@@ -38,14 +38,21 @@ export const Dialog = ({
     query: '(min-width: 768px)',
   })
 
-  const onOpenChange: typeof onOpenChangeProp = open => {
-    setIsOpen(open)
-    return onOpenChangeProp?.(open)
-  }
+  const onOpenChange = React.useCallback(
+    (
+      open: Parameters<
+        Required<React.ComponentProps<typeof DialogBase>>['onOpenChange']
+      >[0],
+    ) => {
+      setIsOpen(open)
+      return onOpenChangeProp?.(open)
+    },
+    [onOpenChangeProp],
+  )
 
   React.useEffect(() => {
-    setIsOpen(true)
-  }, [setIsOpen])
+    onOpenChange(true)
+  }, [onOpenChange])
 
   if (isDesktop) {
     return (
