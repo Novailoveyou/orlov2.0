@@ -45,6 +45,7 @@ const LOCALE_TO_LANGUAGE_MAP = {
   uz: 'Oʻzbekcha',
   eo: 'Esperanto',
   egz: 'No Cap Just Vibes',
+  let: '1337 5p34k',
   sov: 'Советский',
   orv: 'Рѹсьскъ',
   ept: 'Пацанский',
@@ -84,6 +85,7 @@ const LOCALE_TO_COUNTRY_MAP = {
   uz: 'uz',
   eo: 'eo',
   egz: 'us',
+  let: 'us',
   sov: 'sov',
   orv: 'orv',
   ept: 'ru',
@@ -107,6 +109,7 @@ const FUN_LANGUAGES_ICONS = {
   orv: '📜',
   ept: '🪆',
   elv: '🧝‍♂️',
+  let: '💻',
 } as const satisfies Record<
   keyof Pick<
     typeof LOCALE_TO_LANGUAGE_MAP,
@@ -121,6 +124,7 @@ const FUN_LANGUAGES_ICONS = {
     | 'orv'
     | 'ept'
     | 'elv'
+    | 'let'
   >,
   string
 >

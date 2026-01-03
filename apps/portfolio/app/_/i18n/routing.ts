@@ -28,6 +28,7 @@ export const routing = defineRouting({
     'uz', // Uzbek
     'eo', // Esperanto
     'egz', // English GenZ Slang
+    'let', // Leet Speak
     'sov', // Soviet language
     'orv', // Old East Slavic language
     'dov', // Dovahzul (Dragon Language)

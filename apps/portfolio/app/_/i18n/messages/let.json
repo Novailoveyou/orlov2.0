@@ -1,0 +1,96 @@
+{
+  "app": {
+    "countTest": "j00 h4v3 {count, plural, =0 {n0 f0ll0w3r5 y37} =1 {0n3 f0ll0w3r} other {# f0ll0w3r5}}.",
+    "manifest": {
+      "name": "1l14 0rl0v'5 P0r7f0l10",
+      "short_name": "1l14 0rl0v",
+      "description": "W3lc0m3 70 1l14 0rl0v'5 p0r7f0l10 w3b5173. 3xpl0r3 pr0j3c75, 5k1ll5, 4nd g37 1n 70uch."
+    },
+    "OpenGraphImage": {
+      "alt": "1l14 0rl0v'5 P0r7f0l10"
+    },
+    "home": {
+      "meta": {
+        "title": "1l14 0rl0v - P0r7f0l10",
+        "description": "W3lc0m3 70 1l14 0rl0v'5 p0r7f0l10 w3b5173. 3xpl0r3 pr0j3c75, 5k1ll5, 4nd g37 1n 70uch."
+      },
+      "loading": {
+        "loading": "L04d1ng..."
+      },
+      "error": {
+        "title": "50m37h1ng w3n7 wr0ng!",
+        "buttonText": "7ry 4g41n"
+      }
+    }
+  },
+  "views": {},
+  "widgets": {
+    "Hero": {}
+  },
+  "features": {
+    "description": {
+      "descriptions": {
+        "principalEngineer": "Pr1nc1p4l 3ng1n33r",
+        "webAdvocate": "W3b 4dv0c473",
+        "creatorOfEntityJs": "Cr3470r 0f 3n7i7y.j5",
+        "techGuru": "73ch Guru",
+        "businessTechConsultant": "Bu51n355 73ch c0n5ul74n7",
+        "chiefArchitectIgnaLetuccee": "Ch13f 4rch173c7 1gn4 L37ucc3",
+        "techLead": "73ch L34d",
+        "interfaceEngineer": "1n73rf4c3 3ng1n33r",
+        "teamLead": "734m L34d",
+        "fullStackWebDeveloper": "Full 574ck W3b D3v3l0p3r",
+        "UXDesigner": "UX D351gn3r",
+        "frontEndWebDeveloper": "Fr0n7 3nd W3b D3v3l0p3r",
+        "fullStackWebDeveloperSpecializingInTypeScript": "Full 574ck W3b D3v3l0p3r 5p3c14l1z1ng 1n 7yp35cr1p7"
+      }
+    },
+    "navigation-menu-links": {
+      "portfolio": "P0r7f0l10",
+      "skills": "5k1ll5",
+      "stories": "570r135",
+      "chat": "Ch47"
+    },
+    "sm-links": {
+      "githubLink": {
+        "title": "G17Hub",
+        "ariaLabel": "G17Hub L1nk"
+      },
+      "linkedInLink": {
+        "title": "L1nk3d1n",
+        "ariaLabel": "L1nk3d1n L1nk"
+      },
+      "emailLink": {
+        "title": "3m41l",
+        "ariaLabel": "3m41l L1nk"
+      },
+      "moreLink": {
+        "title": "M0r3",
+        "ariaLabel": "M0r3 L1nk5"
+      }
+    },
+    "legal-links": {
+      "privacyPolicy": "Pr1v4cy P0l1cy",
+      "termsOfService": "73rm5 0f 53rv1c3"
+    },
+    "logo": {
+      "name": "1l14 0rl0v"
+    },
+    "mode-toggle": {
+      "themeToggle": "7h3m3 70ggl3"
+    },
+    "my-name": {
+      "hello": "H3ll0!",
+      "myNameIs": "my n4m3 15",
+      "iliaOrlov": "1l14 0rl0v"
+    }
+  },
+  "entities": {
+    "lead": {
+      "hireMe": "H1r3 M3 N0w",
+      "pleaseTryAgain": "Pl3453 7ry 4g41n",
+      "loading": "L04d1ng...",
+      "error": "3rr0r"
+    }
+  }
+}

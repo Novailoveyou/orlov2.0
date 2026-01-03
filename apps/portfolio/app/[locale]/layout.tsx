@@ -21,6 +21,7 @@ import { WebVitals } from '@/shared/components/web-vitals'
 import { YandexMetrika } from '@/shared/yandex-metrika'
 import { UTMs } from '@/shared/components/utms'
 import { NextTopLoader } from '@/shared/components/next-topbar'
+import { PullToRefresh } from '@/shared/components/pull-to-refresh'
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }))
@@ -67,17 +68,19 @@ export default async function RootLayout({
           <StoreProvider>
             <SWRConfig>
               <ThemeProvider>
-                <WebVitals />
-                <NextTopLoader />
-                <Container>
-                  <Header />
-                  <Main>
-                    {children}
-                    {dialog}
-                  </Main>
-                  <Footer />
-                  <NavigationMenu />
-                </Container>
+                <PullToRefresh>
+                  <WebVitals />
+                  <NextTopLoader />
+                  <Container>
+                    <Header />
+                    <Main>
+                      {children}
+                      {dialog}
+                    </Main>
+                    <Footer />
+                    <NavigationMenu />
+                  </Container>
+                </PullToRefresh>
               </ThemeProvider>
               <Suspense>
                 <UTMs />
