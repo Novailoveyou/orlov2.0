@@ -4,6 +4,8 @@ import { Suspense } from 'react'
 import { LangToggle } from '@/features/lang-toggle'
 import { ModeToggle } from '@/features/mode-toggle'
 import { ContactButton } from '@/features/contact-button'
+// import { NotificationsButton } from '@/features/notifications-button'
+import { ShareButton } from '@/features/share-button'
 import { Logo } from '@/features/logo'
 import { Div } from '@/shared/components/div'
 import { Header as HeaderBase } from '@/shared/components/header'
@@ -17,11 +19,6 @@ import { Header as HeaderBase } from '@/shared/components/header'
 // 📖 Read Later
 // 📋 Bookmarks/Saved Items
 // 📌 Pin/Sticky Notes
-// 🕶️ Reader Mode
-// 📏 Text Size
-// 📱 View Mode Toggle
-// 🎨 Customize/Create
-// 👁️ View As/Preview
 // 📶 Network/Connection
 // 🎵 Music/Media Control
 // 🔊 Audio/Mute Toggle
@@ -33,24 +30,32 @@ import { Header as HeaderBase } from '@/shared/components/header'
 // 🔒 Privacy/Security Quick Access
 // 🏠 Home/Dashboard
 
+// 👁️ View As/Preview
+// 🎨 Customize/Create
+// 📏 Text Size
+// 🕶️ Reader Mode
+// 📱 View Mode Toggle
+
+/* TODO: search button */
+/* TODO: user account button */
+/* TODO: print button */
+
 export const Header = () => {
   return (
-    <HeaderBase className='flex flex-wrap justify-between items-center gap-4 mb-6 pt-5'>
-      <Div>
+    <HeaderBase className='flex flex-wrap justify-between items-center gap-4 pt-5'>
+      <Div className='flex flex-wrap gap-1'>
         {/* TODO: figure this out without using suspense */}
         <Suspense>
           <LangToggle />
         </Suspense>
         <ModeToggle />
-        {/* TODO: notifications toggle */}
       </Div>
       <Logo />
-      <Div>
+      <Div className='flex flex-wrap gap-1'>
+        <ShareButton />
         <ContactButton />
-        {/* TODO: share button */}
-        {/* TODO: search button */}
-        {/* TODO: print button */}
-        {/* TODO: user account button */}
+        {/* TODO: notifications */}
+        {/* <NotificationsButton /> */}
       </Div>
     </HeaderBase>
   )

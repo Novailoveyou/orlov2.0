@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, Suspense } from 'react'
 import { Year } from './year'
 import { License } from './license'
 import { Small } from './tags/small'
@@ -17,7 +17,10 @@ export function Copyright({ name, license, className }: CopyrightProps) {
   return (
     <Small className={cn(className)}>
       <License {...license}>
-        <Span>&copy;</Span> <Year year={new Date().getFullYear()} />{' '}
+        <Span>&copy;</Span> {/* TODO: FIGURE OUT A WAY WITHOUT Suspense */}
+        <Suspense>
+          <Year />
+        </Suspense>{' '}
         <Span>{name}</Span>
       </License>
     </Small>

@@ -88,6 +88,8 @@ export const Dialog = ({
       repositionInputs={false}
       closeThreshold={0.75}
       dismissible
+      // TODO: figure out snap points for drawer on mobile so that it never fully closes, only partially leaving a small portion visible to indicate to user that they can swipe it back up https://vaul.emilkowal.ski/snap-points
+      // snapPoints={['270px', 1]}
       direction='bottom'>
       {/* <DrawerTrigger asChild>
         <Button variant='outline'>Edit Profile</Button>

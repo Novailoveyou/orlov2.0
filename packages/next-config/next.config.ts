@@ -22,6 +22,7 @@ const nextConfig = {
     cssChunking: true,
     optimizeServerReact: true,
     optimisticClientCache: true,
+    // viewTransition: true,
   },
   productionBrowserSourceMaps: false,
   async headers() {

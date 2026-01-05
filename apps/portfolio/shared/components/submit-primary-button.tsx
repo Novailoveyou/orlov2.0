@@ -1,6 +1,6 @@
 'use client'
 import 'client-only'
-import { Button as BaseButton } from '@repo/ui/components/shadcnui/button'
+import { Button as BaseButton } from '@/shared/components/button'
 import { ComponentProps } from 'react'
 import LoadingIcons from 'react-loading-icons'
 import { MdErrorOutline } from 'react-icons/md'

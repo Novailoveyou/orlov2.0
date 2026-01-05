@@ -4,13 +4,15 @@ import { useEffect, useState } from 'react'
 import { Time } from './tags/time'
 
 type YearProps = {
-  year: number
+  year?: number
 }
 
 /**
  * @description A component to display the current year, updating automatically
  */
-export function Year({ year: defaultYear }: YearProps) {
+export function Year({
+  year: defaultYear = new Date().getFullYear(),
+}: YearProps) {
   const [year, setYear] = useState(defaultYear)
 
   useEffect(() => {

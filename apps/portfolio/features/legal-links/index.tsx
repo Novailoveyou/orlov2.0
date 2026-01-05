@@ -17,5 +17,5 @@ const LEGAL_LINKS = [
 ] as const satisfies ComponentProps<typeof Ul>['items']
 
 export function LegalLinks() {
-  return <Ul items={LEGAL_LINKS} />
+  return <Ul items={LEGAL_LINKS} className='text-sm' />
 }

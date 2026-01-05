@@ -24,9 +24,14 @@ export const PullToRefresh = ({
       }, 1000)
     })
   }
+
+  // TODO: fix layout shift on load
   return (
     <PullToRefreshBase
-      className={cn('flex flex-col flex-1 [&>div+div]:flex-1', className)}
+      className={cn(
+        'flex [&>div+div]:flex flex-col [&>div+div]:flex-col flex-1 [&>div+div]:flex-1 [&>div+div]:justify-between [&>div+div]:gap-6',
+        className,
+      )}
       onRefresh={onRefresh}>
       {children}
     </PullToRefreshBase>
