@@ -91,7 +91,7 @@ export const Dialog = ({
       fixed
       preventScrollRestoration
       noBodyStyles
-      // disablePreventScroll
+      disablePreventScroll
       // TODO: figure out snap points for drawer on mobile so that it never fully closes, only partially leaving a small portion visible to indicate to user that they can swipe it back up https://vaul.emilkowal.ski/snap-points
       // snapPoints={['270px', 1]}
       direction='bottom'>
