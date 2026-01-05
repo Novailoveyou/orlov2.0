@@ -24,6 +24,7 @@ import {
   // DrawerTrigger,
 } from './shadcnui/drawer'
 import { Div } from './tags/div'
+import { isIOS } from 'react-device-detect'
 
 export const Dialog = ({
   children,
@@ -85,7 +86,7 @@ export const Dialog = ({
       onOpenChange={onOpenChange}
       autoFocus
       shouldScaleBackground
-      repositionInputs
+      repositionInputs={!isIOS}
       closeThreshold={0.75}
       dismissible
       // fixed
