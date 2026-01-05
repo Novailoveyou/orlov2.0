@@ -71,6 +71,7 @@ import {
 import { Button } from '@/shared/components/button'
 
 export const ShareButton = () => {
+  // TODO: add i18n
   return (
     <RWebShare
       data={{

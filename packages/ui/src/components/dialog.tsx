@@ -27,39 +27,18 @@ import { Div } from './tags/div'
 
 export const Dialog = ({
   children,
-  onOpenChange: onOpenChangeProp,
+  onOpenChange,
 }: Pick<
   React.ComponentProps<typeof DialogBase>,
   'children' | 'onOpenChange'
 >) => {
-  const [isOpen, setIsOpen] = React.useState(true)
-
   const isDesktop = useMediaQuery({
     query: '(min-width: 768px)',
   })
 
-  /** @description due to how next intercept & parallel routes work combined with shadcn/ui dialog, this wrapper is required so that user does not get ui jumps on rapid open/close */
-  const onOpenChange = (
-    open: Parameters<
-      Required<React.ComponentProps<typeof DialogBase>>['onOpenChange']
-    >[0],
-  ) => {
-    setIsOpen(open)
-    return onOpenChangeProp?.(open)
-  }
-
-  /** @description due to how next intercept & parallel routes work combined with shadcn/ui dialog, this is required to be done this way instead of having `open` always set to `true` so that user does not get ui jumps on rapid open/close */
-  React.useEffect(() => {
-    setIsOpen(true)
-
-    return () => {
-      setIsOpen(false)
-    }
-  }, [setIsOpen])
-
   if (isDesktop) {
     return (
-      <DialogBase defaultOpen modal open={isOpen} onOpenChange={onOpenChange}>
+      <DialogBase defaultOpen modal open onOpenChange={onOpenChange}>
         {/* <DialogTrigger asChild>
           <Button variant='outline'>Edit Profile</Button>
         </DialogTrigger> */}
@@ -81,13 +60,15 @@ export const Dialog = ({
     <Drawer
       defaultOpen
       modal
-      open={isOpen}
+      open
       onOpenChange={onOpenChange}
       autoFocus
       shouldScaleBackground
       repositionInputs={false}
       closeThreshold={0.75}
       dismissible
+      // fixed
+      // preventScrollRestoration
       // TODO: figure out snap points for drawer on mobile so that it never fully closes, only partially leaving a small portion visible to indicate to user that they can swipe it back up https://vaul.emilkowal.ski/snap-points
       // snapPoints={['270px', 1]}
       direction='bottom'>
