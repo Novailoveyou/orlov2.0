@@ -255,6 +255,9 @@ importers:
       react-responsive:
         specifier: ^10.0.1
         version: 10.0.1(react@19.2.3)
+      react-scroll:
+        specifier: ^1.9.3
+        version: 1.9.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react-share:
         specifier: ^5.2.2
         version: 5.2.2(react@19.2.3)
@@ -267,6 +270,9 @@ importers:
       react-type-animation:
         specifier: ^3.2.0
         version: 3.2.0(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react-web-share:
+        specifier: ^2.0.2
+        version: 2.0.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -889,6 +895,9 @@ importers:
       react-type-animation:
         specifier: ^3.2.0
         version: 3.2.0(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react-web-share:
+        specifier: ^2.0.2
+        version: 2.0.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       server-only:
         specifier: ^0.0.1
         version: 0.0.1
@@ -5485,6 +5494,12 @@ packages:
       prop-types: ^15.5.4
       react: '>= 15.0.0'
       react-dom: '>= 15.0.0'
+
+  react-web-share@2.0.2:
+    resolution: {integrity: sha512-bGm1TJc6xtC0MhAnYFsrzT4En7l2oAdLTgCK7nk7b4xGTg3L5gOldiPrmYQ8a/dEXNydgekvOj/tfjduIlIRVA==}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
 
   react@19.2.3:
     resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
@@ -11096,6 +11111,11 @@ snapshots:
   react-type-animation@3.2.0(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       prop-types: 15.8.1
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+
+  react-web-share@2.0.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+    dependencies:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 

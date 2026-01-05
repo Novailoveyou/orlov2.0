@@ -70,11 +70,11 @@ export const routing = defineRouting({
     '/lead': {
       ru: '/zayavka',
     },
-    '/terms': {
-      ru: '/uslovija-ispolzovanija',
-    },
     '/privacy': {
       ru: '/politika-konfidentsialnosti',
+    },
+    '/terms': {
+      ru: '/polzovatelskoe-soglashenie',
     },
     // '/news/[articleSlug]': {
     //   de: '/neuigkeiten/[articleSlug]',

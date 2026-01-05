@@ -1,9 +1,11 @@
 'use client'
 import 'client-only'
-import { Icon } from '@/shared/components/icon'
 
 import { RiShareForwardLine } from 'react-icons/ri'
 // import { RiShare2Line } from 'react-icons/ri'
+import { RWebShare } from 'react-web-share'
+
+import { Icon } from '@/shared/components/icon'
 
 import {
   EmailShareButton,
@@ -70,18 +72,25 @@ import { Button } from '@/shared/components/button'
 
 export const ShareButton = () => {
   return (
-    <Button variant='ghost' size='icon' className='px-2'>
-      {/* TODO: add aria label */}
-      <Icon
-        width='w-[1.2rem]'
-        height='h-[1.2rem]'
-        Icon={RiShareForwardLine}
-        aria-label='share'
-      />
-      {/* <TelegramShareButton url='https://orlov.app'>
+    <RWebShare
+      data={{
+        url: 'https://orlov.app',
+        title: 'Orlov App',
+        text: 'Check out Orlov App!',
+      }}>
+      <Button variant='ghost' size='icon' className='px-2'>
+        {/* TODO: add aria label */}
+        <Icon
+          width='w-[1.2rem]'
+          height='h-[1.2rem]'
+          Icon={RiShareForwardLine}
+          aria-label='share'
+        />
+        {/* <TelegramShareButton url='https://orlov.app'>
         <TelegramIcon />
       </TelegramShareButton>
       <FacebookShareCount url='https://orlov.app' /> */}
-    </Button>
+      </Button>
+    </RWebShare>
   )
 }
