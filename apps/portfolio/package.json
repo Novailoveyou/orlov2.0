@@ -23,6 +23,7 @@
     "@opentelemetry/instrumentation": "^0.208.0",
     "@opentelemetry/sdk-logs": "^0.208.0",
     "@prisma/client": "^6.16.1",
+    "@radix-ui/react-visually-hidden": "^1.2.4",
     "@repo/api": "workspace:*",
     "@repo/database": "workspace:*",
     "@repo/next-config": "workspace:*",

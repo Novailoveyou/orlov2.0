@@ -1,34 +1,26 @@
 'use client'
 
-import * as React from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Controller, useForm } from 'react-hook-form'
 import { toast } from '@/shared/components/sonner'
 import * as z from 'zod'
 
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@repo/ui/components/shadcnui/card'
-import {
   Field,
   FieldDescription,
   FieldError,
   FieldGroup,
   FieldLabel,
-} from '@repo/ui/components/shadcnui/field'
-import { Input } from '@repo/ui/components/shadcnui/input'
+} from '@/shared/components/field'
+import { Input } from '@/shared/components/input'
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupText,
   InputGroupTextarea,
-} from '@repo/ui/components/shadcnui/input-group'
+} from '@/shared/components/input-group'
 import { LeadButton } from './lead-button'
+import { useId } from 'react'
 
 const formSchema = z.object({
   title: z
@@ -42,6 +34,8 @@ const formSchema = z.object({
 })
 
 export function LeadForm() {
+  const id = useId()
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -60,13 +54,9 @@ export function LeadForm() {
     })
   }
 
-  React.useEffect(() => {
-    form.setFocus('title')
-  }, [form])
-
   return (
     <form
-      id='form-rhf-demo'
+      id={id}
       className='mx-auto w-full max-w-[90%]'
       onSubmit={form.handleSubmit(onSubmit)}>
       <FieldGroup>
@@ -121,7 +111,7 @@ export function LeadForm() {
               )}
             /> */}
         <Field orientation='horizontal'>
-          <LeadButton form='form-rhf-demo' />
+          <LeadButton form={id} />
         </Field>
       </FieldGroup>
     </form>

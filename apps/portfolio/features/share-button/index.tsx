@@ -77,7 +77,7 @@ export const ShareButton = () => {
       data={{
         url: 'https://orlov.app',
         title: 'Orlov App',
-        text: 'Check out Orlov App!',
+        text: 'Check out Orlov App! https://orlov.app',
       }}>
       <Button variant='ghost' size='icon' className='px-2'>
         {/* TODO: add aria label */}

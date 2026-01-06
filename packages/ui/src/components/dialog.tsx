@@ -25,6 +25,7 @@ import {
 } from './shadcnui/drawer'
 import { Div } from './tags/div'
 import { isIOS } from 'react-device-detect'
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 
 export const Dialog = ({
   children,
@@ -51,12 +52,12 @@ export const Dialog = ({
 
   /** @description due to how next intercept & parallel routes work combined with shadcn/ui dialog, this is required to be done this way instead of having `open` always set to `true` so that user does not get ui jumps on rapid open/close */
   React.useEffect(() => {
-    setIsOpen(true)
+    if (!isOpen) setIsOpen(true)
 
     return () => {
-      setIsOpen(false)
+      if (isOpen) setIsOpen(false)
     }
-  }, [setIsOpen])
+  }, [isOpen, setIsOpen])
 
   if (isDesktop) {
     return (
@@ -65,13 +66,15 @@ export const Dialog = ({
           <Button variant='outline'>Edit Profile</Button>
         </DialogTrigger> */}
         <DialogContent className='sm:max-w-[425px] ui:overflow-y-auto'>
-          <DialogHeader>
-            <DialogTitle>Edit profile</DialogTitle>
-            <DialogDescription>
-              Make changes to your profile here. Click save when you&apos;re
-              done.
-            </DialogDescription>
-          </DialogHeader>
+          <VisuallyHidden>
+            <DialogHeader>
+              <DialogTitle>Edit profile</DialogTitle>
+              <DialogDescription>
+                Make changes to your profile here. Click save when you&apos;re
+                done.
+              </DialogDescription>
+            </DialogHeader>
+          </VisuallyHidden>
           <Div className='ui:overflow-y-auto'>{children}</Div>
         </DialogContent>
       </DialogBase>
@@ -84,7 +87,7 @@ export const Dialog = ({
       modal
       open={isOpen}
       onOpenChange={onOpenChange}
-      autoFocus
+      // autoFocus
       shouldScaleBackground
       repositionInputs={!isIOS}
       closeThreshold={0.75}
@@ -100,12 +103,15 @@ export const Dialog = ({
         <Button variant='outline'>Edit Profile</Button>
       </DrawerTrigger> */}
       <DrawerContent>
-        <DrawerHeader className='text-left'>
-          <DrawerTitle>Edit profile</DrawerTitle>
-          <DrawerDescription>
-            Make changes to your profile here. Click save when you&apos;re done.
-          </DrawerDescription>
-        </DrawerHeader>
+        <VisuallyHidden>
+          <DrawerHeader className='text-left'>
+            <DrawerTitle>Edit profile</DrawerTitle>
+            <DrawerDescription>
+              Make changes to your profile here. Click save when you&apos;re
+              done.
+            </DrawerDescription>
+          </DrawerHeader>
+        </VisuallyHidden>
         <Div className='ui:overflow-y-auto'>{children}</Div>
         <DrawerFooter className='pt-2'>
           <DrawerClose asChild>
