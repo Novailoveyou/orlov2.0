@@ -1,33 +1,8 @@
 import 'server-only'
 
-import { ComponentProps } from 'react'
 import { cn } from '@/shared/utils'
 import { Menu } from '@/shared/components/menu'
-import { PortfolioNavigationMenuItem } from './portfolio-navigation-menu-item'
-import { SkillsNavigationMenuItem } from './skills-navigation-menu-item'
-import { StoriesMenuItem } from './stories-navigation-menu-item'
-import { ChatMenuItem } from './chat-navigation-menu-item'
-
-const NAVIGATION_MENU_ITEMS = [
-  {
-    id: '1320507d-2538-4472-927f-ffd060217037',
-    // portfolio / projects
-    children: PortfolioNavigationMenuItem,
-  },
-  {
-    id: 'f764c4c4-9c0f-41cf-a731-0672fd57fae6',
-    children: SkillsNavigationMenuItem,
-  },
-  {
-    id: '4f847d5e-4992-4181-b5b6-611ad1100b27',
-    // expirience
-    children: StoriesMenuItem,
-  },
-  {
-    id: '72a6db63-ff45-4dd6-ba21-e6b8ffa050c2',
-    children: ChatMenuItem,
-  },
-] as const satisfies ComponentProps<typeof Menu>['items']
+import { NAVIGATION_MENU_ITEMS } from './constants'
 
 // TODO: add bounce effect
 // TODO: add tooltip on hover for each point with slightly deeper description of the menu item

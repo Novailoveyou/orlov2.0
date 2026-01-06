@@ -12,6 +12,7 @@ export const NavigationLink = ({
   className,
   ...props
 }: ComponentProps<typeof Link>) => {
+  // TODO: refactor this into a hook to be reused across the app
   const selectedLayoutSegment = useSelectedLayoutSegment()
   const pathname = selectedLayoutSegment ? `/${selectedLayoutSegment}` : '/'
   const isActive = pathname === href

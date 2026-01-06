@@ -24,6 +24,7 @@ import { NextLoader } from '@/shared/components/next-topbar'
 import { PullToRefresh } from '@/shared/components/pull-to-refresh'
 import { Toaster } from '@/shared/components/sonner'
 import { GoogleTagManager } from '@/shared/components/google-tag-manager'
+// import { SwipeNavigation } from '@/features/navigation-menu/swipe-navigation'
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }))
@@ -74,6 +75,7 @@ export default async function RootLayout({
               <ThemeProvider>
                 <Container>
                   <WebVitals />
+                  {/* <SwipeNavigation> */}
                   <PullToRefresh>
                     <Header />
                     <Main>
@@ -82,6 +84,7 @@ export default async function RootLayout({
                     </Main>
                     <Footer />
                   </PullToRefresh>
+                  {/* </SwipeNavigation> */}
                   <NavigationMenu />
                 </Container>
                 <Toaster />
