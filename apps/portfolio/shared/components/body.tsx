@@ -7,7 +7,8 @@ import { cn } from '@/shared/utils'
 export function Body({ className, ...props }: ComponentProps<typeof BodyBase>) {
   return (
     <BodyBase
-      className={cn('overscroll-contain font-poppins', className)}
+      // overscroll-contain
+      className={cn('font-poppins', className)}
       {...props}
     />
   )

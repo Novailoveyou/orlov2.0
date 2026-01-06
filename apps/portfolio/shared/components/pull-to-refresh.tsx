@@ -3,11 +3,14 @@ import 'client-only'
 
 import { PullToRefresh as PullToRefreshBase } from '@repo/ui/components/pull-to-refresh'
 import { ComponentProps } from 'react'
-import { cn } from '../utils'
+import { Div } from './div'
+// import { cn } from '../utils'
+// import { Icon } from './icon'
+// import LoadingIcons from 'react-loading-icons'
 // import { useRouter } from '@/app/_/i18n/navigation'
 
 export const PullToRefresh = ({
-  className,
+  // className,
   children,
 }: Pick<
   ComponentProps<typeof PullToRefreshBase>,
@@ -27,13 +30,15 @@ export const PullToRefresh = ({
 
   // TODO: fix layout shift on load
   return (
-    <PullToRefreshBase
-      className={cn(
-        'flex [&>div+div]:flex flex-col [&>div+div]:flex-col flex-1 [&>div+div]:flex-1 [&>div+div]:justify-between [&>div+div]:gap-6',
-        className,
-      )}
-      onRefresh={onRefresh}>
-      {children}
-    </PullToRefreshBase>
+    // <PullToRefreshBase
+    //   className={cn(
+    //     'flex [&>div+div]:flex flex-col [&>div+div]:flex-col flex-1 [&>div+div]:flex-1 [&>div+div]:justify-between [&>div+div]:gap-6',
+    //     // 'flex flex-col',
+    //     className,
+    //   )}
+    //   onRefresh={onRefresh}>
+    // { children }
+    // </PullToRefreshBase>
+    <Div className='flex flex-col flex-1 justify-between gap-4'>{children}</Div>
   )
 }
