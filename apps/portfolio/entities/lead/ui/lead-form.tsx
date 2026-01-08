@@ -94,7 +94,7 @@ export function LeadForm() {
                 type='text'
                 aria-invalid={fieldState.invalid}
                 placeholder='Ivan Ivanov'
-                // autoComplete='off'
+                autoComplete='on'
               />
               {/* <VisuallyHidden>
                 <FieldDescription>
@@ -123,7 +123,7 @@ export function LeadForm() {
                 id='form-rhf-phone'
                 aria-invalid={fieldState.invalid}
                 placeholder='111 222 3333'
-                // autoComplete='off'
+                autoComplete='on'
                 defaultCountry={toUpperCase(
                   LOCALE_TO_COUNTRY_MAP[locale] || locale,
                 )}
@@ -147,6 +147,7 @@ export function LeadForm() {
                 {...field}
                 type='email'
                 id='form-rhf-email'
+                autoComplete='on'
                 aria-invalid={fieldState.invalid}
                 placeholder='example@domain.com'
                 // autoComplete='off'
