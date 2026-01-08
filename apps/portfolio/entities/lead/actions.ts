@@ -3,7 +3,7 @@ import 'server-only'
 import { sendTelegramMessage } from '@/shared/actions/telegram/sendMessage'
 import { Lead } from './model'
 
-export const sendLeadToTelegram = async (
+export const leadFetcher = async (
   key: string,
   { arg: data }: Readonly<{ arg: Lead }>,
 ) => {

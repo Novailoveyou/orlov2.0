@@ -19,28 +19,41 @@ import {
   InputGroupText,
   InputGroupTextarea,
 } from '@/shared/components/input-group'
-import { LeadButton } from './lead-button'
+import { LeadButton } from './inputs/lead-button'
 import { useId } from 'react'
+// import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
+import { TextInput } from './inputs/text-input'
+import { useLocale } from 'next-intl'
+import { LOCALE_TO_COUNTRY_MAP } from '@/shared/components/lang-toggle-dropdown'
+import { PhoneInput } from '@/shared/components/phone-input'
+import { toUpperCase } from '@repo/ui/utils/index'
+import { useLead } from '../hooks'
+import { v4 as uuidv4 } from 'uuid'
 
 const formSchema = z.object({
-  title: z
+  name: z
     .string()
-    .min(5, 'Bug title must be at least 5 characters.')
+    .min(3, 'Bug title must be at least 5 characters.')
     .max(32, 'Bug title must be at most 32 characters.'),
-  description: z
-    .string()
-    .min(20, 'Description must be at least 20 characters.')
-    .max(100, 'Description must be at most 100 characters.'),
+  // TODO: figure out a way to work with validatorjs
+  phone: z.e164(),
+  email: z.email('Please provide a valid email address.'),
 })
 
 export function LeadForm() {
+  const locale = useLocale()
   const id = useId()
+
+  const { isLeadMutating, leadError, triggerLead } = useLead()
+
+  const isError = !isLeadMutating && leadError
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      title: '',
-      description: '',
+      name: '',
+      phone: '',
+      email: '',
     },
   })
 
@@ -52,6 +65,15 @@ export function LeadForm() {
         </pre>
       ),
     })
+
+    triggerLead({
+      id: uuidv4(),
+      username: data.name,
+      phoneNumber: data.phone,
+      email: data.email,
+      description: '',
+      telegram: '',
+    })
   }
 
   return (
@@ -61,18 +83,77 @@ export function LeadForm() {
       onSubmit={form.handleSubmit(onSubmit)}>
       <FieldGroup>
         <Controller
-          name='title'
+          name='name'
           control={form.control}
           render={({ field, fieldState }) => (
             <Field data-invalid={fieldState.invalid}>
-              <FieldLabel htmlFor='form-rhf-demo-title'>Name</FieldLabel>
+              <FieldLabel htmlFor='form-rhf-name'>Name</FieldLabel>
               <Input
                 {...field}
-                id='form-rhf-demo-title'
+                id='form-rhf-name'
+                aria-invalid={fieldState.invalid}
+                placeholder='Ivan Ivanov'
+                // autoComplete='off'
+              />
+              {/* <VisuallyHidden>
+                <FieldDescription>
+                  Provide a concise title for your bug report.
+                </FieldDescription>
+              </VisuallyHidden> */}
+              {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
+            </Field>
+          )}
+        />
+        <Controller
+          name='phone'
+          control={form.control}
+          render={({ field, fieldState }) => (
+            <Field data-invalid={fieldState.invalid}>
+              <FieldLabel htmlFor='form-rhf-phone'>Phone</FieldLabel>
+              {/* <Input
+                {...field}
+                id='form-rhf-phone'
                 aria-invalid={fieldState.invalid}
                 placeholder='Ivan Ivanov'
                 autoComplete='off'
+              /> */}
+              <PhoneInput
+                {...field}
+                id='form-rhf-phone'
+                aria-invalid={fieldState.invalid}
+                placeholder='111 222 3333'
+                // autoComplete='off'
+                defaultCountry={toUpperCase(
+                  LOCALE_TO_COUNTRY_MAP[locale] || locale,
+                )}
               />
+              {/* <VisuallyHidden>
+                <FieldDescription>
+                  Provide a concise title for your bug report.
+                </FieldDescription>
+              </VisuallyHidden> */}
+              {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
+            </Field>
+          )}
+        />
+        <Controller
+          name='email'
+          control={form.control}
+          render={({ field, fieldState }) => (
+            <Field data-invalid={fieldState.invalid}>
+              <FieldLabel htmlFor='form-rhf-email'>Email</FieldLabel>
+              <Input
+                {...field}
+                id='form-rhf-email'
+                aria-invalid={fieldState.invalid}
+                placeholder='example@domain.com'
+                // autoComplete='off'
+              />
+              {/* <VisuallyHidden>
+                <FieldDescription>
+                  Provide a concise title for your bug report.
+                </FieldDescription>
+              </VisuallyHidden> */}
               {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
             </Field>
           )}
@@ -91,7 +172,7 @@ export function LeadForm() {
                       id='form-rhf-demo-description'
                       placeholder="I'm having an issue with the login button on mobile."
                       rows={6}
-                      className='min-h-24 resize-none'
+                      className='resize-none min-h-24'
                       aria-invalid={fieldState.invalid}
                     />
                     <InputGroupAddon align='block-end'>
@@ -111,7 +192,7 @@ export function LeadForm() {
               )}
             /> */}
         <Field orientation='horizontal'>
-          <LeadButton form={id} />
+          <LeadButton form={id} isLoading={isLeadMutating} isError={isError} />
         </Field>
       </FieldGroup>
     </form>

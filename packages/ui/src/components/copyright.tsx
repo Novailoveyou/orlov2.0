@@ -17,7 +17,8 @@ export function Copyright({ name, license, className }: CopyrightProps) {
   return (
     <Small className={cn(className)}>
       <License {...license}>
-        <Span>&copy;</Span> {/* TODO: FIGURE OUT A WAY WITHOUT Suspense */}
+        <Span>&copy;</Span>{' '}
+        {/* TODO: FIGURE OUT A WAY WITHOUT Suspense https://nextjs.org/docs/messages/next-prerender-current-time */}
         <Suspense>
           <Year />
         </Suspense>{' '}

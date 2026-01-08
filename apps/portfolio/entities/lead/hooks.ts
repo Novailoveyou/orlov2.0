@@ -6,7 +6,7 @@ import { sendGTMEvent } from '@/shared/components/google-tag-manager'
 import { Lead } from './model'
 // import { mutationPost } from '@/shared/actions'
 import { useMutation } from '@/shared/api'
-import { sendLeadToTelegram } from './actions'
+import { leadFetcher } from './actions'
 
 const onSuccess = (lead: Lead) => {
   // console.log('lead: ', lead)
@@ -20,11 +20,11 @@ const onSuccess = (lead: Lead) => {
     yandex_cid: lead.id,
   })
   ym.reachGoal('lead')
-  sendGTMEvent({ event: 'lead', value: 'xyz' })
+  sendGTMEvent({ event: 'lead', value: lead.id })
 }
 
 export const useLead = () =>
-  useMutation('/lead', sendLeadToTelegram, {
+  useMutation('/lead', leadFetcher, {
     entity: 'lead',
     onSuccess,
   })

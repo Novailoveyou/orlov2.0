@@ -10,26 +10,28 @@ import { cn } from '@/shared/utils'
 export const LeadButton = ({
   className,
   form,
-}: Pick<ComponentProps<typeof SubmitPrimaryButton>, 'className' | 'form'>) => {
+  onSubmit,
+  isLoading,
+  isError,
+}: Pick<
+  ComponentProps<typeof SubmitPrimaryButton>,
+  'className' | 'form' | 'onSubmit'
+> & { isError: unknown; isLoading: boolean }) => {
   // const [retryCount, setRetryCount] = useState(0)
   const t = useTranslations('entities.lead')
 
-  const { isLeadMutating, leadError, triggerLead } = useLead()
-
-  const isError = !isLeadMutating && leadError
-
-  const handleLead = useCallback(
-    () =>
-      triggerLead({
-        id: '123',
-        phoneNumber: '',
-        description: '',
-        email: '',
-        telegram: '',
-        username: '',
-      }),
-    [triggerLead],
-  )
+  // const handleLead = useCallback(
+  //   () =>
+  //     triggerLead({
+  //       id: '123',
+  //       phoneNumber: '',
+  //       description: '',
+  //       email: '',
+  //       telegram: '',
+  //       username: '',
+  //     }),
+  //   [triggerLead],
+  // )
 
   // useEffect(() => {
   //   const handleRetry = () => {
@@ -53,11 +55,12 @@ export const LeadButton = ({
   return (
     <SubmitPrimaryButton
       className={cn(className)}
-      isLoading={isLeadMutating}
+      isLoading={isLoading}
       loadingMessage={t('loading')}
       errorMessage={t('error')}
       error={isError}
-      onClick={handleLead}>
+      // onClick={handleLead}
+    >
       {isError ? t('pleaseTryAgain') : t('hireMe')}
     </SubmitPrimaryButton>
   )

@@ -8,8 +8,8 @@ export const ContactButton = () => {
   // TODO: make button fallback to https://t.me/novailoveyou if tg:// protocol is not supported or fallback to phone number is case or russian locale or email (whatsapp/fb messager etc) for other locales
   return (
     <Button variant='ghost' size='icon' className='px-2' asChild>
-      {/* <ExternalLink href='tg://resolve?domain=novailoveyou'> */}
-      <ExternalLink href='https://t.me/novailoveyou'>
+      <ExternalLink href='tg://resolve?domain=novailoveyou'>
+        {/* <ExternalLink href='https://t.me/novailoveyou'> */}
         {/* TODO: add aria label */}
         <Icon
           width='w-[1.2rem]'

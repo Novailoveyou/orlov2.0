@@ -61,20 +61,20 @@ export const Dialog = ({
 
   if (isDesktop) {
     return (
-      <DialogBase defaultOpen modal open={isOpen} onOpenChange={onOpenChange}>
+      <DialogBase modal open={isOpen} onOpenChange={onOpenChange}>
         {/* <DialogTrigger asChild>
           <Button variant='outline'>Edit Profile</Button>
         </DialogTrigger> */}
         <DialogContent className='sm:max-w-[425px] ui:overflow-y-auto'>
-          <VisuallyHidden>
-            <DialogHeader>
-              <DialogTitle>Edit profile</DialogTitle>
+          <DialogHeader>
+            <DialogTitle>Edit profile</DialogTitle>
+            <VisuallyHidden>
               <DialogDescription>
                 Make changes to your profile here. Click save when you&apos;re
                 done.
               </DialogDescription>
-            </DialogHeader>
-          </VisuallyHidden>
+            </VisuallyHidden>
+          </DialogHeader>
           <Div className='ui:overflow-y-auto'>{children}</Div>
         </DialogContent>
       </DialogBase>
@@ -83,7 +83,7 @@ export const Dialog = ({
 
   return (
     <Drawer
-      defaultOpen
+      // defaultOpen
       modal
       open={isOpen}
       onOpenChange={onOpenChange}
@@ -97,21 +97,22 @@ export const Dialog = ({
       // noBodyStyles
       // disablePreventScroll
       // TODO: figure out snap points for drawer on mobile so that it never fully closes, only partially leaving a small portion visible to indicate to user that they can swipe it back up https://vaul.emilkowal.ski/snap-points
+      // TODO: add i18n
       // snapPoints={['270px', 1]}
       direction='bottom'>
       {/* <DrawerTrigger asChild>
         <Button variant='outline'>Edit Profile</Button>
       </DrawerTrigger> */}
       <DrawerContent>
-        <VisuallyHidden>
-          <DrawerHeader className='text-left'>
-            <DrawerTitle>Edit profile</DrawerTitle>
+        <DrawerHeader className='text-left'>
+          <DrawerTitle>Edit profile</DrawerTitle>
+          <VisuallyHidden>
             <DrawerDescription>
               Make changes to your profile here. Click save when you&apos;re
               done.
             </DrawerDescription>
-          </DrawerHeader>
-        </VisuallyHidden>
+          </VisuallyHidden>
+        </DrawerHeader>
         <Div className='ui:overflow-y-auto'>{children}</Div>
         <DrawerFooter className='pt-2'>
           <DrawerClose asChild>

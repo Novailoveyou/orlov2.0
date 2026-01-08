@@ -29,7 +29,6 @@ export const LOCALE_TO_LANGUAGE_MAP = {
   let: '1337 5p34k',
   sov: 'Советский',
   orv: 'Рѹсьскъ',
-  ept: 'Пацанский',
   dov: 'Dovahzul',
   elv: 'Eldarin',
   sim: 'Simlish',
@@ -62,18 +61,17 @@ export const LOCALE_TO_COUNTRY_MAP = {
   la: 'va',
   kk: 'kz',
   uz: 'uz',
-  eo: 'eo',
+  eo: 'us',
   egz: 'us',
   let: 'us',
-  sov: 'sov',
-  orv: 'orv',
-  ept: 'ru',
-  dov: 'dov',
-  elv: 'elv',
-  sim: 'sim',
-  nav: 'nav',
-  kli: 'kli',
-  sss: 'par',
+  sov: 'ru',
+  orv: 'ru',
+  dov: 'us',
+  elv: 'us',
+  sim: 'us',
+  nav: 'us',
+  kli: 'us',
+  sss: 'us',
 } as const satisfies Record<Locale, string>
 
 export const FUN_LANGUAGES_ICONS = {
@@ -86,7 +84,6 @@ export const FUN_LANGUAGES_ICONS = {
   egz: '🗣',
   sov: '🚩',
   orv: '📜',
-  ept: '🪆',
   elv: '🧝‍♂️',
   let: '💻',
 } as const satisfies Record<
@@ -101,7 +98,6 @@ export const FUN_LANGUAGES_ICONS = {
     | 'egz'
     | 'sov'
     | 'orv'
-    | 'ept'
     | 'elv'
     | 'let'
   >,
