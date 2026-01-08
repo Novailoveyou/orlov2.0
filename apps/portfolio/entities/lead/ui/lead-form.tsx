@@ -91,6 +91,7 @@ export function LeadForm() {
               <Input
                 {...field}
                 id='form-rhf-name'
+                type='text'
                 aria-invalid={fieldState.invalid}
                 placeholder='Ivan Ivanov'
                 // autoComplete='off'
@@ -144,6 +145,7 @@ export function LeadForm() {
               <FieldLabel htmlFor='form-rhf-email'>Email</FieldLabel>
               <Input
                 {...field}
+                type='email'
                 id='form-rhf-email'
                 aria-invalid={fieldState.invalid}
                 placeholder='example@domain.com'
