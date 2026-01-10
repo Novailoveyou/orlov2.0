@@ -25,8 +25,8 @@ export const Question = ({ qna }: { qna: QNA }) => {
 
   return (
     // @ts-expect-error drag ref type issue
-    <Div ref={drop} style={{ backgroundColor }} data-testid='dustbin'>
+    <div ref={drop} style={{ backgroundColor }} data-testid='dustbin'>
       {qna.question}
-    </Div>
+    </div>
   )
 }

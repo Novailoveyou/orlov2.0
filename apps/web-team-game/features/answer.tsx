@@ -46,13 +46,13 @@ export const Answer = ({
   }
 
   return (
-    <Div
+    <div
       // @ts-expect-error drag ref type issue
       ref={drag}
       style={{ opacity }}
       data-testid={`box`}
       onClick={handleClick}>
       {answerVariant}
-    </Div>
+    </div>
   )
 }
