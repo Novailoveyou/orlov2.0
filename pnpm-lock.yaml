@@ -560,6 +560,9 @@ importers:
       react:
         specifier: ^19.2.3
         version: 19.2.3
+      react-device-detect:
+        specifier: ^2.2.3
+        version: 2.2.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react-dnd:
         specifier: ^16.0.1
         version: 16.0.1(@types/node@25.0.3)(@types/react@19.2.7)(react@19.2.3)
