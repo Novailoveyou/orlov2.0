@@ -31,11 +31,11 @@ export const Game = () => {
           key={qna.question}
           className={cn(qnaIndex === QNAs.indexOf(qna) ? 'block' : 'hidden')}>
           <Question qna={qna} />
-          {qna.answers.map(answer => (
+          {qna.answerVariants.map(answerVariant => (
             <Answer
-              key={answer}
+              key={answerVariant}
               qna={qna}
-              answer={answer}
+              answerVariant={answerVariant}
               onSuccess={onSuccess}
             />
           ))}

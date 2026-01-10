@@ -7,20 +7,20 @@ import { QNA } from '@/shared/model'
 
 export const Answer = ({
   qna,
-  answer,
+  answerVariant,
   onSuccess,
 }: {
   qna: QNA
-  answer: QNA['answers'][number]
+  answerVariant: QNA['answerVariants'][number]
   onSuccess: () => void
 }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: qna.question,
-    item: { answer },
+    item: { answerVariant },
     end: (item, monitor) => {
       const dropResult = monitor.getDropResult<{ answer: string }>()
 
-      if (dropResult?.answer !== answer) {
+      if (dropResult?.answer !== answerVariant) {
         console.log('wrong')
         return
       }
@@ -37,10 +37,22 @@ export const Answer = ({
 
   const opacity = isDragging ? 0.4 : 1
 
+  const handleClick = () => {
+    if (answerVariant === qna.answer) {
+      onSuccess()
+    } else {
+      console.log('wrong')
+    }
+  }
+
   return (
-    // @ts-expect-error drag ref type issue
-    <Div ref={drag} style={{ opacity }} data-testid={`box`}>
-      {answer}
+    <Div
+      // @ts-expect-error drag ref type issue
+      ref={drag}
+      style={{ opacity }}
+      data-testid={`box`}
+      onClick={handleClick}>
+      {answerVariant}
     </Div>
   )
 }
