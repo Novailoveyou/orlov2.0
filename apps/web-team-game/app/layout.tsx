@@ -9,9 +9,10 @@ import { SWRConfig } from '@/shared/api'
 import { ThemeProvider } from '@/shared/components/theme-provider'
 import { Toaster } from '@/shared/components/sonner'
 import { NextLoader } from '@/shared/components/next-topbar'
-import { Container } from '@/shared/components/container'
 import { Header } from '@/widgets/header'
 import { Suspense } from 'react'
+import { Div } from '@repo/ui/components/tags/div'
+import { DragNDropProvder } from '@/shared/components/drag-n-drop'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -35,10 +36,14 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <StoreProvider>
           <SWRConfig>
             <ThemeProvider>
-              <Suspense>
-                <Header />
-              </Suspense>
-              <Main>{children}</Main>
+              <DragNDropProvder>
+                <Div className='flex flex-col min-h-dvh'>
+                  <Suspense>
+                    <Header />
+                  </Suspense>
+                  <Main className='flex flex-col flex-1'>{children}</Main>
+                </Div>
+              </DragNDropProvder>
               <Toaster />
               <NextLoader />
             </ThemeProvider>

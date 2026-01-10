@@ -3,7 +3,7 @@ import 'server-only'
 import { View } from '@repo/ui/components/view'
 import { Container } from '@/shared/components/container'
 import { Game } from '@/widgets/game'
-import { LoginForm } from '@/widgets/login-form'
+import { LoginForm } from '@/features/login-form'
 import { cookies } from 'next/headers'
 
 export async function HomeView() {
@@ -11,8 +11,8 @@ export async function HomeView() {
   const username = cookieStore.get('username')
 
   return (
-    <View id='home-view' className='w-full'>
-      <Container className='flex flex-col justify-center items-center min-h-dvh'>
+    <View id='home-view' className='flex flex-col flex-1 w-full'>
+      <Container className='flex flex-col flex-1 justify-center items-center'>
         {username?.value ? <Game /> : <LoginForm />}
       </Container>
     </View>
