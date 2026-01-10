@@ -14,5 +14,9 @@ export const DragNDropProvder = ({
     return <DndProvider backend={HTML5Backend}>{children}</DndProvider>
   }
 
-  return <DndProvider backend={TouchBackend}>{children}</DndProvider>
+  return (
+    <DndProvider backend={TouchBackend} options={{ enableMouseEvents: true }}>
+      {children}
+    </DndProvider>
+  )
 }
