@@ -48,13 +48,13 @@ export function LoginForm() {
   })
 
   function onSubmit(data: z.infer<typeof formSchema>) {
-    triggerLogin(data.username).catch(error => {
+    triggerLogin(data.username).catch(() => {
       toast.error(
-        error &&
-          typeof error === 'object' &&
-          'message' in error &&
-          typeof error.message === 'string'
-          ? error.message
+        loginError &&
+          typeof loginError === 'object' &&
+          'message' in loginError &&
+          typeof loginError.message === 'string'
+          ? loginError.message
           : 'Не удалось войти. Пожалуйста, попробуйте еще раз.',
       )
     })
