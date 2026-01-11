@@ -2,8 +2,8 @@
 import 'client-only'
 
 import { Div } from '@repo/ui/components/tags/div'
-import { Answer } from '@/entities/game/ui/answer'
-import { Question } from '@/entities/game/ui/question'
+import { Answer } from '@/widgets/game/answer'
+import { Question } from '@/widgets/game/question'
 import { cn } from '@/shared/utils'
 import { Span } from '@repo/ui/components/tags/span'
 import { useQNAs } from '@/entities/qnas/hooks/useQNAs'

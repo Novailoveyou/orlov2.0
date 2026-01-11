@@ -5,7 +5,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
 import { Div } from '@repo/ui/components/tags/div'
 import { useQNAs } from '@/entities/qnas/hooks/useQNAs'
 
-export const Players = ({ username }: { username: string }) => {
+export const Players = () => {
   const { players } = usePlayers()
   const { QNAs } = useQNAs()
 

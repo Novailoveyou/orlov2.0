@@ -17,7 +17,7 @@ export const Header = async () => {
   return (
     <HeaderBase className='py-4'>
       <Container className='flex justify-between items-center gap-6'>
-        <Players username={username.value} />
+        <Players />
         <Div className='flex items-center gap-4 ml-auto'>
           <Button onClick={logout}>Выйти</Button>
         </Div>
