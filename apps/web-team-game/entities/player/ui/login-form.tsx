@@ -39,7 +39,7 @@ const formSchema = z.object({
 })
 
 export function LoginForm() {
-  const { isLoginMutating, loginError, triggerLogin } = useLogin()
+  const { login, isLoginMutating, triggerLogin } = useLogin()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -48,19 +48,15 @@ export function LoginForm() {
   })
 
   function onSubmit(data: z.infer<typeof formSchema>) {
-    triggerLogin(data.username).catch(() => {
-      toast.error(
-        typeof loginError === 'string'
-          ? loginError
-          : loginError &&
-              typeof loginError === 'object' &&
-              'message' in loginError &&
-              typeof loginError.message === 'string'
-            ? loginError.message
-            : 'Не удалось войти. Пожалуйста, попробуйте еще раз.',
-      )
-    })
+    triggerLogin(data.username).catch(error => console.error(error))
   }
+
+  React.useEffect(() => {
+    if (login && !login?.success)
+      toast.error(
+        login?.message || 'Не удалось войти. Пожалуйста, попробуйте еще раз.',
+      )
+  }, [login])
 
   return (
     <Card className='w-full sm:max-w-md'>
