@@ -3,8 +3,8 @@ import 'client-only'
 
 import { Div } from '@repo/ui/components/tags/div'
 import { useDrop } from 'react-dnd'
-import { QNA } from '@/shared/model'
 import { cn } from '@/shared/utils'
+import { QNA } from '@/generated/prisma/browser'
 
 export const Question = ({ qna }: { qna: QNA }) => {
   const [{ canDrop, isOver }, drop] = useDrop(() => ({

@@ -1,4 +1,16 @@
-export const QNAs = [
+import { PrismaClient, Prisma } from '../generated/prisma/client'
+import { PrismaPg } from '@prisma/adapter-pg'
+import 'dotenv/config'
+
+const adapter = new PrismaPg({
+  connectionString: process.env.DATABASE_URL,
+})
+
+const prisma = new PrismaClient({
+  adapter,
+})
+
+const QNAsData: Prisma.QNACreateInput[] = [
   {
     question: '54 + 65 = ?',
     answer: '119',
@@ -24,6 +36,12 @@ export const QNAs = [
     answer: '42',
     answerVariants: ['40', '41', '42', '43'],
   },
-] as const
+]
 
-export type QNA = (typeof QNAs)[number]
+export async function main() {
+  for (const data of QNAsData) {
+    await prisma.qNA.create({ data })
+  }
+}
+
+main()

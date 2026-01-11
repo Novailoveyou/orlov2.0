@@ -3,7 +3,6 @@ import 'client-only'
 
 import { Div } from '@repo/ui/components/tags/div'
 import { useDrag } from 'react-dnd'
-import { QNA } from '@/shared/model'
 import {
   Card,
   CardContent,
@@ -17,6 +16,7 @@ import { Button } from '@repo/ui/components/shadcnui/button'
 import { useEffect, useState } from 'react'
 import { cn } from '@/shared/utils'
 import { toast } from '@/shared/components/sonner'
+import { QNA } from '@/generated/prisma/browser'
 
 export const Answer = ({
   qna,

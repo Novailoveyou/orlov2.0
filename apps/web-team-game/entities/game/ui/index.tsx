@@ -6,11 +6,14 @@ import { Answer } from '@/entities/game/ui/answer'
 import { Question } from '@/entities/game/ui/question'
 import { useState } from 'react'
 import { cn } from '@/shared/utils'
-import { QNAs } from '@/shared/model'
 import { Span } from '@repo/ui/components/tags/span'
+import { useQNAs } from '@/entities/qnas/hooks/useQNAs'
+import { LoadingIcon } from '@/shared/components/loading-icon'
 
 export const Game = () => {
   const [qnaIndex, setQnaIndex] = useState(0)
+
+  const { QNAs = [], areQNAsLoading } = useQNAs()
 
   const onSuccess = () => {
     setQnaIndex(prev => {
@@ -21,6 +24,8 @@ export const Game = () => {
       return nextIndex
     })
   }
+
+  if (areQNAsLoading) return <LoadingIcon />
 
   return (
     <Div className='flex flex-col'>
