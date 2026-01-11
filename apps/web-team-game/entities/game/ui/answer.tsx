@@ -17,7 +17,8 @@ import { useEffect, useState } from 'react'
 import { cn } from '@/shared/utils'
 import { toast } from '@/shared/components/sonner'
 import { QNA } from '@/generated/prisma/browser'
-import { LoadingIcon } from '@/shared/components/loading-icon'
+
+const WRONG_ANSWER_ERROR_ID = 'f9590417-60c5-42ed-8c59-61ba6225d8d3'
 
 export const Answer = ({
   qna,
@@ -44,6 +45,7 @@ export const Answer = ({
       }
 
       if (monitor.didDrop() && item && dropResult) {
+        toast.dismiss(WRONG_ANSWER_ERROR_ID)
         onSuccess()
       }
     },
@@ -55,6 +57,7 @@ export const Answer = ({
 
   const handleClick = () => {
     if (answerVariant === qna.answer) {
+      toast.dismiss(WRONG_ANSWER_ERROR_ID)
       onSuccess()
     } else {
       setIsWrong(true)
@@ -63,7 +66,9 @@ export const Answer = ({
 
   useEffect(() => {
     if (isWrong) {
-      toast.error('Неверный ответ')
+      toast.error('Неверный ответ', {
+        id: WRONG_ANSWER_ERROR_ID,
+      })
     }
   }, [isWrong])
 
