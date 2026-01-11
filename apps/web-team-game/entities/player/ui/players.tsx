@@ -13,33 +13,38 @@ export const Players = ({ username }: { username: string }) => {
 
   return (
     <Div className='flex flex-wrap gap-2 max-w-1/2'>
-      {players.map(player => (
-        <CircularProgressbar
-          key={player.username}
-          value={(100 / (QNAs?.length || 1)) * player.score}
-          text={player.username}
-          className='max-w-9'
-          styles={buildStyles({
-            // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
-            strokeLinecap: 'butt',
+      {players.map(player => {
+        const value = (100 / (QNAs?.length || 1)) * player.score
 
-            // Text size
-            textSize: '24px',
+        return (
+          <CircularProgressbar
+            key={player.username}
+            value={value}
+            text={player.username}
+            className='max-w-9'
+            styles={buildStyles({
+              // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+              strokeLinecap: 'butt',
 
-            // How long animation takes to go from one percentage to another, in seconds
-            pathTransitionDuration: 0.5,
+              // Text size
+              textSize: '24px',
 
-            // Can specify path transition in more detail, or remove it entirely
-            // pathTransition: 'none',
+              // How long animation takes to go from one percentage to another, in seconds
+              pathTransitionDuration: 0.5,
 
-            // Colors
-            pathColor: 'var(--color-primary)',
-            textColor: 'var(--color-primary)',
-            trailColor: 'var(--color-primary-foreground)',
-            backgroundColor: 'var(--color-primary-foreground)',
-          })}
-        />
-      ))}
+              // Can specify path transition in more detail, or remove it entirely
+              // pathTransition: 'none',
+
+              // Colors
+              pathColor:
+                value === 100 ? 'var(color-success)' : 'var(--color-primary)',
+              textColor: 'var(--color-primary)',
+              trailColor: 'var(--color-primary-foreground)',
+              backgroundColor: 'var(--color-primary-foreground)',
+            })}
+          />
+        )
+      })}
     </Div>
   )
 }
