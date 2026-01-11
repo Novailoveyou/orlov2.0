@@ -86,7 +86,7 @@ export const Answer = ({
             disabled={isWrong || isLoading}
             className={cn(
               'min-h-11 text-lg',
-              isWrong || (isLoading && 'cursor-not-allowed'),
+              (isWrong || isLoading) && 'cursor-not-allowed',
             )}>
             {answerVariant}
           </Button>
