@@ -1,7 +1,9 @@
-import { capitalCase } from 'change-case'
+// import { capitalCase } from 'change-case'
 
+// TODO: make sure this works as expected and fast
 export const toCapitalCase = <Str extends string>(str: Str) =>
-  capitalCase(str) as Capitalize<Str>
+  (String(str).charAt(0).toUpperCase() +
+    String(str).slice(1)) as Capitalize<Str>
 
 export const makeHelpingVerb = <Data>(data: Data) =>
   Array.isArray(data) ? 'are' : 'is'
