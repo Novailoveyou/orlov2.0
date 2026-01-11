@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import 'react-circular-progressbar/dist/styles.css'
 import { Html } from '@repo/ui/components/tags/html'
 import { Body } from '@repo/ui/components/tags/body'
 import { Main } from '@repo/ui/components/tags/main'

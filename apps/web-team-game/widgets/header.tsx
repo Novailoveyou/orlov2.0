@@ -17,12 +17,9 @@ export const Header = async () => {
 
   return (
     <HeaderBase className='py-4'>
-      <Container className='flex justify-between items-center gap-4'>
-        <Div>
-          <Players username={username.value} />
-        </Div>
-        <Span className='inline-block mx-auto'>WEB26</Span>
-        <Div className='flex items-center gap-4'>
+      <Container className='flex justify-between items-center gap-6'>
+        <Players username={username.value} />
+        <Div className='flex items-center gap-4 ml-auto'>
           <Span>{username.value}</Span>
           <Button onClick={logout}>Выйти</Button>
         </Div>

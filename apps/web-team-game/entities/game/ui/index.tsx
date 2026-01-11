@@ -7,6 +7,7 @@ import { Question } from '@/entities/game/ui/question'
 import { useState } from 'react'
 import { cn } from '@/shared/utils'
 import { QNAs } from '@/shared/model'
+import { Span } from '@repo/ui/components/tags/span'
 
 export const Game = () => {
   const [qnaIndex, setQnaIndex] = useState(0)
@@ -22,18 +23,23 @@ export const Game = () => {
   }
 
   return (
-    <Div>
+    <Div className='flex flex-col'>
       {qnaIndex === -1 && (
         <Div className='font-bold text-2xl'>Поздравляем! Вы прошли игру!</Div>
       )}
+      <Span className='flex justify-center items-center text-center'>
+        Задача {qnaIndex + 1} из {QNAs.length}
+      </Span>
       {QNAs.map(qna => (
         <Div
           key={qna.question}
           className={cn(
-            qnaIndex === QNAs.indexOf(qna) ? 'flex flex-col gap-8' : 'hidden',
+            qnaIndex === QNAs.indexOf(qna)
+              ? 'flex flex-col gap-6 mt-2'
+              : 'hidden',
           )}>
           <Question qna={qna} />
-          <Div className='flex flex-row flex-wrap gap-4'>
+          <Div className='flex flex-row flex-wrap justify-center items-center gap-4 mx-auto'>
             {qna.answerVariants.map(answerVariant => (
               <Answer
                 key={answerVariant}
