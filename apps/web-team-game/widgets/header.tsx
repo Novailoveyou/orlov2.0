@@ -16,7 +16,7 @@ export const Header = async () => {
   if (!username?.value) return null
 
   return (
-    <HeaderBase className='mb-6 py-4'>
+    <HeaderBase className='py-4'>
       <Container className='flex justify-between items-center gap-4'>
         <Div>
           <Players username={username.value} />

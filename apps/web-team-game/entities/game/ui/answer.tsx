@@ -14,8 +14,9 @@ import {
 } from '@repo/ui/components/shadcnui/card'
 import { Field } from '@repo/ui/components/shadcnui/field'
 import { Button } from '@repo/ui/components/shadcnui/button'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { cn } from '@/shared/utils'
+import { toast } from '@/shared/components/sonner'
 
 export const Answer = ({
   qna,
@@ -57,6 +58,12 @@ export const Answer = ({
     }
   }
 
+  useEffect(() => {
+    if (isWrong) {
+      toast.error('Неверный ответ')
+    }
+  }, [isWrong])
+
   return (
     <Card
       // @ts-expect-error drag ref type issue
@@ -67,16 +74,13 @@ export const Answer = ({
         isDragging && 'opacity-40 cursor-grabbing',
         isWrong && 'opacity-50 cursor-not-allowed',
       )}>
-      <CardHeader>
-        <CardTitle className='text-center'>{answerVariant}</CardTitle>
-      </CardHeader>
       <CardFooter>
         <Field orientation='horizontal'>
           <Button
             onClick={handleClick}
             disabled={isWrong}
-            className={cn(isWrong && 'cursor-not-allowed')}>
-            Выбрать
+            className={cn('text-lg', isWrong && 'cursor-not-allowed')}>
+            {answerVariant}
           </Button>
         </Field>
       </CardFooter>

@@ -39,7 +39,7 @@ const formSchema = z.object({
 })
 
 export function LoginForm() {
-  const { isLoginMutating, triggerLogin } = useLogin()
+  const { isLoginMutating, loginError, triggerLogin } = useLogin()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -48,8 +48,15 @@ export function LoginForm() {
   })
 
   function onSubmit(data: z.infer<typeof formSchema>) {
-    triggerLogin(data.username).catch(() => {
-      toast.error('Не удалось войти. Пожалуйста, попробуйте еще раз.')
+    triggerLogin(data.username).catch(error => {
+      toast.error(
+        error &&
+          typeof error === 'object' &&
+          'message' in error &&
+          typeof error.message === 'string'
+          ? error.message
+          : 'Не удалось войти. Пожалуйста, попробуйте еще раз.',
+      )
     })
   }
 

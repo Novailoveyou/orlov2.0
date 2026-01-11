@@ -5,7 +5,8 @@ import 'client-only'
 import { useFetcher } from '@/shared/api'
 import { getPlayers } from '../actions/get-players'
 
-export const useGetPlayers = () =>
+export const usePlayers = () =>
   useFetcher('/players', getPlayers, {
     entity: 'players',
+    refreshInterval: 1500,
   })

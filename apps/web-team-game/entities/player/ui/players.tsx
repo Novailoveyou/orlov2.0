@@ -1,9 +1,9 @@
 'use client'
 import 'client-only'
-import { useGetPlayers } from '../hooks/useGetPlayers'
+import { usePlayers } from '../hooks/usePlayers'
 
 export const Players = ({ username }: { username: string }) => {
-  const { players } = useGetPlayers()
+  const { players } = usePlayers()
 
   if (!players) return null
 

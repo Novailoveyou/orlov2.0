@@ -12,8 +12,7 @@ export async function login(key: string, { arg: username }: { arg: string }) {
   })
 
   if (existingPlayer) {
-    cookieStore.set('username', username)
-    return true
+    throw new Error('Игрок с таким именем уже есть. Введите другое имя')
   }
 
   await prisma.player.create({
