@@ -2,8 +2,8 @@ import 'server-only'
 
 import { View } from '@repo/ui/components/view'
 import { Container } from '@/shared/components/container'
-import { Game } from '@/widgets/game'
-import { LoginForm } from '@/features/login-form'
+import { Game } from '@/entities/game/ui'
+import { LoginForm } from '@/entities/player/ui/login-form'
 import { cookies } from 'next/headers'
 
 export async function HomeView() {

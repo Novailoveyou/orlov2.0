@@ -29,7 +29,7 @@ import {
   InputGroupText,
   InputGroupTextarea,
 } from '@repo/ui/components/shadcnui/input-group'
-import { login } from '@/app/actions/login'
+import { useLogin } from '../hooks/useLogin'
 
 const formSchema = z.object({
   username: z
@@ -39,6 +39,7 @@ const formSchema = z.object({
 })
 
 export function LoginForm() {
+  const { isLoginMutating, triggerLogin } = useLogin()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -47,7 +48,7 @@ export function LoginForm() {
   })
 
   function onSubmit(data: z.infer<typeof formSchema>) {
-    login(data.username).catch(() => {
+    triggerLogin(data.username).catch(() => {
       toast.error('Не удалось войти. Пожалуйста, попробуйте еще раз.')
     })
   }
@@ -88,7 +89,7 @@ export function LoginForm() {
       <CardFooter>
         <Field orientation='horizontal'>
           <Button type='submit' form='login-form'>
-            Присоединиться
+            {isLoginMutating ? 'Загрузка...' : 'Присоединиться'}
           </Button>
         </Field>
       </CardFooter>
