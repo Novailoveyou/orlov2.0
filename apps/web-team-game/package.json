@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port 3001",
-    "build": "next build && pnpm prisma:generate",
+    "build": "pnpm prisma:generate && next build",
     "start": "next start",
     "lint": "eslint",
     "check-types": "tsc --noEmit",
