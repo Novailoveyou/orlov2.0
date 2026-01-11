@@ -6,7 +6,6 @@ import { Container } from '@/shared/components/container'
 import { Button } from '@repo/ui/components/shadcnui/button'
 import { logout } from '@/entities/player/actions/logout'
 import { Div } from '@repo/ui/components/tags/div'
-import { Span } from '@repo/ui/components/tags/span'
 import { Players } from '@/entities/player/ui/players'
 
 export const Header = async () => {
@@ -20,7 +19,6 @@ export const Header = async () => {
       <Container className='flex justify-between items-center gap-6'>
         <Players username={username.value} />
         <Div className='flex items-center gap-4 ml-auto'>
-          <Span>{username.value}</Span>
           <Button onClick={logout}>Выйти</Button>
         </Div>
       </Container>
