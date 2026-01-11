@@ -16,7 +16,10 @@ export async function incrementScore(
         increment: 1,
       },
     },
+    select: {
+      score: true,
+    },
   })
 
-  return player
+  return player.score
 }

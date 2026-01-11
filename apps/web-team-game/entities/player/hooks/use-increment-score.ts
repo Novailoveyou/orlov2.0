@@ -7,4 +7,5 @@ import { incrementScore } from '../actions/increment-score'
 export const useIncrementScore = () =>
   useMutation('/incremenet-score', incrementScore, {
     entity: 'incrementScore',
+    optimisticData: (prev: number | undefined) => (prev || 0) + 1,
   })

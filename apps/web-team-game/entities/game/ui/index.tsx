@@ -32,7 +32,7 @@ export const Game = ({ username }: { username: string }) => {
 
   if (isLoading) return <LoadingIcon />
 
-  const score = incrementScore?.score || playerScore || 0
+  const score = incrementScore || playerScore || 0
 
   const isFinished = QNAs.length > 0 && score === QNAs.length
 
