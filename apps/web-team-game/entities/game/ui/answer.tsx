@@ -17,14 +17,17 @@ import { useEffect, useState } from 'react'
 import { cn } from '@/shared/utils'
 import { toast } from '@/shared/components/sonner'
 import { QNA } from '@/generated/prisma/browser'
+import { LoadingIcon } from '@/shared/components/loading-icon'
 
 export const Answer = ({
   qna,
   answerVariant,
+  isLoading,
   onSuccess,
 }: {
   qna: QNA
   answerVariant: QNA['answerVariants'][number]
+  isLoading: boolean
   onSuccess: () => void
 }) => {
   const [isWrong, setIsWrong] = useState(false)
@@ -67,19 +70,24 @@ export const Answer = ({
   return (
     <Card
       // @ts-expect-error drag ref type issue
-      ref={isWrong ? null : drag}
+      ref={isWrong || isLoading ? null : drag}
       data-testid='box'
       className={cn(
         'cursor-grab',
         isDragging && 'opacity-40 cursor-grabbing',
         isWrong && 'opacity-50 cursor-not-allowed',
+        isLoading && 'opacity-40 cursor-wait',
       )}>
       <CardFooter>
         <Field orientation='horizontal'>
           <Button
             onClick={handleClick}
-            disabled={isWrong}
-            className={cn('text-lg', isWrong && 'cursor-not-allowed')}>
+            title={isLoading ? 'Загрузка...' : undefined}
+            disabled={isWrong || isLoading}
+            className={cn(
+              'min-h-11 text-lg',
+              isWrong || (isLoading && 'cursor-not-allowed'),
+            )}>
             {answerVariant}
           </Button>
         </Field>

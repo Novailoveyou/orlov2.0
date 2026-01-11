@@ -13,7 +13,7 @@ export async function HomeView() {
   return (
     <View id='home-view' className='flex flex-col flex-1 w-full'>
       <Container className='flex flex-col flex-1 justify-center items-center'>
-        {username?.value ? <Game /> : <LoginForm />}
+        {username?.value ? <Game username={username.value} /> : <LoginForm />}
       </Container>
     </View>
   )

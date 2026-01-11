@@ -4,44 +4,56 @@ import 'client-only'
 import { Div } from '@repo/ui/components/tags/div'
 import { Answer } from '@/entities/game/ui/answer'
 import { Question } from '@/entities/game/ui/question'
-import { useState } from 'react'
 import { cn } from '@/shared/utils'
 import { Span } from '@repo/ui/components/tags/span'
 import { useQNAs } from '@/entities/qnas/hooks/useQNAs'
 import { LoadingIcon } from '@/shared/components/loading-icon'
+import { useIncrementScore } from '@/entities/player/hooks/use-increment-score'
+import { useEffect } from 'react'
+import { usePlayer } from '@/entities/player/hooks/usePlayer'
 
-export const Game = () => {
-  const [qnaIndex, setQnaIndex] = useState(0)
-
+export const Game = ({ username }: { username: string }) => {
   const { QNAs = [], areQNAsLoading } = useQNAs()
+  const { player, isPlayerLoading } = usePlayer(username)
+  const {
+    incrementScore,
+    isIncrementScoreMutating,
+    triggerIncrementScore,
+    resetIncrementScore,
+  } = useIncrementScore()
+
+  const playerScore = player?.score
+
+  useEffect(() => {
+    if (playerScore === 0) resetIncrementScore()
+  }, [playerScore, resetIncrementScore])
+
+  const isLoading = areQNAsLoading || isPlayerLoading
+
+  if (isLoading) return <LoadingIcon />
+
+  const score = incrementScore?.score || playerScore || 0
+
+  const isFinished = QNAs.length > 0 && score === QNAs.length
 
   const onSuccess = () => {
-    setQnaIndex(prev => {
-      const nextIndex = prev + 1
-      if (nextIndex >= QNAs.length) {
-        return -1
-      }
-      return nextIndex
-    })
+    triggerIncrementScore(username)
   }
-
-  if (areQNAsLoading) return <LoadingIcon />
 
   return (
     <Div className='flex flex-col'>
-      {qnaIndex === -1 && (
+      {isFinished ? (
         <Div className='font-bold text-2xl'>Поздравляем! Вы прошли игру!</Div>
+      ) : (
+        <Span className='flex justify-center items-center text-center'>
+          Задача {(score || 0) + 1} из {QNAs.length}
+        </Span>
       )}
-      <Span className='flex justify-center items-center text-center'>
-        Задача {qnaIndex + 1} из {QNAs.length}
-      </Span>
-      {QNAs.map(qna => (
+      {QNAs.map((qna, index) => (
         <Div
           key={qna.question}
           className={cn(
-            qnaIndex === QNAs.indexOf(qna)
-              ? 'flex flex-col gap-6 mt-2'
-              : 'hidden',
+            score === index ? 'flex flex-col gap-6 mt-2' : 'hidden',
           )}>
           <Question qna={qna} />
           <Div className='flex flex-row flex-wrap justify-center items-center gap-4 mx-auto'>
@@ -50,6 +62,7 @@ export const Game = () => {
                 key={answerVariant}
                 qna={qna}
                 answerVariant={answerVariant}
+                isLoading={isIncrementScoreMutating}
                 onSuccess={onSuccess}
               />
             ))}

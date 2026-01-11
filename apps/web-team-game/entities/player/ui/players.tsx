@@ -3,20 +3,20 @@ import 'client-only'
 import { usePlayers } from '../hooks/usePlayers'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
 import { Div } from '@repo/ui/components/tags/div'
+import { useQNAs } from '@/entities/qnas/hooks/useQNAs'
 
 export const Players = ({ username }: { username: string }) => {
   const { players } = usePlayers()
+  const { QNAs } = useQNAs()
 
   if (!players) return null
-
-  const percentage = 66
 
   return (
     <Div className='flex flex-wrap gap-2 max-w-1/2'>
       {players.map(player => (
         <CircularProgressbar
           key={player.username}
-          value={percentage}
+          value={(100 / (QNAs?.length || 1)) * player.score}
           text={player.username}
           className='max-w-9'
           styles={buildStyles({
