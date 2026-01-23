@@ -19,7 +19,7 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
     theme_color: '#101E33',
     icons: [
       {
-        src: '/logo.svg',
+        src: '/vercel.svg',
         sizes: '48x48 72x72 96x96 128x128 256x256 512x512',
         type: 'image/svg+xml',
         purpose: 'any',
