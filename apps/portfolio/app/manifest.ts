@@ -19,15 +19,21 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
     theme_color: '#101E33',
     icons: [
       {
-        src: '/icon-192x192.png',
-        sizes: '192x192',
-        type: 'image/png',
+        src: '/logo.svg',
+        sizes: '48x48 72x72 96x96 128x128 256x256 512x512',
+        type: 'image/svg+xml',
+        purpose: 'any',
       },
-      {
-        src: '/icon-512x512.png',
-        sizes: '512x512',
-        type: 'image/png',
-      },
+      // {
+      //   src: '/icon-192x192.png',
+      //   sizes: '192x192',
+      //   type: 'image/png',
+      // },
+      // {
+      //   src: '/icon-512x512.png',
+      //   sizes: '512x512',
+      //   type: 'image/png',
+      // },
     ],
   }
 }
