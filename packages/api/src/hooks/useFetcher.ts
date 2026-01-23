@@ -29,6 +29,15 @@ const renameUseFetcherOutput = <Data, Error, Entity extends string>(
 }
 
 // TODO: type properly with fallbackData etc
+/**
+ * @description A custom hook that wraps SWR's useSWR and renames the returned properties based on the provided entity name.
+ * @param key The key to identify the data being fetched.
+ * @param fetcher The fetcher function to retrieve the data.
+ * @param options Additional SWR configuration options, including the entity name.
+ * @returns An object containing the fetched data and related properties with names based on the entity.
+ * @example
+ * const { data, isLoading, error, mutate } = useFetcher('/user', fetchUser, { entity: 'user' });
+ */
 export const useFetcher = <
   Data,
   Error,
