@@ -18,5 +18,14 @@ self.addEventListener('push', function (event) {
 self.addEventListener('notificationclick', function (event) {
   console.log('Notification click received.')
   event.notification.close()
-  event.waitUntil(clients.openWindow('<https://your-website.com>'))
+  event.waitUntil(clients.openWindow('https://orlov.app'))
+})
+
+self.addEventListener('fetch', event => {
+  if (
+    event.request.url.includes('manifest.json') ||
+    event.request.url.includes('apple-touch-icon')
+  ) {
+    event.respondWith(fetch(event.request, { cache: 'no-cache' }))
+  }
 })
