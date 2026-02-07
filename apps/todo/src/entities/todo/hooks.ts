@@ -87,6 +87,8 @@ export const useUpdateTodo = () => {
         if (!todo) return
         updateTodoInStore(todo.id, todo)
       },
+      optimisticData: data =>
+        data ? { ...data, updatedAt: new Date() } : undefined,
       rollbackOnError: true,
     },
   )
@@ -113,6 +115,13 @@ export const useToggleTodo = () => {
         if (!todo) return
         toggleTodoInStore(todo.id)
       },
+      optimisticData: data =>
+        data
+          ? {
+              ...data,
+              isDone: !data.isDone,
+            }
+          : undefined,
       rollbackOnError: true,
     },
   )
