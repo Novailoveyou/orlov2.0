@@ -15,7 +15,6 @@ import {
 import sortBy from 'lodash/sortBy'
 import { isBefore, isToday } from 'date-fns'
 import { Button } from '@/shared/components/ui/button'
-import type { Todo } from '../model'
 import { createSkeletons } from '../utils'
 
 export const Todos = () => {
