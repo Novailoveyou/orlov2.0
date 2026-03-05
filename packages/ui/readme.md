@@ -4,8 +4,7 @@
 
 - [x] a
 - [x] abbr
-- acronym (deprecated)
-- address
+- [x] address
 - area
 - article
 - aside
@@ -14,14 +13,12 @@
 - base
 - bdi
 - bdo
-- big (deprecated)
-- blockquote
+- [x] blockquote
 - body
 - br
 - button
 - canvas
 - caption
-- center (deprecated)
 - cite
 - code
 - col
@@ -33,7 +30,6 @@
 - details
 - dfn
 - dialog
-- dir (deprecated)
 - div
 - dl
 - dt
@@ -43,11 +39,8 @@
 - fieldset
 - figcaption
 - figure
-- font (deprecated)
 - footer
 - form
-- frame (deprecated)
-- frameset (deprecated)
 - geolocation (experimental)
 - h1
 - h2
@@ -73,14 +66,10 @@
 - main
 - map
 - mark
-- marquee (deprecated)
 - menu
 - meta
 - meter
 - nav
-- nobr (deprecated)
-- noembed (deprecated)
-- noframes (deprecated)
 - noscript
 - object
 - ol
@@ -88,16 +77,12 @@
 - option
 - output
 - p
-- param (deprecated)
 - picture
-- plaintext (deprecated)
 - pre
 - progress
 - q
-- rb (deprecated)
 - rp
 - rt
-- rtc (deprecated)
 - ruby
 - s
 - samp
@@ -110,7 +95,6 @@
 - small
 - source
 - span
-- strike (deprecated)
 - strong
 - style
 - sub
@@ -128,10 +112,8 @@
 - title
 - tr
 - track
-- tt (deprecated)
 - u
 - ul
 - var
 - video
 - wbr
-- xmp (deprecated)

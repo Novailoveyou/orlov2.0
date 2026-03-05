@@ -4,23 +4,28 @@ import { cva, type VariantProps } from 'class-variance-authority'
 
 import { AsChildProp } from '../../model/as-child-prop'
 import { cn } from '../../utils'
+import { DEFAULT_VARIANT } from './constants'
+
+const TAG = 'a'
 
 export const aVariants = cva('', {
   variants: {
     variant: {
-      base: '',
+      default: '',
       opinionated: 'ui:text-inherit ui:no-underline ui:cursor-pointer',
     },
   },
   defaultVariants: {
-    variant: 'opinionated',
+    variant: DEFAULT_VARIANT,
   },
 })
 
-type AProps = AsChildProp & VariantProps<typeof aVariants> & ComponentProps<'a'>
+type AProps = AsChildProp &
+  VariantProps<typeof aVariants> &
+  ComponentProps<typeof TAG>
 
 /**
- * @description A component to display <a>
+ * @description <A> component to display <a>
  * @remarks
  * The <a> HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
  * Content within each <a> should indicate the link's destination. If the href attribute is present, pressing the enter key while focused on the <a> element will activate it.
@@ -38,11 +43,11 @@ export function A({
   children,
   ...props
 }: AProps): JSX.Element {
-  const Comp = asChild ? Slot : 'a'
+  const Comp = asChild ? Slot : TAG
 
   return (
     <Comp
-      data-slot='a'
+      data-slot={TAG}
       ref={ref}
       className={cn(aVariants({ variant, className }))}
       {...props}>

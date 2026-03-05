@@ -15,6 +15,7 @@ type UlProps = Omit<ComponentProps<'ul'>, 'children'> & {
 /**
  * @description Ul component to display an unordered list
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+ * @todo fill in tsdoc
  */
 export function Ul({ className, items, ...props }: UlProps) {
   return (

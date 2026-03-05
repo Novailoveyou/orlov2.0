@@ -1,33 +1,63 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, JSX } from 'react'
+import { Slot } from '@radix-ui/react-slot'
+import { cva, type VariantProps } from 'class-variance-authority'
 import Locale from 'intl-locale-textinfo-polyfill'
-import { cn } from '../../utils/index'
 
-type BaseHtmlProps = ComponentProps<'html'>
+import { AsChildProp } from '../../model/as-child-prop'
+import { cn } from '../../utils'
+import { DEFAULT_VARIANT } from './constants'
 
-type HtmlProps = BaseHtmlProps & Required<Pick<BaseHtmlProps, 'lang'>>
+const TAG = 'html'
+
+export const htmlVariants = cva('', {
+  variants: {
+    variant: {
+      default: '',
+      opinionated: '',
+    },
+  },
+  defaultVariants: {
+    variant: DEFAULT_VARIANT,
+  },
+})
+
+type BaseHTMLProps = ComponentProps<typeof TAG>
+
+type HtmlProps = AsChildProp &
+  VariantProps<typeof htmlVariants> &
+  Required<Pick<BaseHTMLProps, 'lang'>> &
+  Omit<BaseHTMLProps, 'lang'>
 
 /**
- * @description Html component to display html
+ * @description <Html> component to display <html> tag
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html
+ * @todo fill in tsdoc
  */
 export function Html({
-  children,
+  asChild,
+  variant,
+  ref,
   className,
+  children,
   lang: locale = 'en',
   dir: dirProp = 'ltr',
   suppressHydrationWarning = true,
   ...props
-}: HtmlProps) {
+}: HtmlProps): JSX.Element {
+  const Comp = asChild ? Slot : TAG
+
   const { direction: dir = dirProp } = new Locale(locale).getTextInfo()
 
   return (
-    <html
-      className={cn(className)}
+    <Comp
+      data-slot={TAG}
+      ref={ref}
       lang={locale}
       dir={dir}
       suppressHydrationWarning={suppressHydrationWarning}
+      className={cn(htmlVariants({ variant, className }))}
       {...props}>
       {children}
-    </html>
+    </Comp>
   )
 }

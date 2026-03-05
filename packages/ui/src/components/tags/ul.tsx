@@ -6,16 +6,13 @@ import { AsChildProp } from '../../model/as-child-prop'
 import { cn } from '../../utils'
 import { DEFAULT_VARIANT } from './constants'
 
-const TAG = 'p'
+const TAG = 'ul'
 
-export const pVariants = cva('', {
+export const ulVariants = cva('', {
   variants: {
     variant: {
       default: '',
-      lead: 'ui:text-muted-foreground ui:text-xl',
-      large: 'ui:text-lg ui:font-semibold',
-      muted: 'ui:text-muted-foreground ui:text-sm',
-      opinionated: 'ui:text-foreground',
+      opinionated: 'ui:m-0 ui:p-0',
     },
   },
   defaultVariants: {
@@ -23,30 +20,32 @@ export const pVariants = cva('', {
   },
 })
 
-type PProps = AsChildProp &
-  VariantProps<typeof pVariants> &
+type UlProps = AsChildProp &
+  VariantProps<typeof ulVariants> &
   ComponentProps<typeof TAG>
 
 /**
- * @description <P> component to display <p> tag
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+ * @description <Ul> component to display <ul> tag
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
  * @todo fill in tsdoc
  */
-export function P({
+export function Ul({
   asChild,
   variant,
   ref,
+  id,
   className,
   children,
   ...props
-}: PProps): JSX.Element {
+}: UlProps): JSX.Element {
   const Comp = asChild ? Slot : TAG
 
   return (
     <Comp
       data-slot={TAG}
       ref={ref}
-      className={cn(pVariants({ variant, className }))}
+      id={id}
+      className={cn(ulVariants({ variant, className }))}
       {...props}>
       {children}
     </Comp>

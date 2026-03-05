@@ -6,16 +6,13 @@ import { AsChildProp } from '../../model/as-child-prop'
 import { cn } from '../../utils'
 import { DEFAULT_VARIANT } from './constants'
 
-const TAG = 'p'
+const TAG = 'ol'
 
-export const pVariants = cva('', {
+export const olVariants = cva('', {
   variants: {
     variant: {
       default: '',
-      lead: 'ui:text-muted-foreground ui:text-xl',
-      large: 'ui:text-lg ui:font-semibold',
-      muted: 'ui:text-muted-foreground ui:text-sm',
-      opinionated: 'ui:text-foreground',
+      opinionated: 'ui:m-0 ui:p-0',
     },
   },
   defaultVariants: {
@@ -23,30 +20,32 @@ export const pVariants = cva('', {
   },
 })
 
-type PProps = AsChildProp &
-  VariantProps<typeof pVariants> &
+type OlProps = AsChildProp &
+  VariantProps<typeof olVariants> &
   ComponentProps<typeof TAG>
 
 /**
- * @description <P> component to display <p> tag
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+ * @description <Ol> component to display <ol> tag
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
  * @todo fill in tsdoc
  */
-export function P({
+export function Ol({
   asChild,
   variant,
   ref,
+  id,
   className,
   children,
   ...props
-}: PProps): JSX.Element {
+}: OlProps): JSX.Element {
   const Comp = asChild ? Slot : TAG
 
   return (
     <Comp
       data-slot={TAG}
       ref={ref}
-      className={cn(pVariants({ variant, className }))}
+      id={id}
+      className={cn(olVariants({ variant, className }))}
       {...props}>
       {children}
     </Comp>
