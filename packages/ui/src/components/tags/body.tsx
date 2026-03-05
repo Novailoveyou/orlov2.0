@@ -28,6 +28,7 @@ type BodyProps = AsChildProp &
 /**
  * @description <Body> component to display <body> tag
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body
+ * @todo fill in tsdoc
  */
 export function Body({
   asChild,
