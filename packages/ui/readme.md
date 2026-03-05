@@ -1,0 +1,137 @@
+# Basic UI
+
+## Tags
+
+- [x] a
+- [x] abbr
+- acronym (deprecated)
+- address
+- area
+- article
+- aside
+- audio
+- b
+- base
+- bdi
+- bdo
+- big (deprecated)
+- blockquote
+- body
+- br
+- button
+- canvas
+- caption
+- center (deprecated)
+- cite
+- code
+- col
+- colgroup
+- data
+- datalist
+- dd
+- del
+- details
+- dfn
+- dialog
+- dir (deprecated)
+- div
+- dl
+- dt
+- em
+- embed
+- fencedframe (experimental)
+- fieldset
+- figcaption
+- figure
+- font (deprecated)
+- footer
+- form
+- frame (deprecated)
+- frameset (deprecated)
+- geolocation (experimental)
+- h1
+- h2
+- h3
+- h4
+- h5
+- h6
+- head
+- header
+- hgroup
+- hr
+- html
+- i
+- iframe
+- img
+- input
+- ins
+- kbd
+- label
+- legend
+- li
+- link
+- main
+- map
+- mark
+- marquee (deprecated)
+- menu
+- meta
+- meter
+- nav
+- nobr (deprecated)
+- noembed (deprecated)
+- noframes (deprecated)
+- noscript
+- object
+- ol
+- optgroup
+- option
+- output
+- p
+- param (deprecated)
+- picture
+- plaintext (deprecated)
+- pre
+- progress
+- q
+- rb (deprecated)
+- rp
+- rt
+- rtc (deprecated)
+- ruby
+- s
+- samp
+- script
+- search
+- section
+- select
+- selectedcontent (experimental)
+- slot
+- small
+- source
+- span
+- strike (deprecated)
+- strong
+- style
+- sub
+- summary
+- sup
+- table
+- tbody
+- td
+- template
+- textarea
+- tfoot
+- th
+- thead
+- time
+- title
+- tr
+- track
+- tt (deprecated)
+- u
+- ul
+- var
+- video
+- wbr
+- xmp (deprecated)
