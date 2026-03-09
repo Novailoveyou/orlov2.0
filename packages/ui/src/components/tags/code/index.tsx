@@ -1,0 +1,34 @@
+import { JSX } from 'react'
+import { Slot } from '@radix-ui/react-slot'
+
+import { cn } from '../../../utils'
+import { CODE_TAG } from './constants'
+import { codeVariants } from './utils'
+import { CodeProps } from './model'
+
+/**
+ * @description <Code> component to display <code> tag
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code
+ * @remarks
+ * The <code> HTML element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. By default, the content text is displayed using the user agent's default monospace font.
+ */
+export function Code({
+  asChild,
+  variant,
+  ref,
+  className,
+  children,
+  ...props
+}: CodeProps): JSX.Element {
+  const Comp = asChild ? Slot : CODE_TAG
+
+  return (
+    <Comp
+      data-slot={CODE_TAG}
+      ref={ref}
+      className={cn(codeVariants({ variant, className }))}
+      {...props}>
+      {children}
+    </Comp>
+  )
+}
