@@ -5,115 +5,115 @@
 - [x] a
 - [x] abbr
 - [x] address
-- area
-- article
-- aside
-- audio
-- b
-- base
-- bdi
-- bdo
+- [x] area
+- [x] article
+- [x] aside
+- [x] audio
+- [x] b
+- [x] base
+- [x] bdi
+- [x] bdo
 - [x] blockquote
 - [x] body
-- br
-- button
-- canvas
-- caption
-- cite
+- [x] br
+- [x] button
+- [x] canvas
+- [x] caption
+- [x] cite
 - [x] code
-- col
-- colgroup
-- data
-- datalist
-- dd
-- del
-- details
-- dfn
-- dialog
+- [x] col
+- [x] colgroup
+- [x] data
+- [x] datalist
+- [x] dd
+- [x] del
+- [x] details
+- [x] dfn
+- [x] dialog
 - [x] div
-- dl
-- dt
-- em
-- embed
+- [x] dl
+- [x] dt
+- [x] em
+- [x] embed
 - fencedframe (experimental)
-- fieldset
-- figcaption
-- figure
+- [x] fieldset
+- [x] figcaption
+- [x] figure
 - [x] footer
-- form
+- [x] form
 - geolocation (experimental)
 - [x] h1
 - [x] h2
 - [x] h3
 - [x] h4
-- h5
-- h6
-- head
+- [x] h5
+- [x] h6
+- [x] head
 - [x] header
-- hgroup
-- hr
+- [x] hgroup
+- [x] hr
 - [x] html
-- i
-- iframe
-- img
-- input
-- ins
-- kbd
-- label
-- legend
+- [x] i
+- [x] iframe
+- [x] img
+- [x] input
+- [x] ins
+- [x] kbd
+- [x] label
+- [x] legend
 - [x] li
-- link
+- [x] link
 - [x] main
-- map
-- mark
+- [x] map
+- [x] mark
 - [x] menu
-- meta
-- meter
-- nav
-- noscript
-- object
+- [x] meta
+- [x] meter
+- [x] nav
+- [x] noscript
+- [x] object
 - [x] ol
-- optgroup
-- option
-- output
+- [x] optgroup
+- [x] option
+- [x] output
 - [x] p
-- picture
-- pre
-- progress
-- q
-- rp
-- rt
-- ruby
-- s
-- samp
-- script
-- search
+- [x] picture
+- [x] pre
+- [x] progress
+- [x] q
+- [x] rp
+- [x] rt
+- [x] ruby
+- [x] s
+- [x] samp
+- [x] script
+- [x] search
 - [x] section
-- select
+- [x] select
 - selectedcontent (experimental)
-- slot
+- [x] slot
 - [x] small
-- source
+- [x] source
 - [x] span
-- strong
-- style
-- sub
-- summary
-- sup
-- table
-- tbody
-- td
-- template
-- textarea
-- tfoot
-- th
-- thead
+- [x] strong
+- [x] style
+- [x] sub
+- [x] summary
+- [x] sup
+- [x] table
+- [x] tbody
+- [x] td
+- [x] template
+- [x] textarea
+- [x] tfoot
+- [x] th
+- [x] thead
 - [x] time
-- title
-- tr
-- track
-- u
+- [x] title
+- [x] tr
+- [x] track
+- [x] u
 - [x] ul
-- var
-- video
-- wbr
+- [x] var
+- [x] video
+- [x] wbr
