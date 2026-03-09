@@ -28,7 +28,7 @@ const renameUseFetcherOutput = <Data, Error, Entity extends string>(
     Record<`${Entity}Mutate`, typeof mutate>
 }
 
-// TODO: type properly with fallbackData etc
+// TODO: type properly with fallbackData etc @see https://github.com/microsoft/TypeScript/issues/13948
 /**
  * @description A custom hook that wraps SWR's useSWR and renames the returned properties based on the provided entity name.
  * @param key The key to identify the data being fetched.

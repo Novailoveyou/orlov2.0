@@ -11,5 +11,9 @@
     "apps/portfolio/app/_/i18n",
     "apps/portfolio/app/_/i18n/messages"
   ],
-  "i18n-ally.keystyle": "nested"
+  "i18n-ally.keystyle": "nested",
+  "workbench.colorCustomizations": {
+    "minimap.background": "#00000000",
+    "scrollbar.shadow": "#00000000"
+  }
 }

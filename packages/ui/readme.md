@@ -14,13 +14,13 @@
 - bdi
 - bdo
 - [x] blockquote
-- body
+- [x] body
 - br
 - button
 - canvas
 - caption
 - cite
-- code
+- [x] code
 - col
 - colgroup
 - data
@@ -30,7 +30,7 @@
 - details
 - dfn
 - dialog
-- div
+- [x] div
 - dl
 - dt
 - em
@@ -39,20 +39,20 @@
 - fieldset
 - figcaption
 - figure
-- footer
+- [x] footer
 - form
 - geolocation (experimental)
-- h1
-- h2
-- h3
-- h4
+- [x] h1
+- [x] h2
+- [x] h3
+- [x] h4
 - h5
 - h6
 - head
-- header
+- [x] header
 - hgroup
 - hr
-- html
+- [x] html
 - i
 - iframe
 - img
@@ -61,22 +61,22 @@
 - kbd
 - label
 - legend
-- li
+- [x] li
 - link
-- main
+- [x] main
 - map
 - mark
-- menu
+- [x] menu
 - meta
 - meter
 - nav
 - noscript
 - object
-- ol
+- [x] ol
 - optgroup
 - option
 - output
-- p
+- [x] p
 - picture
 - pre
 - progress
@@ -88,13 +88,13 @@
 - samp
 - script
 - search
-- section
+- [x] section
 - select
 - selectedcontent (experimental)
 - slot
-- small
+- [x] small
 - source
-- span
+- [x] span
 - strong
 - style
 - sub
@@ -108,12 +108,12 @@
 - tfoot
 - th
 - thead
-- time
+- [x] time
 - title
 - tr
 - track
 - u
-- ul
+- [x] ul
 - var
 - video
 - wbr
