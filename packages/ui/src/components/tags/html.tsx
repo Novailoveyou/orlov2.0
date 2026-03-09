@@ -31,7 +31,8 @@ type HtmlProps = AsChildProp &
 /**
  * @description <Html> component to display <html> tag
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html
- * @todo fill in tsdoc
+ * @remarks
+ * The <html> HTML element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element. There can be only one <html> element in a document.
  */
 export function Html({
   asChild,

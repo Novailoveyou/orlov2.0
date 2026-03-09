@@ -27,7 +27,8 @@ type UlProps = AsChildProp &
 /**
  * @description <Ul> component to display <ul> tag
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
- * @todo fill in tsdoc
+ * @remarks
+ * The <ul> HTML element represents an unordered list of items, typically rendered as a bulleted list.
  */
 export function Ul({
   asChild,

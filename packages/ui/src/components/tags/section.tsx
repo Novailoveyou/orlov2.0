@@ -30,7 +30,8 @@ type SectionProps = AsChildProp &
 /**
  * @description <Section> component to display <section> tag
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
- * @todo fill in tsdoc
+ * @remarks
+ * The <section> HTML element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.
  */
 export function Section({
   asChild,

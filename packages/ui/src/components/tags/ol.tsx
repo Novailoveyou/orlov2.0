@@ -27,7 +27,8 @@ type OlProps = AsChildProp &
 /**
  * @description <Ol> component to display <ol> tag
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
- * @todo fill in tsdoc
+ * @remarks
+ * The <ol> HTML element represents an ordered list of items — typically rendered as a numbered list.
  */
 export function Ol({
   asChild,

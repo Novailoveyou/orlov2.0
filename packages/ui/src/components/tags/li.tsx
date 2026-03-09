@@ -27,7 +27,8 @@ type LiProps = AsChildProp &
 /**
  * @description <Li> component to display <li> tag
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
- * @todo fill in tsdoc
+ * @remarks
+ * The <li> HTML element is used to represent an item in a list. It must be contained in a parent element: an ordered list (<ol>), an unordered list (<ul>), or a menu (<menu>). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.
  */
 export function Li({
   asChild,

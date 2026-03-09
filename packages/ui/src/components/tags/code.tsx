@@ -28,7 +28,8 @@ type CodeProps = AsChildProp &
 /**
  * @description <Code> component to display <code> tag
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code
- * @todo fill in tsdoc
+ * @remarks
+ * The <code> HTML element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. By default, the content text is displayed using the user agent's default monospace font.
  */
 export function Code({
   asChild,

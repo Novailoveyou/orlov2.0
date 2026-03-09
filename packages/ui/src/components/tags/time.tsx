@@ -31,6 +31,12 @@ type TimeProps = AsChildProp &
  * @description <Time> component to display <time> tag
  * @remarks dateTime format: YYYY-MM-DDThh:mm:ssTZD
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
+ * @remarks
+ * The <time> HTML element represents a specific period in time. It may include the datetime attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders.
+ * It may represent one of the following:
+ * A time on a 24-hour clock.
+ * A precise date in the Gregorian calendar (with optional time and timezone information).
+ * A valid time duration.
  * @todo add support for `dateTime` as `Date` object
  */
 export function Time({
