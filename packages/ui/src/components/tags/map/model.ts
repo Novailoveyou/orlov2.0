@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type mapVariants } from './utils'
 import { MAP_TAG } from './constants'
 
+type MapBaseProps = ComponentProps<typeof MAP_TAG>
+
 export type MapProps = AsChildProp &
   VariantProps<typeof mapVariants> &
-  ComponentProps<typeof MAP_TAG>
+  MapBaseProps

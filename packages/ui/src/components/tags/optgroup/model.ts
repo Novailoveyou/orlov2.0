@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type optgroupVariants } from './utils'
 import { OPTGROUP_TAG } from './constants'
 
+type OptgroupBaseProps = ComponentProps<typeof OPTGROUP_TAG>
+
 export type OptgroupProps = AsChildProp &
   VariantProps<typeof optgroupVariants> &
-  ComponentProps<typeof OPTGROUP_TAG>
+  OptgroupBaseProps

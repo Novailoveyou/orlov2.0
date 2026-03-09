@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type sampVariants } from './utils'
 import { SAMP_TAG } from './constants'
 
+type SampBaseProps = ComponentProps<typeof SAMP_TAG>
+
 export type SampProps = AsChildProp &
   VariantProps<typeof sampVariants> &
-  ComponentProps<typeof SAMP_TAG>
+  SampBaseProps

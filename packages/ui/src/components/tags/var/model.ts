@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type varVariants } from './utils'
 import { VAR_TAG } from './constants'
 
+type VarBaseProps = ComponentProps<typeof VAR_TAG>
+
 export type VarProps = AsChildProp &
   VariantProps<typeof varVariants> &
-  ComponentProps<typeof VAR_TAG>
+  VarBaseProps

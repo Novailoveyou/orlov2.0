@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type outputVariants } from './utils'
 import { OUTPUT_TAG } from './constants'
 
+type OutputBaseProps = ComponentProps<typeof OUTPUT_TAG>
+
 export type OutputProps = AsChildProp &
   VariantProps<typeof outputVariants> &
-  ComponentProps<typeof OUTPUT_TAG>
+  OutputBaseProps

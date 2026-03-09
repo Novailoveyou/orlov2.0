@@ -4,6 +4,6 @@ import { type VariantProps } from 'class-variance-authority'
 import { type bVariants } from './utils'
 import { B_TAG } from './constants'
 
-export type BProps = AsChildProp &
-  VariantProps<typeof bVariants> &
-  ComponentProps<typeof B_TAG>
+type BBaseProps = ComponentProps<typeof B_TAG>
+
+export type BProps = AsChildProp & VariantProps<typeof bVariants> & BBaseProps

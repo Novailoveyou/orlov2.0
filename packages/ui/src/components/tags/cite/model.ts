@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type citeVariants } from './utils'
 import { CITE_TAG } from './constants'
 
+type CiteBaseProps = ComponentProps<typeof CITE_TAG>
+
 export type CiteProps = AsChildProp &
   VariantProps<typeof citeVariants> &
-  ComponentProps<typeof CITE_TAG>
+  CiteBaseProps

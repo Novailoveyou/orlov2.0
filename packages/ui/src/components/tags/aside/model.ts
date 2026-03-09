@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type asideVariants } from './utils'
 import { ASIDE_TAG } from './constants'
 
+type AsideBaseProps = ComponentProps<typeof ASIDE_TAG>
+
 export type AsideProps = AsChildProp &
   VariantProps<typeof asideVariants> &
-  ComponentProps<typeof ASIDE_TAG>
+  AsideBaseProps

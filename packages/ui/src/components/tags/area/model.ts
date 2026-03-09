@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type areaVariants } from './utils'
 import { AREA_TAG } from './constants'
 
+type AreaBaseProps = ComponentProps<typeof AREA_TAG>
+
 export type AreaProps = AsChildProp &
   VariantProps<typeof areaVariants> &
-  ComponentProps<typeof AREA_TAG>
+  AreaBaseProps

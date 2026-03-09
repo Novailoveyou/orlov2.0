@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type rpVariants } from './utils'
 import { RP_TAG } from './constants'
 
+type RpBaseProps = ComponentProps<typeof RP_TAG>
+
 export type RpProps = AsChildProp &
   VariantProps<typeof rpVariants> &
-  ComponentProps<typeof RP_TAG>
+  RpBaseProps

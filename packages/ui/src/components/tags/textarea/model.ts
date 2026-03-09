@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type textareaVariants } from './utils'
 import { TEXTAREA_TAG } from './constants'
 
+type TextareaBaseProps = ComponentProps<typeof TEXTAREA_TAG>
+
 export type TextareaProps = AsChildProp &
   VariantProps<typeof textareaVariants> &
-  ComponentProps<typeof TEXTAREA_TAG>
+  TextareaBaseProps

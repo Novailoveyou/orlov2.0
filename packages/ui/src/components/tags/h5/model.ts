@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type h5Variants } from './utils'
 import { H5_TAG } from './constants'
 
+type H5BaseProps = ComponentProps<typeof H5_TAG>
+
 export type H5Props = AsChildProp &
   VariantProps<typeof h5Variants> &
-  ComponentProps<typeof H5_TAG>
+  H5BaseProps

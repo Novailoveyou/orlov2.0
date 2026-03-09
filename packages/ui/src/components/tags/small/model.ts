@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type smallVariants } from './utils'
 import { SMALL_TAG } from './constants'
 
+type SmallBaseProps = ComponentProps<typeof SMALL_TAG>
+
 export type SmallProps = AsChildProp &
   VariantProps<typeof smallVariants> &
-  ComponentProps<typeof SMALL_TAG>
+  SmallBaseProps

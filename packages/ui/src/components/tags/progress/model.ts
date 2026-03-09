@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type progressVariants } from './utils'
 import { PROGRESS_TAG } from './constants'
 
+type ProgressBaseProps = ComponentProps<typeof PROGRESS_TAG>
+
 export type ProgressProps = AsChildProp &
   VariantProps<typeof progressVariants> &
-  ComponentProps<typeof PROGRESS_TAG>
+  ProgressBaseProps

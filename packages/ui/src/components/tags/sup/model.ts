@@ -4,6 +4,8 @@ import { type VariantProps } from 'class-variance-authority'
 import { type supVariants } from './utils'
 import { SUP_TAG } from './constants'
 
+type SupBaseProps = ComponentProps<typeof SUP_TAG>
+
 export type SupProps = AsChildProp &
   VariantProps<typeof supVariants> &
-  ComponentProps<typeof SUP_TAG>
+  SupBaseProps
