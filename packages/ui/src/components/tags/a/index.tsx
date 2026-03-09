@@ -1,28 +1,10 @@
-import { ComponentProps, JSX } from 'react'
+import { JSX } from 'react'
 import { Slot } from '@radix-ui/react-slot'
-import { cva, type VariantProps } from 'class-variance-authority'
 
-import { AsChildProp } from '../../model/as-child-prop'
-import { cn } from '../../utils'
-import { DEFAULT_VARIANT } from './constants'
-
-const TAG = 'a'
-
-export const aVariants = cva('', {
-  variants: {
-    variant: {
-      default: '',
-      opinionated: 'ui:text-inherit ui:no-underline ui:cursor-pointer',
-    },
-  },
-  defaultVariants: {
-    variant: DEFAULT_VARIANT,
-  },
-})
-
-type AProps = AsChildProp &
-  VariantProps<typeof aVariants> &
-  ComponentProps<typeof TAG>
+import { cn } from '../../../utils'
+import { A_TAG } from './constants'
+import { aVariants } from './utils'
+import { AProps } from './model'
 
 /**
  * @description <A> component to display <a>
@@ -43,11 +25,11 @@ export function A({
   children,
   ...props
 }: AProps): JSX.Element {
-  const Comp = asChild ? Slot : TAG
+  const Comp = asChild ? Slot : A_TAG
 
   return (
     <Comp
-      data-slot={TAG}
+      data-slot={A_TAG}
       ref={ref}
       className={cn(aVariants({ variant, className }))}
       {...props}>
